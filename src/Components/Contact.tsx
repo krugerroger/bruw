@@ -1,43 +1,8 @@
 'use client'
 
-import { submitFormData } from '@/utils/submitForm'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target as HTMLInputElement
-    const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined
-    
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }))
-  }
-
-const [error, setError] = useState(false);
-
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setError(false); // reset
-  setSubmitted(false); // reset
-
-  const success = await submitFormData(formData);
-  if (success) {
-    setSubmitted(true);
-  } else {
-    setError(true);
-  }
-};
-
 
   const container = {
     hidden: { opacity: 0 },
@@ -84,67 +49,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Formulaire */}
-          <motion.div 
-            variants={item}
-            className="w-full lg:w-1/2"
-          >
-            {submitted && (
-              <div className="alert alert-success shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.</span>
-              </div>
-            )}
-            {error && <p className="text-red-600 mt-4">Une erreur est survenue. Veuillez réessayer.</p>}
-              <form onSubmit={handleSubmit} className="card bg-base-200 shadow-lg p-6">
-                <div className="form-control mb-4 grid sm:grid-cols-2">
-                  <label className="label">
-                    <span className="label-text">Votre nom ou pseudonyme</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-
-                <div className="form-control mb-4 grid sm:grid-cols-2">
-                  <label className="label">
-                    <span className="label-text">Votre email</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-
-                <div className="form-control mb-4 grid sm:grid-cols-2">
-                  <label className="label">
-                    <span className="label-text">Votre message</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="textarea textarea-bordered h-32"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary bg-pink-600 hover:bg-pink-700 border-none w-full">
-                  Envoyer le message
-                </button>
-              </form>
-          </motion.div>
-
           {/* Méthodes alternatives */}
           <motion.div 
             variants={item}
