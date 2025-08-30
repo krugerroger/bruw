@@ -192,26 +192,26 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                 method="POST"
                 action="https://usebasin.com/f/1075a0a67158"
                 onSubmit={handleSubmit}
-                className="space-y-6">
+                className="space-y-1 card bg-base-200 shadow-sm">
                 {/* Forfait sélectionné */}
                {offer && (
-                 <div className="card bg-base-200 shadow-sm p-6">
-                  <h3 className="text-xl font-semibold text-pink-600 mb-2">Votre sélection</h3>
+                 <div className="border p-3">
+                  <h3 className="text-xl font-semibold text-indigo-500 mb-2">Choisissez un tarif</h3>
                   <div className=" justify-between items-center">
                     <div>
-                      <p className="font-medium">{offer.title}</p>
+                      <p className="text-xl font-bold">{offer.title}</p>
                     </div>
                     <div className="bg-gray-800/60 rounded-box p-4">
                         <h4 className="font-bold text-pink-600 mb-2">Options disponibles :</h4>
                         {/* Sélection du forfait */}
                             <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Forfait souhaité</span>
+                                <span className="label-text">Choisir forfait souhaité</span>
                             </label>
                             <select
                                 name="selectedPackage"
                                 onChange={handlePackageChange}
-                                className="select select-bordered"
+                                className="select select-bordered border bg-pink-800"
                                 defaultValue="2" // Default to 3h option
                             >
                                 {offer.price.map((option, index) => (
@@ -230,8 +230,8 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                )}
 
                 {/* Détails du forfait sélectionné */}
-                <div className="card bg-base-200 shadow-sm p-6">
-                  <h3 className="text-xl font-semibold text-pink-600 mb-2">Votre sélection</h3>
+                <div className=" p-3 border">
+                  <h3 className="text-lg font-semibold text-pink-600 mb-2">Votre sélection</h3>
                   <div className="flex justify-between items-center mb-2">
                     <p className="font-medium">Durée :</p>
                     <p>{selectedPackage.duration}</p>

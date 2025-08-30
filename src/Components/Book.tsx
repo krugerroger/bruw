@@ -31,7 +31,7 @@ export function Booker(){
     return(
         <motion.div variants={itemVariants}>
             <Link 
-              href="/reservation" 
+              href="/tarifs" 
               className="btn btn-primary bg-pink-600 hover:bg-pink-700 border-none text-white text-lg px-8 py-4 rounded-full shadow-lg"
             >
               <motion.span

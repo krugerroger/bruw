@@ -32,14 +32,14 @@ export default function Pricing() {
   }
 
   return (
-    <section id="prestations" className="py-20">
+    <section id="prestations" className="py-10">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={container}
-          className="text-center mb-16"
+          className="text-center mb-5"
         >
           <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold text-pink-600 mb-4 font-serif">
             Prestations & Tarifs
