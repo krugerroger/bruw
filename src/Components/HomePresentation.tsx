@@ -69,7 +69,7 @@ export default function HomePresentation() {
             transition={{ delay: 1 }}
           >
             <Link 
-              href="/#about" 
+              href="/about" 
               className="btn btn-primary bg-pink-600 hover:bg-pink-700 border-none text-white px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
             >
               En savoir plus

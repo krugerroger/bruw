@@ -30,42 +30,42 @@ const galleryImages = [
     id: 4,
     src: '/gallery/4.jpeg',
     alt: 'Soirée romantique',
-    category: 'soirée',
+    category: 'intérieur',
     blurred: false
   },
   {
     id: 5,
     src: '/gallery/5.jpeg',
     alt: 'Moment détente en lounge',
-    category: 'soirée',
+    category: 'intérieur',
     blurred: false
   },
   {
     id: 6,
     src: '/gallery/6.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'soirée',
+    category: 'intérieur',
     blurred: false
   },
   {
     id: 7,
     src: '/gallery/7.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'ville',
+    category: 'intérieur',
     blurred: false
   },
   {
     id: 8,
     src: '/gallery/8.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'soirée',
+    category: 'intérieur',
     blurred: false
   },
   {
     id: 9,
     src: '/gallery/9.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'soirée',
+    category: 'intérieur',
     blurred: false
   },
   {
@@ -93,7 +93,7 @@ const galleryImages = [
     id: 13,
     src: '/gallery/13.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'intérieur',
+    category: 'ville',
     blurred: false
   },
   {
@@ -107,14 +107,14 @@ const galleryImages = [
     id: 15,
     src: '/gallery/15.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'intérieur',
+    category: 'ville',
     blurred: false
   },
   {
     id: 16,
     src: '/gallery/16.jpeg',
     alt: 'Cocktail en terrasse',
-    category: 'intérieur',
+    category: 'soirée',
     blurred: false
   },
   {
@@ -122,6 +122,76 @@ const galleryImages = [
     src: '/gallery/17.jpeg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
+    blurred: false
+  },
+  {
+    id: 18,
+    src: '/gallery/18.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'intérieur',
+    blurred: false
+  },
+  {
+    id: 19,
+    src: '/gallery/19.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'soirée',
+    blurred: false
+  },
+  {
+    id: 20,
+    src: '/gallery/20.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'soirée',
+    blurred: false
+  },
+  {
+    id: 21,
+    src: '/gallery/21.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'soirée',
+    blurred: false
+  },
+  {
+    id: 22,
+    src: '/gallery/22.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'intérieur',
+    blurred: false
+  },
+  {
+    id: 23,
+    src: '/gallery/23.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 24,
+    src: '/gallery/24.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 25,
+    src: '/gallery/25.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 26,
+    src: '/gallery/26.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'soirée',
+    blurred: false
+  },
+  {
+    id: 27,
+    src: '/gallery/27.jpeg',
+    alt: 'Cocktail en terrasse',
+    category: 'soirée',
     blurred: false
   },
 ]
