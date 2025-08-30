@@ -173,7 +173,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 <h4 className="font-medium">Réseaux professionnels pour réservation:</h4>
               <div className="flex flex-col gap-6 p-4">
                 <a 
-                  href="https://wa.me/message/2SL4YOIBTI2ME1" 
+                  href="https://wa.me/qr/J7DMHJKWBDFGK1" 
                   className="btn btn-outline border-primary text-primary hover:bg-transparent hover:text-[#25D366] hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 px-6"
                 >
                   <svg 
