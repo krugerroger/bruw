@@ -15,7 +15,7 @@ export default function HomePresentation() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-8">
-            Pour tout savoir sur Jessica
+            Pour tout savoir sur Béatrice
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
             Escort Girl Indépendante
@@ -29,7 +29,7 @@ export default function HomePresentation() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Je m’appelle Jessica, je suis Française d’origine Espagnole, ancienne Actrice X professionnelle reconvertie Escort Girl indépendante et masseuse professionnelle pour votre plus grand plaisir personnel.
+              Je m’appelle Béatrice, Française d’origine Américaine. Après une première carrière dans le cinéma adulte, j’ai choisi de me réinventer pour devenir Escort Girl indépendante et masseuse professionnelle, afin d’offrir une expérience unique, raffinée et inoubliable.
             </motion.p>
 
             <motion.p 
@@ -39,7 +39,7 @@ export default function HomePresentation() {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              J’offre une expérience de haut niveau et de grande qualité en tant que Courtisane VIP. Je suis une jeune femme de 28 ans, Escort Girl de luxe Internationale et Call Girl Indépendante basée en France, qui reçoit et se déplace.
+              Aujourd’hui, j’incarne l’élégance et la sensualité d’une Courtisane VIP moderne : attentive, cultivée et passionnée, je propose des moments d’exception où séduction, complicité et plaisir se rencontrent harmonieusement.
             </motion.p>
 
             <motion.p 
@@ -49,7 +49,16 @@ export default function HomePresentation() {
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
             >
-              Je suis une accompagnatrice de haut standing, appelée plus précisément une Courtisane. Je pratique l’activité d’Escort Girl par plaisir et non par obligation.
+              Âgée de 28 ans, je suis une Escort Girl de luxe internationale et Call Girl indépendante basée en France, disponible aussi bien pour des rendez-vous privés que pour des déplacements, en France comme à l’étranger.
+            </motion.p>
+            <motion.p 
+              className="text-lg md:text-xl leading-relaxed text-justify"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+            >
+              Je ne pratique cette activité que par choix et par plaisir, ce qui fait de chaque rencontre une expérience authentique, sincère et haut de gamme.
             </motion.p>
           </div>
 

@@ -160,8 +160,8 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
           <div className="hidden lg:block lg:w-1/3 sticky top-20">
             <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/sarah_hero.jpg" // Remplacez par votre photo
-                alt="Sarah - Moments privilégiés"
+                src="/bea_hero.jpeg" // Remplacez par votre photo
+                alt="Béatrice Moreau - Moments privilégiés"
                 sizes='(min-width: 640px) 32rem, 90vw'
                 fill
                 className="object-cover"
@@ -283,7 +283,12 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                       selected={formData.appointmentDate}
                       onChange={handleDateChange}
                       minDate={new Date()}
-                      className="input input-bordered w-full bg-gray-500/40"
+                      dateFormat="dd/MM/yyyy"
+                      isClearable
+                      showTimeSelect
+                      showMonthDropdown
+                      className="input input-bordered bg-gray-500/40 min-w-[320px]"
+                      calendarClassName="border border-pink-600 rounded-lg"
                       placeholderText="Sélectionnez une date"
                       required
                     />

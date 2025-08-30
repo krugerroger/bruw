@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Sarah Meyer | Élégante compagne à Ville",
+  title: "Béatrice Moreau | Élégante compagne à Ville",
   description: "Compagne raffinée pour moments privilégiés à Ville. Discrétion absolue et expérience inoubliable.",
   keywords: [
     "compagnie féminine",
@@ -27,24 +27,24 @@ export const metadata: Metadata = {
     "soirée entre adultes",
     "rencontre discrète"
   ].join(", "),
-  authors: [{ name: "Sarah Meyer" }],
-  creator: "Sarah Meyer",
-  publisher: "Sarah Meyer",
+  authors: [{ name: "Béatrice Moreau" }],
+  creator: "Béatrice Moreau",
+  publisher: "Béatrice Moreau",
   metadataBase: new URL("https://votresite.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Sarah Meyer | Compagne d'exception à Ville",
+    title: "Béatrice Moreau | Compagne d'exception à Ville",
     description: "Expérience raffinée et discrète en compagnie d'une femme élégante",
     url: "https://votresite.com",
-    siteName: "Sarah Meyer",
+    siteName: "Béatrice Moreau",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sarah Meyer - Compagne raffinée",
+        alt: "Béatrice Moreau - Compagne raffinée",
       },
     ],
     locale: "fr_FR",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "dc.title": "Sarah Meyer - Moments privilégiés",
+    "dc.title": "Béatrice Moreau - Moments privilégiés",
     "dc.language": "fr",
   },
   icons :{
