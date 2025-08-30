@@ -86,7 +86,7 @@ const itemVariants: Variants = {
         </div>
       </motion.div>
 
-      {/* Indicateur de scroll */}
+      {/* Indicateur de scrol */}
       <motion.div
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
         animate={{
