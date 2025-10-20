@@ -19,10 +19,10 @@ export default function Footer() {
               href="/mentions-legales" 
               className="hover:text-pink-600 transition-colors text-sm"
             >
-              Mentions légales - Béatrice est une travailleuse indépendante
+              Mentions légales - Brunella est une travailleuse indépendante
             </Link>
             <p className="text-sm">
-              © {new Date().getFullYear()} Béatrice – Tous droits réservés
+              © {new Date().getFullYear()} Brunella – Tous droits réservés
             </p>
           </div>
 

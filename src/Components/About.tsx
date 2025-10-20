@@ -43,8 +43,8 @@ export default function About() {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-pink-200 shadow-lg">
               <Image
-                src="/bea_about.jpeg" // Remplacez par votre image
-                alt="Béatrice - Portrait"
+                src="/bru_about.jpeg" // Remplacez par votre image
+                alt="Brunella - Portrait"
                 fill
                 className="object-cover"
                 priority
@@ -58,7 +58,7 @@ export default function About() {
             className="w-full lg:w-2/3 space-y-6"
           >
             <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold text-pink-600 font-serif">
-              À Propos de Béatrice
+              À Propos de Brunella
             </motion.h2>
 
             <motion.div variants={item} className="space-y-4">
@@ -73,11 +73,11 @@ export default function About() {
                 </div>
                 <div className="bg-base-200 p-3 rounded-box text-center">
                   <p className="text-sm text-base-content/70">Silhouette</p>
-                  <p className="font-bold">53kg</p>
+                  <p className="font-bold">47kg</p>
                 </div>
                 <div className="bg-base-200 p-3 rounded-box text-center">
                   <p className="text-sm text-base-content/70">Cheveux</p>
-                  <p className="font-bold">Blond</p>
+                  <p className="font-bold">Brun</p>
                 </div>
               </div>
 
@@ -106,11 +106,9 @@ export default function About() {
               </motion.p>
 
               <motion.p variants={item} className="">
-                Mon telegramme : @moreaubeatrice
+                Mon telegramme : @moreaubrunella
 
-                Mon WhatsApp : +33757081623
-
-                Mon Instagram : beatrice_moreaufr
+                Mon Instagram : brunella_5626
 
                 À très vite entre mes draps… et entre mes jambes 💋🍒
               </motion.p>

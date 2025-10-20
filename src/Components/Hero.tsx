@@ -49,8 +49,8 @@ const itemVariants: Variants = {
       {/* Image de fond avec effet de profondeur */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bea_hero.jpeg" // Remplacez par votre chemin d'image
-          alt="Béatrice - Escort Premium"
+          src="/bru_hero.jpg" // Remplacez par votre chemin d'image
+          alt="Brunella - Escort Premium"
           fill
           className="object-cover object-center"
           loading='lazy'
@@ -72,7 +72,7 @@ const itemVariants: Variants = {
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight font-serif"
             variants={itemVariants}
           >
-           Béatrice – Escort professionnelle en France
+           Brunella – Escort professionnelle en France
           </motion.h1>
 
           <motion.p

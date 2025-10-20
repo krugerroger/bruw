@@ -16,7 +16,7 @@ export default function Header() {
     <header className="navbar bg-black shadow-sm sticky top-0 z-50">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost normal-case text-xl font-serif italic text-pink-600">
-          Béatrice
+          Brunella
         </Link>
       </div>
 

@@ -7,191 +7,135 @@ import { useState } from 'react'
 const galleryImages = [
   {
     id: 1,
-    src: '/gallery/1.jpeg',
-    alt: 'Béatrice en tenue de soirée au restaurant',
+    src: '/gallery/1.jpg',
+    alt: 'Brunella en tenue de soirée au restaurant',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 2,
-    src: '/gallery/2.jpeg',
-    alt: 'Béatrice en ville, tenue élégante',
+    src: '/gallery/2.jpg',
+    alt: 'Brunella en ville, tenue élégante',
     category: 'intérieur',
     blurred: false // Exemple d'image floutée
   },
   {
     id: 3,
-    src: '/gallery/3.jpeg',
+    src: '/gallery/3.jpg',
     alt: 'Ambiance intérieure chic',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 4,
-    src: '/gallery/4.jpeg',
+    src: '/gallery/4.jpg',
     alt: 'Soirée romantique',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 5,
-    src: '/gallery/5.jpeg',
+    src: '/gallery/5.jpg',
     alt: 'Moment détente en lounge',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 6,
-    src: '/gallery/6.jpeg',
+    src: '/gallery/6.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 7,
-    src: '/gallery/7.jpeg',
+    src: '/gallery/7.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 8,
-    src: '/gallery/8.jpeg',
+    src: '/gallery/8.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 9,
-    src: '/gallery/9.jpeg',
+    src: '/gallery/9.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 10,
-    src: '/gallery/10.jpeg',
+    src: '/gallery/10.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 11,
-    src: '/gallery/11.jpeg',
+    src: '/gallery/11.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 12,
-    src: '/gallery/12.jpeg',
+    src: '/gallery/12.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 13,
-    src: '/gallery/13.jpeg',
+    src: '/gallery/13.jpg',
     alt: 'Cocktail en terrasse',
     category: 'ville',
     blurred: false
   },
   {
     id: 14,
-    src: '/gallery/14.jpeg',
+    src: '/gallery/14.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 15,
-    src: '/gallery/15.jpeg',
+    src: '/gallery/15.jpg',
     alt: 'Cocktail en terrasse',
     category: 'ville',
     blurred: false
   },
   {
     id: 16,
-    src: '/gallery/16.jpeg',
+    src: '/gallery/16.jpg',
     alt: 'Cocktail en terrasse',
     category: 'soirée',
     blurred: false
   },
   {
     id: 17,
-    src: '/gallery/17.jpeg',
+    src: '/gallery/17.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 18,
-    src: '/gallery/18.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'intérieur',
-    blurred: false
-  },
-  {
-    id: 19,
-    src: '/gallery/19.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'soirée',
-    blurred: false
-  },
-  {
-    id: 20,
-    src: '/gallery/20.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'soirée',
-    blurred: false
-  },
-  {
-    id: 21,
-    src: '/gallery/21.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'soirée',
-    blurred: false
-  },
-  {
-    id: 22,
-    src: '/gallery/22.jpeg',
+    src: '/gallery/18.jpg',
     alt: 'Cocktail en terrasse',
     category: 'intérieur',
     blurred: false
   },
   {
     id: 23,
-    src: '/gallery/23.jpeg',
+    src: '/gallery/23.jpg',
     alt: 'Cocktail en terrasse',
     category: 'ville',
-    blurred: false
-  },
-  {
-    id: 24,
-    src: '/gallery/24.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'ville',
-    blurred: false
-  },
-  {
-    id: 25,
-    src: '/gallery/25.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'ville',
-    blurred: false
-  },
-  {
-    id: 26,
-    src: '/gallery/26.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'soirée',
-    blurred: false
-  },
-  {
-    id: 27,
-    src: '/gallery/27.jpeg',
-    alt: 'Cocktail en terrasse',
-    category: 'soirée',
     blurred: false
   },
 ]
@@ -305,7 +249,7 @@ export default function Gallery() {
 
                 {/* Signature visible */}
                 <div className="absolute bottom-2 right-2 bg-black/70 text-white/80 px-2 py-1 rounded text-xs">
-                  ©{new Date().getFullYear()} Béatrice Meyer
+                  ©{new Date().getFullYear()} Brunella Moreau
                 </div>
               </div>
 
@@ -393,7 +337,7 @@ export default function Gallery() {
         
         {/* Signature visible */}
         <div className="absolute bottom-4 right-4 bg-black/70 text-white/80 px-3 py-1 rounded text-sm md:text-base backdrop-blur-sm">
-          ©{new Date().getFullYear()} Béatrice Meyer
+          ©{new Date().getFullYear()} Brunella Moreau
         </div>
       </div>
     </div>

@@ -160,8 +160,8 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
           <div className="hidden lg:block lg:w-1/3 sticky top-20">
             <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/bea_hero.jpeg" // Remplacez par votre photo
-                alt="Béatrice Moreau - Moments privilégiés"
+                src="/bru_hero.jpg" // Remplacez par votre photo
+                alt="Brunella Moreau - Moments privilégiés"
                 sizes='(min-width: 640px) 32rem, 90vw'
                 fill
                 className="object-cover"

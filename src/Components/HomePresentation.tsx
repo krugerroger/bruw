@@ -15,7 +15,7 @@ export default function HomePresentation() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-8">
-            Pour tout savoir sur Béatrice
+            Pour tout savoir sur Brunella
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
             Escort Girl Indépendante
@@ -29,7 +29,7 @@ export default function HomePresentation() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Je m’appelle Béatrice, Française d’origine Américaine. Après une première carrière dans le cinéma adulte, j’ai choisi de me réinventer pour devenir Escort Girl indépendante et masseuse professionnelle, afin d’offrir une expérience unique, raffinée et inoubliable.
+              Je m’appelle Brunella, Française d’origine Américaine. Après une première carrière dans le cinéma adulte, j’ai choisi de me réinventer pour devenir Escort Girl indépendante et masseuse professionnelle, afin d’offrir une expérience unique, raffinée et inoubliable.
             </motion.p>
 
             <motion.p 

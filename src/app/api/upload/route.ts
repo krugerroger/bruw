@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       )
     }
 
-    // Vérification de la taille du fichier (max 5MB)
+    // Vérification de la Moreau du fichier (max 5MB)
     if (paymentProof.size > 5 * 1024 * 1024) {
       return NextResponse.json(
         { error: 'Le fichier est trop volumineux (max 5MB)' },
