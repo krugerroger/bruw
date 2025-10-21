@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function PracticesPage() {
@@ -200,7 +199,7 @@ export default function PracticesPage() {
           className="text-center mt-12"
         >
           <p className="text-gray-400 mb-6">
-            Maintenant que vous connaissez mes pratiques, n'hésitez pas à me contacter pour une expérience inoubliable.
+            Maintenant que vous connaissez mes pratiques, nchésitez pas à me contacter pour une expérience inoubliable.
           </p>
           <Link href="contact">
             <button className="btn bg-pink-600 hover:bg-pink-700 border-none text-white">

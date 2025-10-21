@@ -148,16 +148,16 @@ export default function Pricing() {
   {/* Section Rencontre Extérieur */}
   <div className="bg-gray-800/40 rounded-lg p-4">
     <h3 className="font-bold text-pink-600 text-lg mb-3">
-      RENCONTRE À L'EXTÉRIEUR : <span className="text-gray-400 text-base">(SANS INTIMITÉ)</span>
+      RENCONTRE À L’EXTÉRIEUR : <span className="text-gray-400 text-base">(SANS INTIMITÉ)</span>
     </h3>
     <div className="space-y-3 text-gray-300">
       <div className="flex justify-between items-center bg-gray-700/30 p-3 rounded">
         <span className="font-semibold">1h : 150€</span>
-        <span className="text-pink-500 text-sm">d'accompagnement extérieur</span>
+        <span className="text-pink-500 text-sm">d’accompagnement extérieur</span>
       </div>
       <p className="leading-relaxed">
-        Nous nous découvrons autour d'un verre, à la terrasse d'un bar où au restaurant, 
-        lors d'un spectacle, ou en soirée… Je favorise une première rencontre avant un 
+        Nous nous découvrons autour d’un verre, à la terrasse d’un bar où au restaurant, 
+        lors d’un spectacle, ou en soirée… Je favorise une première rencontre avant un 
         accompagnement de longue durée : week-end, semaine, vacances.
       </p>
     </div>
@@ -201,7 +201,7 @@ export default function Pricing() {
 </div>
     </div>
 
-    {/* Politique d'annulation */}
+    {/* Politique d’annulation */}
     <div className="pt-2 border-t border-base-300">
       <p className="text-sm text-base-content/60 flex items-center justify-center gap-1">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

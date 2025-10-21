@@ -136,11 +136,13 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
   } catch (err) {
     console.error('Erreur:', err)
-    err instanceof Error && console.log('Message d’erreur:', err.message)
+   if( err instanceof Error){
+   console.log('Message d’erreur:', err.message)
+  }  
     // Afficher un message d'erreur à l'utilisateur
-  }
+  
 }
-
+}
 const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
   const selectedIndex = Number(e.target.value)
   if (offer) {

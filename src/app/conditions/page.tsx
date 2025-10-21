@@ -9,12 +9,12 @@ export default function conditions(){
     </h2>
     <div className="text-gray-300 leading-relaxed space-y-4">
       <p>
-        Je propose mes services d'<span className="font-semibold text-pink-500">accompagnement</span> 
-        (restaurant, soirée privée, Club & Sauna libertin, Discothèque…) et d'<span className="font-semibold text-pink-500">escorting</span>, 
+        Je propose mes services d’<span className="font-semibold text-pink-500">accompagnement</span> 
+        (restaurant, soirée privée, Club & Sauna libertin, Discothèque…) et d’<span className="font-semibold text-pink-500">escorting</span>, 
         des prestations de <span className="font-semibold text-pink-500">massages NATURISTE intégral</span> de Bien être et de relaxation, 
         des <span className="font-semibold text-pink-500">strip tease sensuels</span> ou <span className="font-semibold text-pink-500">Effeuillage Burlesque</span>, 
         des <span className="font-semibold text-pink-500">DUO escorte</span>, <span className="font-semibold text-pink-500">Triolisme couple</span>, 
-        de l'<span className="font-semibold text-pink-500">initiation SM Soft ou Hard</span>, 
+        de l’<span className="font-semibold text-pink-500">initiation SM Soft ou Hard</span>, 
         du <span className="font-semibold text-pink-500">Fétichisme</span>, 
         réalisation de <span className="font-semibold text-pink-500">scénario</span> ou <span className="font-semibold text-pink-500">fantasme insolite</span>.
       </p>
@@ -58,7 +58,7 @@ export default function conditions(){
             Sérieux et Sécurité
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            En demandant un pré-paiement, je vous assure de mon sérieux et de mon engagement à honorer notre rendez-vous, tout en minimisant les risques d'annulation de dernière minute.
+            En demandant un pré-paiement, je vous assure de mon sérieux et de mon engagement à honorer notre rendez-vous, tout en minimisant les risques d’annulation de dernière minute.
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function conditions(){
             Préparation Optimale
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            Cette démarche me permet de me préparer sereinement et d'organiser mon emploi du temps pour vous offrir le meilleur service possible.
+            Cette démarche me permet de me préparer sereinement et d’organiser mon emploi du temps pour vous offrir le meilleur service possible.
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function conditions(){
             Engagement Mutuel
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            En acceptant ce pré-paiement, nous établissons une relation de confiance mutuelle, chacun s'engageant à respecter ses obligations.
+            En acceptant ce pré-paiement, nous établissons une relation de confiance mutuelle, chacun s’engageant à respecter ses obligations.
           </p>
         </div>
       </div>
@@ -122,7 +122,7 @@ export default function conditions(){
             Simplicité et Accessibilité
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            L'achat de codes <span className="font-semibold">PCS, Transcash ou Neosurf</span> en bureau de tabac est simple et rapide, évitant les complications des virements bancaires ou des paiements en ligne.
+            L’achat de codes <span className="font-semibold">PCS, Transcash ou Neosurf</span> en bureau de tabac est simple et rapide, évitant les complications des virements bancaires ou des paiements en ligne.
           </p>
         </div>
       </div>
@@ -181,7 +181,7 @@ export default function conditions(){
   {/* Conclusion */}
   <div className="text-center mt-8 p-6 bg-pink-600/20 rounded-xl border border-pink-600/30">
     <p className="text-lg text-gray-300 leading-relaxed">
-      Merci de votre compréhension et de votre coopération. <span className="font-semibold text-pink-500">J'ai hâte de vous rencontrer.</span>
+      Merci de votre compréhension et de votre coopération. <span className="font-semibold text-pink-500">J’ai hâte de vous rencontrer.</span>
     </p>
   </div>
 
@@ -212,7 +212,7 @@ export default function conditions(){
         Avez-vous des TABOO ?
       </h3>
       <p className="text-gray-300 leading-relaxed">
-        Je suis une personne ouverte, libérée et libertine, cependant je ne tolère pas tout ce qui est bizarre, dégradant, sale, les comportements irrespectueux ou risquant de porter atteinte d'une quelconque façon à ma personne ou à ma vie privée.
+        Je suis une personne ouverte, libérée et libertine, cependant je ne tolère pas tout ce qui est bizarre, dégradant, sale, les comportements irrespectueux ou risquant de porter atteinte d’une quelconque façon à ma personne ou à ma vie privée.
       </p>
     </div>
 
@@ -225,7 +225,7 @@ export default function conditions(){
         Négocier vous vos Tarifs, Prestations et Conditions ?
       </h3>
       <p className="text-gray-300 leading-relaxed">
-        Merci de ne pas négocier mes prestations et mes tarifs, s'ils ne vous conviennent pas, nous sommes tellement nombreuses à exercer ce travail que je suis sûre que vous trouverez facilement votre bonheur auprès d'une de mes collègues ! Et même si vous me promettez de me payer plus pour quelque chose que je ne veux pas faire, cela sera toujours non.
+        Merci de ne pas négocier mes prestations et mes tarifs, s’ils ne vous conviennent pas, nous sommes tellement nombreuses à exercer ce travail que je suis sûre que vous trouverez facilement votre bonheur auprès d’une de mes collègues ! Et même si vous me promettez de me payer plus pour quelque chose que je ne veux pas faire, cela sera toujours non.
       </p>
     </div>
 
@@ -238,8 +238,8 @@ export default function conditions(){
         Votre âge peut-il me poser problème ?
       </h3>
       <p className="text-gray-300 leading-relaxed">
-        Je n'ai aucun soucis à rencontrer des personnes ayant une dizaine d'années de plus que moi, au contraire car généralement ce sont des partenaires plus calmes et plus à l'écoute et bien plus gentleman.
-        Par contre je préfère ne pas rencontrer les hommes de moins de 30 ans. Mais vu qu'il m'est arrivé de passer de très beaux moments avec des hommes plus jeunes que moi, je préfère ne pas fermer totalement la porte… A vous de me séduire.
+        Je n’ai aucun soucis à rencontrer des personnes ayant une dizaine d’années de plus que moi, au contraire car généralement ce sont des partenaires plus calmes et plus à l’écoute et bien plus gentleman.
+        Par contre je préfère ne pas rencontrer les hommes de moins de 30 ans. Mais vu qu’il m’est arrivé de passer de très beaux moments avec des hommes plus jeunes que moi, je préfère ne pas fermer totalement la porte… A vous de me séduire.
       </p>
     </div>
 
@@ -252,7 +252,7 @@ export default function conditions(){
         Acceptez-vous des personnes ayant un handicap ?
       </h3>
       <p className="text-gray-300 leading-relaxed">
-        Si vous avez un handicap ou un problème physique, cela ne me pose pas de problème : j'ai déjà rencontré des hommes en fauteuil roulant, amputés, ayant une poche de stomie, aveugle, paralysé tétraplégique, ayant une malformation…et cela s'est toujours bien passé. Donc si vous avez certaines demandes ou craintes par rapport à cela, n'hésitez pas à m'en faire part, je vous ferez passer un bon moment.
+        Si vous avez un handicap ou un problème physique, cela ne me pose pas de problème : j’ai déjà rencontré des hommes en fauteuil roulant, amputés, ayant une poche de stomie, aveugle, paralysé tétraplégique, ayant une malformation…et cela s’est toujours bien passé. Donc si vous avez certaines demandes ou craintes par rapport à cela, n’hésitez pas à m’en faire part, je vous ferez passer un bon moment.
       </p>
     </div>
 
@@ -266,11 +266,11 @@ export default function conditions(){
       </h3>
       <div className="text-gray-300 leading-relaxed space-y-3">
         <p>
-          Absolument, c'est <span className="font-semibold text-pink-500">LA règle d'OR</span> de l'accompagnement. Je suis très discrète et vous demanderai la même chose en retour.
+          Absolument, c’est <span className="font-semibold text-pink-500">LA règle d’OR</span> de l’accompagnement. Je suis très discrète et vous demanderai la même chose en retour.
         </p>
         <div className="bg-gray-700/30 p-4 rounded-lg border-l-4 border-pink-600">
           <p className="text-sm italic">
-            *Je vous rappelle que ce site propose uniquement des services d'accompagnement ou de massages entre adultes et vous informe de l'activité légale et totalement indépendante d'une accompagnatrice.
+            *Je vous rappelle que ce site propose uniquement des services d’accompagnement ou de massages entre adultes et vous informe de l’activité légale et totalement indépendante d’une accompagnatrice.
             Toute relation intime qui pourrait intervenir relèverait uniquement de la vie privée entre adultes consentants et serait de ce fait parfaitement détachée de la prestation tarifée.
           </p>
         </div>
