@@ -1,6 +1,6 @@
 'use client'
 
-import { HTMLInputTypeAttribute, useEffect, useState } from 'react'
+import {useEffect, useState } from 'react'
 import Image from 'next/image'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
@@ -136,7 +136,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
   } catch (err) {
     console.error('Erreur:', err)
-    err instanceof Error && console.error('Message d’erreur:', err.message)
+    err instanceof Error && console.log('Message d’erreur:', err.message)
     // Afficher un message d'erreur à l'utilisateur
   }
 }

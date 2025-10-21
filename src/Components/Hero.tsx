@@ -32,18 +32,6 @@ const itemVariants: Variants = {
   },
 }
 
-
-  const buttonVariants = {
-    hover: {
-      scale: 1.05,
-      boxShadow: '0px 5px 15px rgba(236, 72, 153, 0.4)',
-      transition: {
-        duration: 0.3,
-        yoyo: Infinity
-      }
-    }
-  }
-
   return (
     <section className="relative h-screen min-h-[800px] max-w-screen overflow-hidden">
       {/* Image de fond avec effet de profondeur */}
