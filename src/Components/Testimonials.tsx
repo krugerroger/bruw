@@ -143,7 +143,7 @@ export default function Testimonials() {
                 </div>
 
                 <blockquote className="italic text-base-content/90">
-                  &quot;{testimonial.text}&quot;
+                  {testimonial.text}
                 </blockquote>
               </div>
             </motion.div>

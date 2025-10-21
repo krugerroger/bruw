@@ -22,7 +22,7 @@ export default function Footer() {
               Mentions légales - Brunella est une travailleuse indépendante
             </Link>
             <p className="text-sm">
-              © {new Date().getFullYear()} Brunella – Tous droits réservés
+              © 2023 - 2025 Brunella – Tous droits réservés
             </p>
           </div>
 

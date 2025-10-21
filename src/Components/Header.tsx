@@ -1,14 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   const navLinks = [
     { name: 'Accueil', href: '/' },
     { name: 'Prestations & Tarifs', href: 'tarifs' },
+    { name: 'Pratiques', href: 'pratiques' },
     { name: 'Galerie', href: 'galerie' },
     { name: 'À propos', href: 'about' },
     { name: 'Commentaires/Témoignages', href: 'temoignages' },
+    { name: 'Conditions Générales & FAQs', href: 'conditions' },
     { name: 'Contact', href: 'contact' },
   ]
 
@@ -16,7 +19,8 @@ export default function Header() {
     <header className="navbar bg-black shadow-sm sticky top-0 z-50">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost normal-case text-xl font-serif italic text-pink-600">
-          Brunella
+          <Image src="/logo.jpeg" width={30} height={30} alt="Logow" loading='lazy'/>
+          BRUNELLA
         </Link>
       </div>
 

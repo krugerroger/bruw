@@ -339,12 +339,11 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         </div>
         <div className="divider"></div>
         <div>
-            <h2>Pour une reservation via virement ou Wero,</h2>
-            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33 6 37 24 43 87</span> ou par Telegram à        
+            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> ou par Telegram à        
                 <a 
-                  href="https://t.me/moreaubeatrice" 
+                  href="https://t.me/moreaubrunella" 
                   className="text-[#0088CC] hover:bg-secondary hover:text-secondary-content px-6"
-                  >@moreaubeatrice</a> 
+                  >@moreaubrunella</a> 
                   pour obtenir les informations nécessaires.
             </p>
         </div>

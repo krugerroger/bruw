@@ -132,8 +132,239 @@ const galleryImages = [
     blurred: false
   },
   {
+    id: 19,
+    src: '/gallery/19.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 20,
+    src: '/gallery/20.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 21,
+    src: '/gallery/21.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 22,
+    src: '/gallery/22.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
     id: 23,
     src: '/gallery/23.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 24,
+    src: '/gallery/24.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 25,
+    src: '/gallery/25.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 26,
+    src: '/gallery/26.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 27,
+    src: '/gallery/27.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 28,
+    src: '/gallery/28.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 29,
+    src: '/gallery/29.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 30,
+    src: '/gallery/30.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 31,
+    src: '/gallery/31.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 32,
+    src: '/gallery/32.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 33,
+    src: '/gallery/33.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 34,
+    src: '/gallery/34.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 35,
+    src: '/gallery/35.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 36,
+    src: '/gallery/36.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 37,
+    src: '/gallery/37.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 38,
+    src: '/gallery/38.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 39,
+    src: '/gallery/39.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 40,
+    src: '/gallery/40.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 41,
+    src: '/gallery/41.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 42,
+    src: '/gallery/42.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 43,
+    src: '/gallery/43.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 44,
+    src: '/gallery/44.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 45,
+    src: '/gallery/45.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 46,
+    src: '/gallery/46.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 47,
+    src: '/gallery/47.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 48,
+    src: '/gallery/48.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 49,
+    src: '/gallery/49.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 50,
+    src: '/gallery/50.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 51,
+    src: '/gallery/51.jpg',
+    alt: 'Cocktail en terrasse',
+    category: 'ville',
+    blurred: false
+  },
+  {
+    id: 52,
+    src: '/gallery/52.jpg',
     alt: 'Cocktail en terrasse',
     category: 'ville',
     blurred: false
@@ -249,7 +480,7 @@ export default function Gallery() {
 
                 {/* Signature visible */}
                 <div className="absolute bottom-2 right-2 bg-black/70 text-white/80 px-2 py-1 rounded text-xs">
-                  ©{new Date().getFullYear()} Brunella Moreau
+                  © Brunella Moreau
                 </div>
               </div>
 

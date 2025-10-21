@@ -29,7 +29,7 @@ export default function HomePresentation() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Je m’appelle Brunella, Française d’origine Américaine. Après une première carrière dans le cinéma adulte, j’ai choisi de me réinventer pour devenir Escort Girl indépendante et masseuse professionnelle, afin d’offrir une expérience unique, raffinée et inoubliable.
+              Je m’appelle Brunella, Française d’origine espagnole italienne. Après une première carrière dans le cinéma adulte, j’ai choisi de me réinventer pour devenir Escort Girl indépendante et masseuse professionnelle, afin d’offrir une expérience unique, raffinée et inoubliable.
             </motion.p>
 
             <motion.p 

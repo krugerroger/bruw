@@ -121,22 +121,84 @@ export default function Pricing() {
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
-          Virement instantanée
-        </div>
-        <div className="badge badge-lg badge-primary gap-1 px-2">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-          </svg>
-          Wero
+          Paypal (INDISPONIBLE MOMENTANÉMENT)
         </div>
       </div>
 
-      <div className="alert alert-warning py-2 px-4 text-sm bg-warning/20 text-warning-content border border-warning">
-        <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
-        <span>Les espèces ne sont acceptées qu’à partir du deuxième rendez-vous</span>
+     <div className="space-y-6 text-sm md:text-base">
+  {/* Section Moyens de Paiement */}
+  <div className="bg-gray-800/40 rounded-lg p-4">
+    <h3 className="font-bold text-pink-600 text-lg mb-3">MOYENS DE PAIEMENT :</h3>
+    <ul className="space-y-2 text-gray-300">
+      <li className="flex items-start">
+        <span className="text-pink-500 mr-2">•</span>
+        <span>Espèces exclues lors du premier rendez-vous <span className="text-gray-400">(mais les suivants peuvent être réglés en espèces)</span></span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-500 mr-2">•</span>
+        <span>Coupon : Transcash, ou PCS MasterCard</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-500 mr-2">•</span>
+        <span>PayPal (Indisponible Momentanément)</span>
+      </li>
+    </ul>
+  </div>
+
+  {/* Section Rencontre Extérieur */}
+  <div className="bg-gray-800/40 rounded-lg p-4">
+    <h3 className="font-bold text-pink-600 text-lg mb-3">
+      RENCONTRE À L'EXTÉRIEUR : <span className="text-gray-400 text-base">(SANS INTIMITÉ)</span>
+    </h3>
+    <div className="space-y-3 text-gray-300">
+      <div className="flex justify-between items-center bg-gray-700/30 p-3 rounded">
+        <span className="font-semibold">1h : 150€</span>
+        <span className="text-pink-500 text-sm">d'accompagnement extérieur</span>
       </div>
+      <p className="leading-relaxed">
+        Nous nous découvrons autour d'un verre, à la terrasse d'un bar où au restaurant, 
+        lors d'un spectacle, ou en soirée… Je favorise une première rencontre avant un 
+        accompagnement de longue durée : week-end, semaine, vacances.
+      </p>
+    </div>
+  </div>
+
+  {/* Section Tarif Incall */}
+  <div className="bg-gray-800/40 rounded-lg p-4">
+    <h3 className="font-bold text-pink-600 text-lg mb-3">TARIF INCALL : <span className="text-gray-400 text-base">(RÉCEPTION)</span></h3>
+    <div className="space-y-4 text-gray-300">
+      <div className="bg-gray-700/30 p-3 rounded">
+        <p className="font-semibold text-pink-500 mb-2">Horaires de réception :</p>
+        <p>Je reçois de 08h00 à 00h00 uniquement sur réservation de rendez-vous préalable SVP.</p>
+        <p className="mt-1 text-gray-400">Pour un rendez-vous le jour même, merci de me prévenir au moins 30min avant svp.</p>
+      </div>
+      
+      <div className="space-y-3">
+        <p className="font-semibold text-pink-500">Cadre de la réception :</p>
+        <p>En réception chez moi dans une belle villa, une boisson fraîche vous sera proposée dès votre arrivée :</p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Coca</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Oasis</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Jus de fruit</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Café</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Thé</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Cappuccino</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Latte macchiato</span>
+          <span className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">Alcool</span>
+        </div>
+      </div>
+
+      <div className="bg-gray-700/30 p-3 rounded">
+        <p className="font-semibold text-pink-500 mb-2">Hygiène et confort :</p>
+        <p className="leading-relaxed">
+          Je suis très attentive à mon hygiène qui sera irréprochable, une douche obligatoire 
+          vous sera donc proposée dès votre arrivée : Serviettes, chaussons, produits divers 
+          de toilette seront mis à votre disposition.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 
     {/* Politique d'annulation */}
