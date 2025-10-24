@@ -119,6 +119,12 @@ export default function Pricing() {
         </div>
         <div className="badge badge-lg badge-primary gap-1 px-2">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+          </svg>
+          Virement instantanée
+        </div>
+        <div className="badge badge-lg badge-primary gap-1 px-2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
           Paypal (INDISPONIBLE MOMENTANÉMENT)
@@ -137,6 +143,10 @@ export default function Pricing() {
       <li className="flex items-start">
         <span className="text-pink-500 mr-2">•</span>
         <span>Coupon : Transcash, ou PCS MasterCard</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-500 mr-2">•</span>
+        <span>Virement instantanée</span>
       </li>
       <li className="flex items-start">
         <span className="text-pink-500 mr-2">•</span>

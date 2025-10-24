@@ -77,7 +77,7 @@ export default function Contact() {
                 <h4 className="font-medium">Réseaux professionnels pour réservation:</h4>
              <div className="flex flex-col gap-6 p-4">
   <a 
-    href="https://wa.me/33612345678" 
+    href="https://wa.me/33756985757" 
     className="btn btn-outline border-[#25D366] text-[#25D366] hover:bg-secondary hover:text-secondary-content hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 px-6"
   >
     <svg 
