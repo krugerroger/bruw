@@ -116,7 +116,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     const result = await response.json()
 
-     const basin_response = await fetch("https://usebasin.com/f/1075a0a67158", {
+     const basin_response = await fetch("https://usebasin.com/f/d067186870dd", {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -192,7 +192,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
               <form
                 encType="multipart/form-data"
                 method="POST"
-                action="https://usebasin.com/f/1075a0a67158"
+                action="https://usebasin.com/f/d067186870dd"
                 onSubmit={handleSubmit}
                 className="space-y-1 card bg-base-200 shadow-sm">
                 {/* Forfait sélectionné */}
@@ -218,7 +218,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                             >
                                 {offer.price.map((option, index) => (
                                 <option key={index} value={index}>
-                                    {option.duration} - {option.amount}
+                                    {option.duration} &nbsp; {option.amount}
                                 </option>
                                 ))}
                             </select>
@@ -314,7 +314,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                     <span className="label-text-alt text-sm">Photo de la recharge(Transcash, PCS, Néosurf)</span>
                   </label>
                   <div className="text-sm">
-                    Pour réverser via virement instantanée ou par Wero, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33 6 37 24 43 87</span> pour obtenir les informations nécessaires.
+                    Pour réverser via virement instantanée, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> pour obtenir les informations nécessaires.
                   </div>
                 </div>
 

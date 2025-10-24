@@ -36,14 +36,14 @@ const ServiceCards = () => {
         "🔞 Explorations sensuelles : Sex toys (pour moi & pour vous), Travail anal / Massage prostatique, Trio HOT (Couple ou HFF), Conversation excitante (mots crus & fessées)",
       ],
       price: [
-        { duration: "2 rapports + massage", amount: "Rendez-vous galant 1 heure : " , details:"En journée : 150€ / Après 19h00 : 170€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité"},
-        { duration: "3 rapports + massage", amount: "Rendez-vous galant 1 heure 30 : ", details: "En journée : 240€ / Après 19h00: 250€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
-        { duration: "3 à 4 rapports + massage", amount: "Rendez-vous galant 2h00 :", details: "En journée : 300€ / Après 19h00 : 320€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
-        { duration: "4 rapports + massage", amount: "Rendez-vous galant 3h00 : ", details: "En journée : 400€ / après 19h00: 420€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
-        { duration: " 550€ (avant 19h)", amount: "Après-midi détente et bien-être 4h00 :", details: "Nous profitons d’une après-midi en institut de soin (spa, hammam, massage…), ou autour d’un verre, déjeuner, puis nous rejoignons votre chambre, pour finir en apothéose…" },
-        { duration: "670€ 2h Dîner + 2h charnel", amount: "Soirée délice (de 20h00 à minuit) 4h00 : ", details: "Une soirée sensuelle en tête à tête pour un éveil des sens charnel…" },
-        { duration: "720€ 2h Dîner + 3h charnel", amount: "Soirée torride (de 20h00 à 1h00) 5h00 : ", details: "Le rendez-vous galant que je préfère, autour d’un bon dîner chez moi ou à votre hôtel, suivi d’une soirée endiablée…" },
-        { duration: "800€ dîner + nuit torride + petit déjeuner", amount: "Nuit complète (de 20h00 à 8h00) 12h :", details: "Nous nous rencontrons autour d’un dîner au restaurant à votre hôtel avant de rejoindre votre chambre pour un moment torride. Pas de nuit blanche : sommeil de 5h minimum et merci de prévoir notre ou mon petit déjeuner" },
+        { prestation: "2 rapports + massage", duration: "Rendez-vous galant 1 heure : " ,amount: "150€", details:"En journée : 150€ / Après 19h00 : 170€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité"},
+        { prestation: "3 rapports + massage", duration: "Rendez-vous galant 1 heure 30 : ",amount: "240€", details: "En journée : 240€ / Après 19h00: 250€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
+        { prestation: "3 à 4 rapports + massage", duration: "Rendez-vous galant 2h00 :",amount: "300€", details: "En journée : 300€ / Après 19h00 : 320€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
+        { prestation: "4 rapports + massage", duration: "Rendez-vous galant 3h00 : ",amount: "400€", details: "En journée : 400€ / après 19h00: 420€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
+        { prestation: " 550€ (avant 19h)", duration: "Après-midi détente et bien-être 4h00 :",amount: "550€", details: "Nous profitons d’une après-midi en institut de soin (spa, hammam, massage…), ou autour d’un verre, déjeuner, puis nous rejoignons votre chambre, pour finir en apothéose…" },
+        { prestation: "670€ 2h Dîner + 2h charnel", duration: "Soirée délice (de 20h00 à minuit) 4h00 : ",amount: "720€", details: "Une soirée sensuelle en tête à tête pour un éveil des sens charnel…" },
+        { prestation: "720€ 2h Dîner + 3h charnel", duration: "Soirée torride (de 20h00 à 1h00) 5h00 : ",amount: "", details: "Le rendez-vous galant que je préfère, autour d’un bon dîner chez moi ou à votre hôtel, suivi d’une soirée endiablée…" },
+        { prestation: "800€ dîner + nuit torride + petit déjeuner", duration: "Nuit complète (de 20h00 à 8h00) 12h :",amount: "800€", details: "Nous nous rencontrons autour d’un dîner au restaurant à votre hôtel avant de rejoindre votre chambre pour un moment torride. Pas de nuit blanche : sommeil de 5h minimum et merci de prévoir notre ou mon petit déjeuner" },
       ]
     },
   ]
@@ -81,8 +81,8 @@ const ServiceCards = () => {
                 <li key={idx} className="bg-gray-700/40 rounded-lg p-2 md:p-3 hover:bg-gray-700/60 transition-colors">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-0">
                     <div className="flex">
-                      <span className="text-pink-500 font-bold text-base md:text-lg">{option.amount}</span>
-                      <span className="font-semibold text-base md:text-lg text-white">&nbsp;{option.duration}</span>
+                      <span className="text-pink-500 font-bold text-base md:text-lg">{option.duration}</span>
+                      <span className="font-semibold text-base md:text-lg text-white">&nbsp;{option.prestation}</span>
                     </div>
                     <div className="text-gray-300 md:text-right text-sm md:text-base max-w-xs mt-1 md:mt-0">
                       {option.details}
