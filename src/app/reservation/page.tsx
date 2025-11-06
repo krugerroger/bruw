@@ -314,7 +314,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                     <span className="label-text-alt text-sm">Photo de la recharge(Transcash, PCS, Néosurf)</span>
                   </label>
                   <div className="text-sm">
-                    Pour réverser via virement instantanée, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> pour obtenir les informations nécessaires.
+                    Pour réverser via virement instantanée, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33757835156</span> pour obtenir les informations nécessaires.
                   </div>
                 </div>
 
@@ -341,7 +341,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         </div>
         <div className="divider"></div>
         <div>
-            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> ou par Telegram à        
+            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33757835156</span> ou par Telegram à        
                 <a 
                   href="https://t.me/moreaubrunella" 
                   className="text-[#0088CC] hover:bg-secondary hover:text-secondary-content px-6"
