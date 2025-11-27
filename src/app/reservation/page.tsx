@@ -3,7 +3,6 @@
 import {useEffect, useState } from 'react'
 import Image from 'next/image'
 import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
 import Link from 'next/link'
 
 interface BookingFormProps {
@@ -109,12 +108,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     formDataToSend.append('packageDuration', selectedPackage.duration)
     formDataToSend.append('packagePrice', selectedPackage.price)
 
-    const response = await fetch('/api/upload', {
-      method: 'POST',
-      body: formDataToSend
-    })
-
-    const result = await response.json()
 
      const basin_response = await fetch("https://usebasin.com/f/d067186870dd", {
         method: "POST",
@@ -128,12 +121,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         alert("❌ Erreur lors de l’envoi")
       }
 
-    if (response.ok) {
-      setSubmitted(true)
-    } else {
-      console.error('Erreur:', result.error)
-      // Afficher un message d'erreur à l'utilisateur
-    }
   } catch (err) {
     console.error('Erreur:', err)
    if( err instanceof Error){
