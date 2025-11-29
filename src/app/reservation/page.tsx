@@ -2,8 +2,9 @@
 
 import {useEffect, useState } from 'react'
 import Image from 'next/image'
-import DatePicker from 'react-datepicker'
 import Link from 'next/link'
+import DatePicker from 'react-datepicker'
+import pb from '@/utils/pocketbase/pocketbase'
 
 interface BookingFormProps {
     selectedPackage: {
@@ -31,6 +32,7 @@ interface Offer {
 
 export default function BookingForm() {
   const [offer, setOffer] = useState<Offer | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -84,6 +86,36 @@ export default function BookingForm() {
     }
   }
 
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  try {
+    const data = new FormData();
+    data.append('name', formData.name);
+    data.append('email', formData.email);
+    data.append('appointmentDate', formData.appointmentDate?.toISOString() || '');
+    data.append('additionalMessage', formData.additionalMessage);
+    data.append('packageTitle', selectedPackage.title);
+    data.append('packageDuration', selectedPackage.duration);
+    data.append('packagePrice', selectedPackage.price);
+    
+    if (formData.paymentProof) {
+      data.append('paymentProof', formData.paymentProof);
+    }
+
+    await pb.collection('reservations').create(data);
+    setSubmitted(true);
+
+  } catch (error) {
+    console.error('Erreur:', error);
+    alert('Erreur lors de la réservation');
+  } finally {
+    setIsLoading(false);
+  }
+};
+
+
   const handleDateChange = (date: Date | null) => {
     setFormData(prev => ({
       ...prev,
@@ -91,45 +123,7 @@ export default function BookingForm() {
     }))
   }
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  console.log('Form data:', formData)
-  
-  try {
-    const formDataToSend = new FormData()
-    formDataToSend.append('name', formData.name)
-    formDataToSend.append('email', formData.email)
-    formDataToSend.append('appointmentDate', formData.appointmentDate?.toISOString() || '')
-    if (formData.paymentProof) {
-      formDataToSend.append('paymentProof', formData.paymentProof)
-    }
-    formDataToSend.append('additionalMessage', formData.additionalMessage)
-    formDataToSend.append('packageTitle', selectedPackage.title)
-    formDataToSend.append('packageDuration', selectedPackage.duration)
-    formDataToSend.append('packagePrice', selectedPackage.price)
 
-
-     const basin_response = await fetch("https://usebasin.com/f/d067186870dd", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-        },
-        body: formDataToSend
-      })
-
-      if (!basin_response.ok) {
-        alert("❌ Erreur lors de l’envoi")
-      }
-
-  } catch (err) {
-    console.error('Erreur:', err)
-   if( err instanceof Error){
-   console.log('Message d’erreur:', err.message)
-  }  
-    // Afficher un message d'erreur à l'utilisateur
-  
-}
-}
 const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
   const selectedIndex = Number(e.target.value)
   if (offer) {
@@ -168,7 +162,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
             <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-2">Réserver un rendez-vous</h2>
             <div className="w-20 h-1 bg-pink-500 mb-8"></div>
 
-            {submitted ? (
+            {submitted  ? (
               <div className="alert alert-success shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -176,12 +170,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                 <span>Votre demande a bien été envoyée. Je vous confirmerai le rendez-vous sous 24h.</span>
               </div>
             ) : (
-              <form
-                encType="multipart/form-data"
-                method="POST"
-                action="https://usebasin.com/f/d067186870dd"
-                onSubmit={handleSubmit}
-                className="space-y-1 card bg-base-200 shadow-sm">
+              <form onSubmit={handleSubmit} className="space-y-1 card bg-base-200 shadow-sm">
                 {/* Forfait sélectionné */}
                {offer && (
                  <div className="border p-3">
@@ -294,7 +283,6 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                     name="paymentProof"
                     onChange={handleChange}
                     className="file-input file-input-bordered bg-gray-500/40"
-                    accept="image/*,.pdf"
                     required
                   />
                   <label className="label">
@@ -319,8 +307,12 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary bg-pink-600 hover:bg-pink-700 border-none w-full">
-                  Confirmer la réservation
+                <button 
+                  type="submit" 
+                  disabled={isLoading}
+                  className="btn btn-primary bg-pink-600 hover:bg-pink-700 border-none w-full"
+                >
+                  {isLoading ? 'Envoi en cours...' : 'Confirmer la réservation'}
                 </button>
               </form>
             )}
