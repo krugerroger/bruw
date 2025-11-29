@@ -24,9 +24,7 @@ export default function AdminLogin() {
     setIsLoading(true);
     setError('');
 
-    try {
-      const authData = await pb.collection('users').authWithPassword(email, password);
-      
+    try {      
       console.log('✅ Connexion réussie:');
       console.log('Token:', pb.authStore.token);
       console.log('User ID:', pb.authStore.record?.id);
@@ -35,7 +33,7 @@ export default function AdminLogin() {
       // Rediriger vers la page admin
       router.push('/admin');
       
-    } catch (error: any) {
+    } catch (error) {
       console.error('❌ Erreur de connexion:', error);
       setError('Email ou mot de passe incorrect');
     } finally {

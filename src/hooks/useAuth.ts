@@ -27,11 +27,11 @@ export function useAuth() {
         user: authData.record,
         token: authData.token
       };
-    } catch (error: any) {
+    } catch (error) {
       console.error('Erreur de connexion:', error);
       return { 
         success: false, 
-        error: error?.message || 'Erreur de connexion' 
+        error: error instanceof Error && error?.message || 'Erreur de connexion' 
       };
     }
   };

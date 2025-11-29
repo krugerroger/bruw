@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, ComponentType, FC } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 
-export function withAuth(Component: React.ComponentType) {
-  return function AuthenticatedComponent(props: any) {
+export function withAuth<P extends object>(Component: ComponentType<P>): FC<P> {
+  const AuthenticatedComponent: FC<P> = (props) => {
     const { isAuthenticated, loading } = useAuth();
     const router = useRouter();
 
@@ -30,4 +30,6 @@ export function withAuth(Component: React.ComponentType) {
 
     return <Component {...props} />;
   };
+
+  return AuthenticatedComponent;
 }

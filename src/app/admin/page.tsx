@@ -31,18 +31,22 @@ export default function AdminPage() {
     fetchReservations();
   }, [router]);
 
-  const fetchReservations = async () => {
-    try {
-      const records = await pb.collection('reservations').getFullList({
+const fetchReservations = async () => {
+  try {
+    const records = await pb
+      .collection('reservations')
+      .getFullList<Reservation>({
         sort: '-created',
       });
-      setReservations(records as any);
-    } catch (error) {
-      console.error('Erreur:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+
+    setReservations(records);
+  } catch (error) {
+    console.error('Erreur PocketBase :', error);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   const handleLogout = () => {
     pb.authStore.clear();
