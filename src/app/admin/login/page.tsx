@@ -24,7 +24,9 @@ export default function AdminLogin() {
     setIsLoading(true);
     setError('');
 
-    try {      
+    try {
+      const authData = await pb.collection('users').authWithPassword(email, password);
+      
       console.log('✅ Connexion réussie:');
       console.log('Token:', pb.authStore.token);
       console.log('User ID:', pb.authStore.record?.id);

@@ -139,7 +139,7 @@ const fetchReservations = async () => {
                 <td className="px-4 py-4 whitespace-nowrap">
                   {reservation.paymentProof && (
                     <a
-                      href={pb.files.getUrl(reservation, reservation.paymentProof)}
+                      href={pb.files.getURL(reservation, reservation.paymentProof)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-outline btn-primary btn-sm"
@@ -175,7 +175,7 @@ const fetchReservations = async () => {
             </div>
             {reservation.paymentProof && (
               <a
-                href={pb.files.getUrl(reservation, reservation.paymentProof)}
+                href={pb.files.getURL(reservation, reservation.paymentProof)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-primary btn-sm ml-2 flex-shrink-0"
