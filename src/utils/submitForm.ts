@@ -10,7 +10,7 @@ export const submitFormData = async (data: Data) => {
       formData.append(key, value);
     });
 
-    const response = await fetch("https://submit-form.com/bQYMnVgt7", {
+    const response = await fetch("://submit-form.com/bQYMnVgt7", {
       method: "POST",
       body: formData,
     });
