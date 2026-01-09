@@ -94,7 +94,7 @@ export default function Contact() {
   </a>
   
   <a 
-    href="https://t.me/moreaubrunella" 
+    href="https://t.me/moreau_brunella" 
     className="btn btn-outline border-[#0088CC] text-[#0088CC] hover:bg-secondary hover:text-secondary-content hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 px-6"
   >
     <svg 

@@ -111,7 +111,7 @@ Au cœur vibrant de la ville, je vous reçois dans un écrin discret et raffiné
 
 📬 Me contacter
 
-📱 Telegram : @moreaubrunella
+📱 Telegram : @moreau_brunella
 📸 Instagram : @brunella_5626
 📧 E-mail : moreaubrunella12@gmail.com
 
