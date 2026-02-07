@@ -15,55 +15,55 @@ export default function AdminLogin() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const router = useRouter();
 
-  // Vérifier la session au chargement
-  useEffect(() => {
-    checkSession();
-  }, []);
+  // // Vérifier la session au chargement
+  // useEffect(() => {
+  //   checkSession();
+  // }, []);
 
-  const checkSession = async () => {
-    try {
-      const { data: { session }, error } = await supabaseClient.auth.getSession();
+  // const checkSession = async () => {
+  //   try {
+  //     const { data: { session }, error } = await supabaseClient.auth.getSession();
       
-      if (error) {
-        console.error('❌ Erreur lors de la vérification de session:', error);
-        setDebugInfo({
-          isValid: false,
-          message: error.message,
-        });
-        return;
-      }
+  //     if (error) {
+  //       console.error('❌ Erreur lors de la vérification de session:', error);
+  //       setDebugInfo({
+  //         isValid: false,
+  //         message: error.message,
+  //       });
+  //       return;
+  //     }
 
-      if (session) {
-        console.log('✅ Session existante détectée');
-        console.log('User ID:', session.user.id);
-        console.log('Email:', session.user.email);
+  //     if (session) {
+  //       console.log('✅ Session existante détectée');
+  //       console.log('User ID:', session.user.id);
+  //       console.log('Email:', session.user.email);
         
-        setIsAuthenticated(true);
-        setDebugInfo({
-          isValid: true,
-          userId: session.user.id,
-          userEmail: session.user.email,
-          expiresAt: session.expires_at ? new Date(session.expires_at * 1000).toLocaleString() : 'Non disponible',
-          provider: session.user.app_metadata?.provider || 'email',
-        });
+  //       setIsAuthenticated(true);
+  //       setDebugInfo({
+  //         isValid: true,
+  //         userId: session.user.id,
+  //         userEmail: session.user.email,
+  //         expiresAt: session.expires_at ? new Date(session.expires_at * 1000).toLocaleString() : 'Non disponible',
+  //         provider: session.user.app_metadata?.provider || 'email',
+  //       });
 
-        // Rediriger vers l'admin si déjà connecté
-        router.push('/admin');
-      } else {
-        setIsAuthenticated(false);
-        setDebugInfo({
-          isValid: false,
-          message: 'Aucune session active',
-        });
-      }
-    } catch (error) {
-      console.error('Erreur lors de la vérification de session:', error);
-      setDebugInfo({
-        isValid: false,
-        message: 'Erreur lors de la vérification',
-      });
-    }
-  };
+  //       // Rediriger vers l'admin si déjà connecté
+  //       router.push('/admin');
+  //     } else {
+  //       setIsAuthenticated(false);
+  //       setDebugInfo({
+  //         isValid: false,
+  //         message: 'Aucune session active',
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error('Erreur lors de la vérification de session:', error);
+  //     setDebugInfo({
+  //       isValid: false,
+  //       message: 'Erreur lors de la vérification',
+  //     });
+  //   }
+  // };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -302,12 +302,12 @@ export default function AdminLogin() {
               )}
             </div>
             <div className="mt-3 flex gap-2">
-              <button
+              {/* <button
                 onClick={checkSession}
                 className="text-xs px-3 py-1 bg-slate-200 hover:bg-slate-300 rounded text-slate-700"
               >
                 Rafraîchir session
-              </button>
+              </button> */}
               <button
                 onClick={handleSignOut}
                 className="text-xs px-3 py-1 bg-red-100 hover:bg-red-200 rounded text-red-700"
