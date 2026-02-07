@@ -40,7 +40,7 @@ export default function Header() {
       <div className="navbar-end">
         {/* Bouton Disponibilités (Desktop) */}
         <Link
-          href="tarifs"
+          href="reservation"
           className="btn btn-primary hidden lg:inline-flex bg-pink-500 border-pink-500 hover:bg-pink-600 text-white"
         >
           Réserver

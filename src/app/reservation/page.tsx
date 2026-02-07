@@ -30,9 +30,24 @@ interface Offer {
   title: string
   price: PriceOption[]
 }
+const Offers: Offer = {
+    title: "Rendez-vous galant",
+    price: [
+        {duration: "Rendez-vous galant 30 minutes : " ,amount: "50€"},
+        {duration: "Rendez-vous galant 1 heure : " ,amount: "150€",},
+        { duration: "Rendez-vous galant 1 heure 30 : ",amount: "240€"},
+        {duration: "Rendez-vous galant 2h00 :",amount: "300€"},
+        {duration: "Rendez-vous galant 3h00 : ",amount: "400€"},
+        {duration: "Après-midi détente et bien-être 4h00 :",amount: "550€"},
+        {duration: "Soirée délice (de 20h00 à minuit) 4h00 : ",amount: "720€"},
+        { duration: "Soirée torride (de 20h00 à 1h00) 5h00 : ",amount: "720€"},
+        {duration: "Nuit complète (de 20h00 à 8h00) 12h :",amount: "800€"},
+
+    ]  
+  }
 
 export default function BookingForm() {
-  const [offer, setOffer] = useState<Offer | null>(null);
+  const [offer, setOffer] = useState<Offer | null>(Offers);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
