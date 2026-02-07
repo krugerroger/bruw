@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import DatePicker from 'react-datepicker'
 import pb from '@/utils/pocketbase/pocketbase'
+import { ArrowBigDown, Calendar } from 'lucide-react';
 
 interface BookingFormProps {
     selectedPackage: {
@@ -87,33 +88,70 @@ export default function BookingForm() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsLoading(true);
-
+  e.preventDefault()
+  console.log('Form data:', formData)
+  
   try {
-    const data = new FormData();
-    data.append('name', formData.name);
-    data.append('email', formData.email);
-    data.append('appointmentDate', formData.appointmentDate?.toISOString() || '');
-    data.append('additionalMessage', formData.additionalMessage);
-    data.append('packageTitle', selectedPackage.title);
-    data.append('packageDuration', selectedPackage.duration);
-    data.append('packagePrice', selectedPackage.price);
-    
+    const formDataToSend = new FormData()
+    formDataToSend.append('name', formData.name)
+    formDataToSend.append('email', formData.email)
+    formDataToSend.append('appointmentDate', formData.appointmentDate?.toISOString() || '')
     if (formData.paymentProof) {
-      data.append('paymentProof', formData.paymentProof);
+      formDataToSend.append('paymentProof', formData.paymentProof)
     }
+    formDataToSend.append('additionalMessage', formData.additionalMessage)
+    formDataToSend.append('packageTitle', selectedPackage.title)
+    formDataToSend.append('packageDuration', selectedPackage.duration)
+    formDataToSend.append('packagePrice', selectedPackage.price)
 
-    await pb.collection('reservations').create(data);
-    setSubmitted(true);
+    const response = await fetch('/api/upload', {
+      method: 'POST',
+      body: formDataToSend
+    })
 
-  } catch (error) {
-    console.error('Erreur:', error);
-    alert('Erreur lors de la réservation');
-  } finally {
-    setIsLoading(false);
+    const result = await response.json()
+
+    if (response.ok) {
+      setSubmitted(true)
+    } else {
+      console.error('Erreur:', result.error)
+      // Afficher un message d'erreur à l'utilisateur
+    }
+  } catch (err) {
+    console.error('Erreur:', err)
+    err instanceof Error && console.error('Message d’erreur:', err.message)
+    // Afficher un message d'erreur à l'utilisateur
   }
-};
+}
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setIsLoading(true);
+
+//   try {
+//     const data = new FormData();
+//     data.append('name', formData.name);
+//     data.append('email', formData.email);
+//     data.append('appointmentDate', formData.appointmentDate?.toISOString() || '');
+//     data.append('additionalMessage', formData.additionalMessage);
+//     data.append('packageTitle', selectedPackage.title);
+//     data.append('packageDuration', selectedPackage.duration);
+//     data.append('packagePrice', selectedPackage.price);
+    
+//     if (formData.paymentProof) {
+//       data.append('paymentProof', formData.paymentProof);
+//     }
+
+//     await pb.collection('reservations').create(data);
+//     setSubmitted(true);
+
+//   } catch (error) {
+//     console.error('Erreur:', error);
+//     alert('Erreur lors de la réservation');
+//   } finally {
+//     setIsLoading(false);
+//   }
+// };
 
 
   const handleDateChange = (date: Date | null) => {
@@ -252,26 +290,49 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                 </div>
 
                 {/* Date et heure */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="form-control">
-                    <label className="label w-full">
-                      <span className="label-text">Date souhaitée</span>
-                    </label>
-                    <DatePicker
-                      selected={formData.appointmentDate}
-                      onChange={handleDateChange}
-                      minDate={new Date()}
-                      dateFormat="dd/MM/yyyy"
-                      isClearable
-                      showTimeSelect
-                      showMonthDropdown
-                      className="input input-bordered bg-gray-500/40 min-w-[320px]"
-                      calendarClassName="border border-pink-600 rounded-lg"
-                      placeholderText="Sélectionnez une date"
-                      required
-                    />
-                  </div>
-                </div>
+<div className="grid md:grid-cols-2 gap-6">
+  <div className="form-control">
+    <label className="label w-full">
+      <span className="label-text flex items-center gap-2">
+        <Calendar className="h-4 w-4 text-violet-600" />
+        Date & heure souhaitée *
+      </span>
+    </label>
+    
+    <div className="relative">
+      <input
+        type="datetime-local"
+        name="appointmentDate"
+        value={formData.appointmentDate ? 
+          formData.appointmentDate.toISOString().slice(0, 16) : 
+          ''
+        }
+        onChange={(e) => {
+          if (e.target.value) {
+            const selectedDate = new Date(e.target.value);
+            // S'assurer que la date n'est pas dans le passé
+            if (selectedDate >= new Date()) {
+              handleDateChange(selectedDate);
+            } else {
+              alert("Veuillez sélectionner une date future");
+              e.target.value = "";
+              handleDateChange(null);
+            }
+          } else {
+            handleDateChange(null);
+          }
+        }}
+        min={new Date().toISOString().slice(0, 16)}
+        className="input input-bordered bg-gray-500/40"
+        required
+      />
+    </div>
+    
+    <p className="mt-2 text-xs text-slate-500">
+      Sélectionnez une date et heure futures. Heures disponibles : 9h-20h
+    </p>
+  </div>
+</div>
 
                 {/* Preuve de paiement */}
                 <div className="form-control">
@@ -285,7 +346,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                     className="file-input file-input-bordered bg-gray-500/40"
                     required
                   />
-                  <label className="label">
+                  <label className="label block">
                     <span className="label-text-alt text-sm">Photo de la recharge(Transcash, PCS, Néosurf)</span>
                   </label>
                   <div className="text-sm">
@@ -319,6 +380,37 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
           </div>
         </div>
         <div className="divider"></div>
+        <div>
+          Vous avez la possibilité d’effectuer le règlement de votre recharge Transcash en ligne via deux plateformes de paiement dédiées. Il vous conviendra, dans un premier temps, de sélectionner le montant correspondant au tarif souhaité, puis de procéder à l’achat de la recharge associée. Lors de la complétion du formulaire de réservation, la photographie de la recharge Transcash devra être intégrée dans l’espace prévu à cet effet afin de permettre la validation définitive de la réservation.
+        </div>
+        <div className="space-y-6 p-4 bg-gray-700/50 my-5 rounded-lg shadow-md">
+            <h2>Deux plateformes d'achat de recharge <ArrowBigDown size={52} color="#ee1794" /></h2>
+            
+        {/* Premier iframe */}
+        <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
+          <iframe
+            src="https://cdn.iframe.ly/api/iframe?app=1&url=https%3A%2F%2Fwww.transcash-recharge.com&key=f465d843feece6bc76328fed1045d15e"
+            className="absolute top-0 left-0 w-full h-full border-0"
+            title="Transcash Recharge"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+
+        {/* Deuxième iframe */}
+        <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
+          <iframe
+            src="https://cdn.iframe.ly/api/iframe?app=1&url=https%3A%2F%2Fcartedirecte.fr&key=f465d843feece6bc76328fed1045d15e"
+            className="absolute top-0 left-0 w-full h-full border-0"
+            title="Carte Directe"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+
+      {/* Script - ajouté une seule fois */}
+      <script async src="https://cdn.iframe.ly/embed.js"></script>
+    </div>
         <div>
             <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> ou par Telegram à        
                 <a 

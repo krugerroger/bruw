@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Brunella Moreau" }],
   creator: "Brunella Moreau",
   publisher: "Brunella Moreau",
-  metadataBase: new URL("https://votresite.com"),
+  metadataBase: new URL("https://www.brunellaindependante.com/"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Brunella Moreau | Compagne d'exception à Ville",
     description: "Expérience raffinée et discrète en compagnie d'une femme élégante",
-    url: "https://votresite.com",
+    url: "https://www.brunellaindependante.com/",
     siteName: "Brunella Moreau",
     images: [
       {

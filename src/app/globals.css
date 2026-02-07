@@ -142,3 +142,18 @@ body {
     font-family: var(--font-serif);
   }
 }
+
+.preview-box {
+    display: none; /* Hide the preview box by default */
+    position: absolute; /* Position it relative to the link */
+    z-index: 10; /* Ensure it appears above other content */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.preview-link:hover .preview-box {
+    display: block; /* Show the box on hover */
+}

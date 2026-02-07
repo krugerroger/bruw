@@ -1,12 +1,12 @@
 // app/api/submit-booking/route.ts
 
-import { supabaseServer } from "@/utils/supabaseServer"
+import { supabaseClient } from "@/utils/supabaseClient"
 import { NextResponse } from "next/server"
 
 export const dynamic = 'force-dynamic' // Important pour les uploads de fichiers
 
 export async function POST(request: Request) {
-  const supabase = supabaseServer
+  const supabase = supabaseClient
 
   try {
     const formData = await request.formData()
@@ -81,12 +81,12 @@ export async function POST(request: Request) {
       .insert({
         name: name,
         email: email,
-        meetDate: appointmentDate,
-        ticketProof: publicUrl,
+        meetdate: appointmentDate,
+        ticketproof: publicUrl,
         message: additionalMessage,
-        optionName: packageTitle,
-        optionDuration: packageDuration,
-        optionPrice: packagePrice,
+        optionname: packageTitle,
+        optionduration: packageDuration,
+        optionprice: packagePrice,
         status: 'pending'
       })
       .select()
