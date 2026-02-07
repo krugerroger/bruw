@@ -8,6 +8,6 @@ export const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: true
+    detectSessionInUrl: false // Important pour éviter les boucles
   }
 })
