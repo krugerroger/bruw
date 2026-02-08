@@ -71,7 +71,7 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <Link href="/tarifs" className="text-pink-500 font-semibold">
+              <Link href="/reservation" className="text-pink-500 font-semibold">
                 Réserver
               </Link>
             </li>
