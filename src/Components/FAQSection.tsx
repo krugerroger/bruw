@@ -70,7 +70,7 @@ const FAQSection = () => {
             ))}
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-10 text-center">
             <p className="font-sans text-base-500 mb-4">
                 Vous ne trouvez pas la réponse à votre question ?
             </p>
