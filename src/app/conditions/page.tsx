@@ -41,7 +41,7 @@ export default function conditions(){
       Mode de Paiement
     </h1>
     <p className="text-lg text-gray-300 leading-relaxed">
-      Pour garantir la sécurité et le sérieux de nos engagements, un pré-paiement sécurisé et discret peut vous être demandé via <span className="font-semibold text-pink-500">Transcash, Neosurf, PayPal ou PCS</span>. Voici pourquoi cette méthode est bénéfique pour nous deux :
+      Pour garantir la sécurité et le sérieux de nos engagements, un pré-paiement sécurisé et discret peut vous être demandé via <span className="font-semibold text-pink-500">Transcash, PayPal</span>. Voici pourquoi cette méthode est bénéfique pour nous deux :
     </p>
   </div>
 
@@ -90,7 +90,7 @@ export default function conditions(){
             Discrétion et Anonymat
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            Les paiements via <span className="font-semibold">Transcash, Neosurf, PayPal, PCS</span> respectent votre anonymat et sont des méthodes discrètes, idéales pour préserver votre vie privée.
+            Les paiements via <span className="font-semibold">Transcash, PayPal</span> respectent votre anonymat et sont des méthodes discrètes, idéales pour préserver votre vie privée.
           </p>
         </div>
       </div>
@@ -122,7 +122,7 @@ export default function conditions(){
             Simplicité et Accessibilité
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            L’achat de codes <span className="font-semibold">PCS, Transcash ou Neosurf</span> en bureau de tabac est simple et rapide, évitant les complications des virements bancaires ou des paiements en ligne.
+            L’achat de codes <span className="font-semibold">Transcash</span> en bureau de tabac est simple et rapide, évitant les complications des virements bancaires ou des paiements en ligne.
           </p>
         </div>
       </div>
@@ -190,9 +190,7 @@ export default function conditions(){
     <p className="text-gray-400 text-sm mb-3">Méthodes de paiement acceptées :</p>
     <div className="flex justify-center items-center gap-4 flex-wrap">
       <span className="bg-gray-700/50 px-4 py-2 rounded-lg text-pink-400 font-semibold">Transcash</span>
-      <span className="bg-gray-700/50 px-4 py-2 rounded-lg text-pink-400 font-semibold">Neosurf</span>
       <span className="bg-gray-700/50 px-4 py-2 rounded-lg text-pink-400 font-semibold">PayPal</span>
-      <span className="bg-gray-700/50 px-4 py-2 rounded-lg text-pink-400 font-semibold">PCS</span>
     </div>
   </div>
 

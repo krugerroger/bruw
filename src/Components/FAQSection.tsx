@@ -12,7 +12,7 @@ const FAQSection = () => {
     },
     {
       question: "Quels sont vos modes de paiement ?",
-      answer: "Nous acceptons les cartes Mastercard, PayPal, recharge TRANSCASH, PCS, Néosurf ainsi que les virements bancaires. Tous les paiements sont sécurisés."
+      answer: "Nous acceptons les cartes Mastercard, PayPal, recharge TRANSCASH ainsi que les virements bancaires. Tous les paiements sont sécurisés."
     },
     {
       question: "Puis-je annuler ma réservation ?",

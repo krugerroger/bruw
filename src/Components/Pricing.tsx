@@ -142,7 +142,7 @@ export default function Pricing() {
       </li>
       <li className="flex items-start">
         <span className="text-pink-500 mr-2">•</span>
-        <span>Coupon : Transcash, ou PCS MasterCard</span>
+        <span>Coupon : Transcash</span>
       </li>
       <li className="flex items-start">
         <span className="text-pink-500 mr-2">•</span>

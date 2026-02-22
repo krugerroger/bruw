@@ -362,10 +362,10 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                     required
                   />
                   <label className="label block">
-                    <span className="label-text-alt text-sm">Photo de la recharge(Transcash, PCS, Néosurf)</span>
+                    <span className="label-text-alt text-sm">Photo de la recharge(Transcash)</span>
                   </label>
                   <div className="text-sm">
-                    Pour réverser via virement instantanée, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> pour obtenir les informations nécessaires.
+                    Pour réverser via virement instantanée, merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33780967872</span> pour obtenir les informations nécessaires.
                   </div>
                 </div>
 
@@ -427,7 +427,7 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       <script async src="https://cdn.iframe.ly/embed.js"></script>
     </div>
         <div>
-            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33756985757</span> ou par Telegram à        
+            <p>Merci de me contacter par WhatsApp au <span className='font-semibold text-[#25D366]'>+33780967872</span> ou par Telegram à        
                 <a 
                   href="https://t.me/moreau_brunella" 
                   className="text-[#0088CC] hover:bg-secondary hover:text-secondary-content px-6"
