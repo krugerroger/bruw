@@ -11,7 +11,7 @@ const FAQSection = () => {
       answer: "Contactez moi via l'un de mes réseaux professionnels(Telegram ou Whatsapp) dans la section «Contact». C’est simple et rapide !"
     },
     {
-      question: "Quels sont vos modes de paiement ?",
+      question: "Quels sont vos modes de paiement ? ",
       answer: "Nous acceptons les cartes Mastercard, PayPal, recharge TRANSCASH ainsi que les virements bancaires. Tous les paiements sont sécurisés."
     },
     {
