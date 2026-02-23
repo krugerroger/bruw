@@ -25,7 +25,12 @@ export const metadata: Metadata = {
     "escort de luxe",
     "ville",
     "soirée entre adultes",
-    "rencontre discrète"
+    "rencontre discrète",
+    "expérience raffinée",
+    "femme élégante",
+    "compagne d'exception",
+    "services personnalisés",
+    "moment privilégié"
   ].join(", "),
   authors: [{ name: "Brunella Moreau" }],
   creator: "Brunella Moreau",

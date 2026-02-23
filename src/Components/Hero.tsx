@@ -38,7 +38,7 @@ const itemVariants: Variants = {
       <div className="absolute inset-0 z-0">
         <Image
           src="/bru_hero.jpg" // Remplacez par votre chemin d'image
-          alt="BRUNELLA - Escort Premium"
+          alt="BRUNELLA - Escort Premium en France"
           fill
           className="object-cover object-center"
           loading='lazy'
