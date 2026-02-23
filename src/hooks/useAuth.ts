@@ -31,7 +31,7 @@ export function useAuth() {
       console.error('Erreur de connexion:', error);
       return { 
         success: false, 
-        error: error instanceof Error && error?.message || 'Erreur de connexion' 
+        error: error instanceof Error && error?.message || 'Erreur de connexion; veuillez réessayer.' 
       };
     }
   };
