@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Brunella Indépendante | Élégante Compagne à [Ta Ville]",
+  title: "Brunella Indépendante | Rencontre intime",
   description: "Faites la connaissance de Brunella, une compagne indépendante alliant élégance naturelle et expertise du bien-être. Je vous propose des instants d'exception et des massages professionnels, pensés pour une clientèle exigeante en quête de distinction.",
   keywords: [
     "Escort indépendante Paris",
