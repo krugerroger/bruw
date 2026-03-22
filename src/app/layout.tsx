@@ -18,59 +18,60 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Brunella Moreau | Élégante compagne à Ville",
-  description: "Compagne raffinée pour moments privilégiés à Ville. Discrétion absolue et expérience inoubliable.",
+  title: "Brunella Indépendante | Élégante Compagne à [Ta Ville]",
+  description: "Faites la connaissance de Brunella, une compagne indépendante alliant élégance naturelle et expertise du bien-être. Je vous propose des instants d'exception et des massages professionnels, pensés pour une clientèle exigeante en quête de distinction.",
   keywords: [
-    "compagnie féminine",
-    "escort de luxe",
-    "ville",
-    "soirée entre adultes",
+    "Escort indépendante Paris",
+    "escort de luxe", // À garder si tu assumes le terme pour le SEO
+    "Massage sensuel Paris",
+    "Rencontre intime",
+    "Services escort",
     "rencontre discrète",
-    "expérience raffinée",
-    "femme élégante",
-    "compagne d'exception",
-    "services personnalisés",
-    "moment privilégié"
+    "Escort indépendante",
+    "Escort sensuel",
+    "Brunella Moreau",
+    "Brunella Indépendante",
   ].join(", "),
+  
   authors: [{ name: "Brunella Moreau" }],
   creator: "Brunella Moreau",
-  publisher: "Brunella Moreau",
   metadataBase: new URL("https://www.brunellaindependante.com/"),
+  
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
-    title: "Brunella Moreau | Compagne d'exception à Ville",
-    description: "Expérience raffinée et discrète en compagnie d'une femme élégante",
+    title: "Brunella Indépendante | Rencontre intime",
+    description: "L'élégance et la discrétion d'une compagne d'exception pour vos moments privilégiés.",
     url: "https://www.brunellaindependante.com/",
-    siteName: "Brunella Moreau",
+    siteName: "Brunella Indépendante",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/bru_hero.jpg",
         width: 1200,
         height: 630,
-        alt: "Brunella Moreau - Compagne raffinée",
+        alt: "Brunella Indépendante - Compagne raffinée",
       },
     ],
     locale: "fr_FR",
     type: "website",
   },
+
+  // --- CORRECTION ROBOTS ---
   robots: {
-    index: false,
+    index: true, // Autorise l'apparition sur Google
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
+      index: true,
+      follow: true,
+      noimageindex: false,
     },
   },
-  other: {
-    "dc.title": "Brunella Moreau - Moments privilégiés",
-    "dc.language": "fr",
-  },
-  icons :{
-    icon : "web_logo.ico"
+
+  icons: {
+    icon: "/web_logo.ico", // Ajout du slash initial pour la sécurité du chemin
   }
 };
 

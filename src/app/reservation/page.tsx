@@ -135,7 +135,6 @@ export default function BookingForm() {
   } catch (err) {
     console.error('Erreur:', err)
     err instanceof Error && console.error('Message d’erreur:', err.message)
-    // Afficher un message d'erreur à l'utilisateur
   }
 }
 
@@ -192,11 +191,10 @@ const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
  <section id="reservation" className="py-20 bg-base-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          {/* Photo discrète */}
           <div className="hidden lg:block lg:w-1/3 sticky top-20">
             <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/bru_hero.jpg" // Remplacez par votre photo
+                src="/bru_hero.jpg"
                 alt="Brunella Moreau - Moments privilégiés"
                 sizes='(min-width: 640px) 32rem, 90vw'
                 fill

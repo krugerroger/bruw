@@ -1,3 +1,4 @@
+//admin/data/privateData-reservation/page.tsx
 'use client'
 
 import { useState, useEffect } from 'react';
@@ -41,41 +42,41 @@ export default function AdminPage() {
   const router = useRouter();
 
   // Vérifier l'authentification et récupérer l'utilisateur
-  // useEffect(() => {
-  //   checkAuthAndFetchData();
-  // }, []);
+  useEffect(() => {
+    checkAuthAndFetchData();
+  }, []);
 
-  // const checkAuthAndFetchData = async () => {
-  //   try {
-  //     // Vérifier la session
-  //     const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
+  const checkAuthAndFetchData = async () => {
+    try {
+      // Vérifier la session
+      const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
       
-  //     if (sessionError) {
-  //       console.error('❌ Erreur de session:', sessionError);
-  //       setAuthError('Erreur de session');
-  //       router.push('/admin/login');
-  //       return;
-  //     }
+      if (sessionError) {
+        console.error('❌ Erreur de session:', sessionError);
+        setAuthError('Erreur de session');
+        router.push('/admin/adminLogin');
+        return;
+      }
 
-  //     if (!session) {
-  //       console.log('ℹ️ Aucune session - redirection vers login');
-  //       router.push('/admin/login');
-  //       return;
-  //     }
+      if (!session) {
+        console.log('ℹ️ Aucune session - redirection vers login');
+        router.push('/admin/adminLogin');
+        return;
+      }
 
-  //     // Récupérer l'email de l'utilisateur
-  //     setUserEmail(session.user.email || '');
-  //     console.log('✅ Utilisateur connecté:', session.user.email);
+      // Récupérer l'email de l'utilisateur
+      setUserEmail(session.user.email || '');
+      console.log('✅ Utilisateur connecté:', session.user.email);
 
-  //     // Récupérer les réservations
-  //     await fetchReservations();
+      // Récupérer les réservations
+      await fetchReservations();
 
-  //   } catch (error) {
-  //     console.error('❌ Erreur de vérification:', error);
-  //     setAuthError('Erreur de vérification');
-  //     router.push('/admin/login');
-  //   }
-  // };
+    } catch (error) {
+      console.error('❌ Erreur de vérification:', error);
+      setAuthError('Erreur de vérification');
+      router.push('/admin/adminLogin');
+    }
+  };
 
   const fetchReservations = async () => {
     try {
@@ -110,7 +111,7 @@ export default function AdminPage() {
       if (error) throw error;
       
       console.log('✅ Déconnexion réussie');
-      router.push('/adminLogin');
+      router.push('/admin/adminLogin');
     } catch (error) {
       console.error('❌ Erreur de déconnexion:', error);
       alert('Erreur lors de la déconnexion');
@@ -187,7 +188,7 @@ export default function AdminPage() {
             </div>
           </div>
           
-          {/* <div className="flex flex-wrap gap-2 w-full md:w-auto">
+          <div className="flex flex-wrap gap-2 w-full md:w-auto">
             <button 
               onClick={fetchReservations} 
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-medium rounded-lg hover:from-violet-600 hover:to-fuchsia-600 transition-all shadow hover:shadow-lg"
@@ -203,7 +204,7 @@ export default function AdminPage() {
               <LogOut className="w-4 h-4" />
               Déconnexion
             </button>
-          </div> */}
+          </div>
         </div>
 
         {/* Statistiques */}
