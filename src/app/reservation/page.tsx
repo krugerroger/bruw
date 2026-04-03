@@ -10,6 +10,7 @@ interface BookingFormProps {
     title: string
     duration: string
     price: string
+    description?: string
   }
   formData: {
     name: string
@@ -23,6 +24,7 @@ interface BookingFormProps {
 interface PriceOption {
   duration: string
   amount: string
+  description?: string
 }
 
 interface Offer {
@@ -33,15 +35,15 @@ interface Offer {
 const Offers: Offer = {
   title: 'Rendez-vous galant',
   price: [
-    { duration: 'Rendez-vous galant 30 minutes', amount: '50€' },
-    { duration: 'Rendez-vous galant 1 heure', amount: '150€' },
-    { duration: 'Rendez-vous galant 1 heure 30', amount: '240€' },
-    { duration: 'Rendez-vous galant 2h00', amount: '300€' },
-    { duration: 'Rendez-vous galant 3h00', amount: '400€' },
-    { duration: 'Après-midi détente et bien-être 4h00', amount: '550€' },
-    { duration: 'Soirée délice (de 20h00 à minuit) 4h00', amount: '720€' },
-    { duration: 'Soirée torride (de 20h00 à 1h00) 5h00', amount: '720€' },
-    { duration: 'Nuit complète (de 20h00 à 8h00) 12h', amount: '800€' },
+    { duration: '30 minutes', amount: '50€ (jour) / 70€ (nuit)', description: '1 rapport + massage' },
+    { duration: '1 heure', amount: '150€ (jour) / 170€ (soir)', description: '2 rapports + massage' },
+    { duration: '1 heure 30', amount: '240€ (jour) / 260€ (soir)', description: '3 rapports + massage' },
+    { duration: '2 heures', amount: '300€ (jour) / 320€ (soir)', description: '3 à 4 rapports + massage' },
+    { duration: '3 heures', amount: '400€ (jour) / 420€ (soir)', description: '4 rapports + massage' },
+    { duration: 'Après-midi détente (4h, avant 19h)', amount: '550€', description: 'Spa, hammam, massage, verre/déjeuner + moment intime' },
+    { duration: 'Soirée Délice (20h–00h, 4h)', amount: '670€', description: '2h dîner + 2h plaisir' },
+    { duration: 'Soirée Torride (20h–01h, 5h)', amount: '720€', description: '2h dîner + 3h plaisir' },
+    { duration: 'Nuit Complète (20h–08h, 12h)', amount: '800€', description: 'Dîner, nuit sensuelle (5h de sommeil min.), petit déjeuner à prévoir' },
   ],
 }
 
@@ -63,6 +65,7 @@ export default function BookingForm() {
     title: Offers.title,
     duration: Offers.price[0].duration,
     price: Offers.price[0].amount,
+    description: Offers.price[0].description,
   })
 
   const [formData, setFormData] = useState<BookingFormProps['formData']>({
@@ -136,6 +139,7 @@ export default function BookingForm() {
         title: offer.title,
         duration: offer.price[selectedIndex].duration,
         price: offer.price[selectedIndex].amount,
+        description: offer.price[selectedIndex].description,
       })
     }
   }
@@ -222,6 +226,9 @@ export default function BookingForm() {
                 <p className="text-pink-400 font-semibold uppercase tracking-wider text-xs mb-3">Votre sélection</p>
                 <p className="font-medium text-white">{selectedPackage.duration}</p>
                 <p className="text-3xl font-bold text-pink-500">{selectedPackage.price}</p>
+                {selectedPackage.description && (
+                  <p className="text-xs text-gray-400 border-t border-pink-800/30 pt-2">{selectedPackage.description}</p>
+                )}
               </div>
             )}
           </div>
@@ -370,7 +377,10 @@ export default function BookingForm() {
                             <div className="bg-gradient-to-br from-pink-950/50 to-rose-950/30 border border-pink-800/40 rounded-xl p-5 mt-2">
                               <p className="text-pink-400 uppercase tracking-widest text-xs font-semibold mb-3">Votre sélection</p>
                               <p className="text-lg font-medium text-white mb-1">{selectedPackage.duration}</p>
-                              <p className="text-4xl font-bold text-pink-500">{selectedPackage.price}</p>
+                              <p className="text-4xl font-bold text-pink-500 mb-2">{selectedPackage.price}</p>
+                              {selectedPackage.description && (
+                                <p className="text-sm text-gray-300 border-t border-pink-800/30 pt-2 mt-2">✨ {selectedPackage.description}</p>
+                              )}
                             </div>
 
                             <Link href="/tarifs" className="link link-primary text-sm">
@@ -528,6 +538,9 @@ export default function BookingForm() {
                         <div className="bg-gray-800/60 rounded-xl divide-y divide-gray-700/60 overflow-hidden">
                           <SummaryRow icon={<Sparkles className="w-4 h-4 text-pink-500" />} label="Forfait" value={selectedPackage.duration} />
                           <SummaryRow icon={<span className="text-pink-500 font-bold text-sm">€</span>} label="Tarif" value={<span className="text-pink-400 font-bold text-xl">{selectedPackage.price}</span>} />
+                          {selectedPackage.description && (
+                            <SummaryRow icon={<span className="text-pink-400 text-sm">✨</span>} label="Inclus" value={selectedPackage.description} />
+                          )}
                           <SummaryRow icon={<User className="w-4 h-4 text-pink-500" />} label="Nom" value={formData.name} />
                           <SummaryRow icon={<Mail className="w-4 h-4 text-pink-500" />} label="Email" value={formData.email} />
                           <SummaryRow
