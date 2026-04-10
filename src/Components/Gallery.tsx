@@ -471,6 +471,7 @@ export default function Gallery() {
                 className="object-cover select-none"
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
+                unoptimized
               />
 
               {/* Couche de protection permanente */}
@@ -545,6 +546,7 @@ export default function Gallery() {
         draggable="false"
         priority
         quality={100}
+        unoptimized
         onContextMenu={(e) => e.preventDefault()}
       />
 

@@ -48,6 +48,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 priority
+                unoptimized
               />
             </div>
           </motion.div>
