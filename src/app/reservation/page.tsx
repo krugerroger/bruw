@@ -606,39 +606,94 @@ export default function BookingForm() {
             Vous pouvez effectuer le règlement de votre recharge Transcash en ligne via deux plateformes dédiées. Sélectionnez le montant correspondant au tarif choisi, achetez la recharge, puis joignez la photo dans le formulaire de réservation.
           </p>
 
-          <div className="space-y-4 p-4 bg-gray-700/50 rounded-lg shadow-md">
-            <h2 className="font-semibold flex items-center gap-2">
-              Trois plateformes d'achat de recharge <ArrowBigDown size={28} color="#ee1794" />
-            </h2>
-            <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
-                <iframe 
-                src="https://cdn.iframe.ly/api/iframe?card=small&app=1&url=https%3A%2F%2Frecharge.com&key=f465d843feece6bc76328fed1045d15e"
-                className="absolute top-0 left-0 w-full h-full border-0" 
-                allowFullScreen 
-                loading='lazy'
-                title='Recharge.com'/>
+        <div className="space-y-4 p-4 bg-gray-800/50 rounded-lg shadow-md border border-gray-700">
+          <h2 className="font-semibold flex items-center gap-2 text-gray-200">
+            Trois plateformes d'achat de recharge <ArrowBigDown size={28} color="#ee1794" />
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Carte Recharge.com - version dark */}
+            <div className="group relative bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-lg hover:shadow-pink-900/20 transition-all duration-300 overflow-hidden">
+              <div className="p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold text-xl">
+                    R
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-100">Recharge.com</h3>
+                </div>
+                <p className="text-gray-400 text-sm mb-4">
+                  Rechargez vos mobiles, jeux vidéo et cartes cadeaux instantanément. Plus de 750 marques disponibles.
+                </p>
+                <a
+                  href="https://recharge.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Visiter le site
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </div>
-                
-            <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
-              <iframe
-                src="https://cdn.iframe.ly/api/iframe?app=1&url=https%3A%2F%2Fwww.transcash-recharge.com&key=f465d843feece6bc76328fed1045d15e"
-                className="absolute top-0 left-0 w-full h-full border-0"
-                title="Transcash Recharge"
-                allowFullScreen
-                loading="lazy"
-              />
+
+            {/* Carte Transcash Recharge - version dark */}
+            <div className="group relative bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-lg hover:shadow-pink-900/20 transition-all duration-300 overflow-hidden">
+              <div className="p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-green-900/50 flex items-center justify-center text-green-400 font-bold text-xl">
+                    T
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-100">Transcash Recharge</h3>
+                </div>
+                <p className="text-gray-400 text-sm mb-4">
+                  Solution de paiement sécurisée par carte prépayée. Rechargez votre compte Transcash en quelques clics.
+                </p>
+                <a
+                  href="https://www.transcash-recharge.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-green-400 hover:text-green-300 transition-colors"
+                >
+                  Visiter le site
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </div>
-            <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
-              <iframe
-                src="https://cdn.iframe.ly/api/iframe?app=1&url=https%3A%2F%2Fcartedirecte.fr&key=f465d843feece6bc76328fed1045d15e"
-                className="absolute top-0 left-0 w-full h-full border-0"
-                title="Carte Directe"
-                allowFullScreen
-                loading="lazy"
-              />
+
+            {/* Carte Carte Directe - version dark */}
+            <div className="group relative bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-lg hover:shadow-pink-900/20 transition-all duration-300 overflow-hidden">
+              <div className="p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-400 font-bold text-xl">
+                    C
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-100">Carte Directe</h3>
+                </div>
+                <p className="text-gray-400 text-sm mb-4">
+                  Carte prépayée Mastercard pour vos achats en ligne sécurisés. Rechargeable et sans découvert.
+                </p>
+                <a
+                  href="https://cartedirecte.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
+                >
+                  Visiter le site
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </div>
-            <script async src="https://cdn.iframe.ly/embed.js" />
           </div>
+        </div>
 
           <p>
             Contactez-moi sur{' '}
