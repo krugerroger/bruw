@@ -608,8 +608,17 @@ export default function BookingForm() {
 
           <div className="space-y-4 p-4 bg-gray-700/50 rounded-lg shadow-md">
             <h2 className="font-semibold flex items-center gap-2">
-              Deux plateformes d'achat de recharge <ArrowBigDown size={28} color="#ee1794" />
+              Trois plateformes d'achat de recharge <ArrowBigDown size={28} color="#ee1794" />
             </h2>
+            <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
+                <iframe 
+                src="https://cdn.iframe.ly/api/iframe?card=small&app=1&url=https%3A%2F%2Frecharge.com&key=f465d843feece6bc76328fed1045d15e"
+                className="absolute top-0 left-0 w-full h-full border-0" 
+                allowFullScreen 
+                loading='lazy'
+                title='Recharge.com'/>
+            </div>
+                
             <div className="relative w-full h-[140px] overflow-hidden rounded-lg border border-gray-200">
               <iframe
                 src="https://cdn.iframe.ly/api/iframe?app=1&url=https%3A%2F%2Fwww.transcash-recharge.com&key=f465d843feece6bc76328fed1045d15e"
