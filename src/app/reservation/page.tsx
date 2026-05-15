@@ -623,7 +623,7 @@ export default function BookingForm() {
           {/* Aperçu du site : miniature */}
           <div className="w-full h-32 mb-4 overflow-hidden rounded-md bg-gray-700">
             <img
-              src="https://static.rapido.com/media/mm-web/images/rechargefr/logo.svg"
+              src="https://www.recharge.fr/_next/image?url=https%3A%2F%2Frecharge-prd.asset.akeneo.cloud%2Fproduct_assets%2Fmedia%2FTranscash.png&w=640&q=75"
               alt="Aperçu de Recharge.fr"
               className="w-full h-full object-top group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
@@ -679,7 +679,7 @@ export default function BookingForm() {
 
       {/* Carte Carte Directe - entièrement cliquable */}
       <a
-        href="https://cartedirecte.fr"
+        href="https://cartedirecte.fr/cartes-de-paiement/transcash"
         target="_blank"
         rel="noopener noreferrer"
         className="group block bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-md hover:border-gray-500 transition-all duration-300 overflow-hidden"
@@ -687,7 +687,7 @@ export default function BookingForm() {
         <div className="p-5">
           <div className="w-full h-32 mb-4 overflow-hidden rounded-md bg-gray-700">
             <img
-              src="https://cartedirecte.fr/cdn-cgi/imagedelivery/Pk8Ky-xDyeK8TLUvfplArQ/7/88021f62-022b-4dc9-8af0-0cd9da8335ff-cartedirectefr-logo.svg/public"
+              src="https://cartedirecte.fr/cdn-cgi/imagedelivery/Pk8Ky-xDyeK8TLUvfplArQ/cartes-de-paiement-transcash-banner-1659618230.pngv2-staging-1737042874.0467/public?w=1280"
               alt="Aperçu de Carte Directe"
               className="w-full h-full object-top group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
