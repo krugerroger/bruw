@@ -614,7 +614,7 @@ export default function BookingForm() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* Carte Recharge.com - entièrement cliquable */}
       <a
-        href="https://recharge.fr"
+        href="https://www.recharge.fr/carte-transcash"
         target="_blank"
         rel="noopener noreferrer"
         className="group block bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-md hover:border-gray-500 transition-all duration-300 overflow-hidden"
