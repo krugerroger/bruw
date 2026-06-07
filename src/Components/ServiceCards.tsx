@@ -36,7 +36,7 @@ const ServiceCards = () => {
         "🔞 Explorations sensuelles : Sex toys (pour moi & pour vous), Travail anal / Massage prostatique, Trio HOT (Couple ou HFF), Conversation excitante (mots crus & fessées)",
       ],
       price: [
-        { prestation: "1 rapports + massage", duration: "Rendez-vous galant 30 minutes : " ,amount: "50€", details:"En journée : 50€ / Après 19h00 : 70€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité"},
+      
         { prestation: "2 rapports + massage", duration: "Rendez-vous galant 1 heure : " ,amount: "150€", details:"En journée : 150€ / Après 19h00 : 170€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité"},
         { prestation: "3 rapports + massage", duration: "Rendez-vous galant 1 heure 30 : ",amount: "240€", details: "En journée : 240€ / Après 19h00: 250€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
         { prestation: "3 à 4 rapports + massage", duration: "Rendez-vous galant 2h00 :",amount: "300€", details: "En journée : 300€ / Après 19h00 : 320€. Nous faisons connaissance autour d’un verre, douche et moment de sensualité" },
