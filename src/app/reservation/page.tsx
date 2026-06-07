@@ -35,7 +35,7 @@ interface Offer {
 const Offers: Offer = {
   title: 'Rendez-vous galant',
   price: [
-    { duration: '30 minutes', amount: '50€ (jour) / 70€ (nuit)', description: '1 rapport + massage' },
+  
     { duration: '1 heure', amount: '150€ (jour) / 170€ (soir)', description: '2 rapports + massage' },
     { duration: '1 heure 30', amount: '240€ (jour) / 260€ (soir)', description: '3 rapports + massage' },
     { duration: '2 heures', amount: '300€ (jour) / 320€ (soir)', description: '3 à 4 rapports + massage' },
