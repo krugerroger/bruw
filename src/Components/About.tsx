@@ -1,32 +1,9 @@
 'use client'
 
 import { CONTACTS } from '@/constants/contacts'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function About() {
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  }
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 100,
-        damping: 20
-      }
-    }
-  }
 
   return (
     <section id="about" className="py-24 bg-[#0a0a0a] text-white overflow-hidden relative">
@@ -35,16 +12,11 @@ export default function About() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <motion.div
+        <div
           className="flex flex-col lg:flex-row gap-16 items-center lg:items-start"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={container}
         >
           {/* Image de profil */}
-          <motion.div 
-            variants={item}
+          <div 
             className="w-full lg:w-2/5 flex justify-center lg:justify-end lg:sticky lg:top-32"
           >
             <div className="relative group">
@@ -62,23 +34,22 @@ export default function About() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Texte de présentation */}
-          <motion.div 
-            variants={container}
+          <div 
             className="w-full lg:w-3/5 space-y-8"
           >
-            <motion.div variants={item}>
+            <div>
               <span className="text-xs uppercase tracking-[0.3em] text-amber-500/80 block mb-3">Découvrir</span>
               <h2 className="text-4xl md:text-5xl font-light text-white font-serif mb-6">
                 À Propos de <span className="text-amber-500 italic">Brunella</span>
               </h2>
               <div className="w-16 h-px bg-amber-500/40"></div>
-            </motion.div>
+            </div>
 
             {/* Grille de caractéristiques */}
-            <motion.div variants={item} className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
               {[
                 { label: "Âge", value: "28 ans" },
                 { label: "Taille", value: "1m70" },
@@ -90,10 +61,10 @@ export default function About() {
                   <p className="text-lg text-white font-serif">{stat.value}</p>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* Paragraphes de description */}
-            <motion.div variants={item} className="space-y-6 text-neutral-400 font-light leading-relaxed text-sm md:text-base">
+            <div className="space-y-6 text-neutral-400 font-light leading-relaxed text-sm md:text-base">
               <p className="text-neutral-200 text-lg">
                 🌸 Bienvenue dans l’univers de Brunella Moreau
               </p>
@@ -113,10 +84,10 @@ export default function About() {
               <p>
                 Laissez-vous guider, détendez-vous… et goûtez à l’intensité d’un instant où le temps s’arrête, dans les bras d’une femme attentionnée, sensuelle et généreuse. ❤️☺️
               </p>
-            </motion.div>
+            </div>
 
             {/* Informations pratiques et Contact */}
-            <motion.div variants={item} className="mt-10 p-6 border border-neutral-900 rounded-2xl bg-neutral-950/30">
+            <div className="mt-10 p-6 border border-neutral-900 rounded-2xl bg-neutral-950/30">
               <h3 className="text-amber-500 text-sm uppercase tracking-widest mb-4">✨ Informations pratiques</h3>
               <ul className="space-y-3 text-sm text-neutral-300 font-light mb-8">
                 <li className="flex items-start gap-3">
@@ -149,18 +120,14 @@ export default function About() {
                   <span className="text-amber-500/70">Brunella — votre parenthèse de douceur et de volupté. 🌹</span>
                 </p>
               </div>
-            </motion.div>
+            </div>
 
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Section supplémentaire - Langues et centres d’intérêt */}
-        <motion.div 
+        <div 
           className="mt-24 pt-16 border-t border-neutral-900 grid md:grid-cols-2 gap-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
         >
           {/* Langues */}
           <div>
@@ -191,7 +158,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

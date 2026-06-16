@@ -13,28 +13,7 @@ export default function Testimonials() {
   const [hoverRating, setHoverRating] = useState(0)
   const [comment, setComment] = useState('')
 
-  // Animations épurées et fluides
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  }
 
-  const item = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1] // Courbe d'accélération premium
-      }
-    }
-  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -73,7 +52,6 @@ export default function Testimonials() {
         {/* Grille de témoignages stylisés en cartes Premium */}
         <motion.div
           className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-24"
-          variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -81,7 +59,6 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
-              variants={item}
               className="group relative border border-neutral-900 bg-neutral-950/50 p-10 transition-colors duration-500 hover:border-amber-400/30 overflow-hidden"
             >
               {/* Ligne dorée subtile au survol sur le bord supérieur */}

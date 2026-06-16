@@ -1,7 +1,6 @@
 'use client'
 
 import { CONTACTS } from '@/constants/contacts'
-import { motion } from 'framer-motion'
 
 export default function Contact() {
 
@@ -39,11 +38,7 @@ export default function Contact() {
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         
         {/* En-tête de section style "Haute Joaillerie" */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
+        <div
           className="text-center mb-24 flex flex-col items-center"
         >
           <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 block mb-4">Entrer en relation</span>
@@ -52,18 +47,13 @@ export default function Contact() {
           <p className="text-lg text-neutral-400 max-w-xl mx-auto font-light leading-relaxed">
             Pour toute demande d'entrevue exclusive ou information complémentaire, je vous invite à privilégier les canaux sécurisés ci-dessous.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           className="max-w-3xl mx-auto"
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
         >
           {/* Bloc Principal de Contact */}
-          <motion.div 
-            variants={item}
+          <div 
             className="w-full space-y-10"
           >
             {/* Carte de Réservation stylisée (Pas de shadow lourde, bordure fine or/neutre) */}
@@ -212,11 +202,7 @@ export default function Contact() {
             </div>
 
             {/* Disclaimer Style Luxe */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
+            <div
               className="border-t border-neutral-900 bg-black p-8 text-neutral-500"
             >
               <div className="flex items-start gap-4 max-w-2xl mx-auto">
@@ -232,9 +218,9 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -40,21 +40,17 @@ export default function Pricing() {
       <div className="container mx-auto px-3 max-w-7xl">
         
         {/* En-tête de section style "Haute Joaillerie" */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={container}
+        <div
           className="text-center mb-20 flex flex-col items-center"
         >
-          <motion.span variants={itemVariants} className="text-xs uppercase tracking-[0.3em] text-amber-400/80 block mb-3">
+          <span className="text-xs uppercase tracking-[0.3em] text-amber-400/80 block mb-3">
             L'Excellence sur mesure
-          </motion.span>
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-light text-white mb-6 font-serif tracking-wide">
+          </span>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-serif tracking-wide">
             Prestations & Honoraires
-          </motion.h2>
-          <motion.div variants={itemVariants} className="w-16 h-px bg-amber-400"></motion.div>
-        </motion.div>
+          </h2>
+          <div className="w-16 h-px bg-amber-400"></div>
+        </div>
 
         {/* Grille principale des cartes ServiceCards (Doit être adaptée au thème sombre/or) */}
         <div className="mb-12">
@@ -62,17 +58,13 @@ export default function Pricing() {
         </div>
 
         {/* Grille d'informations professionnelles & Options */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={container}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20"
         >
           
           {/* Carte 1: Options Premium */}
-          <motion.div 
-            variants={itemVariants}
+          <div 
+          
             className="group bg-neutral-900 border border-neutral-800 p-10 rounded-2xl shadow-2xl transition-all duration-500 hover:border-amber-400/30 hover:-translate-y-1"
           >
             <div className="flex items-center gap-4 mb-8">
@@ -94,11 +86,11 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Carte 2: Incall / Réception */}
-          <motion.div 
-            variants={itemVariants}
+          <div 
+          
             className="group bg-neutral-900 border border-neutral-800 p-10 rounded-2xl shadow-2xl transition-all duration-500 hover:border-amber-400/30 hover:-translate-y-1"
           >
             <div className="flex items-center gap-4 mb-8">
@@ -124,11 +116,11 @@ export default function Pricing() {
                 <p className="text-sm leading-relaxed">Irréprochable. Douche requise dès l'arrivée. Linge de maison de haute qualité et produits de toilette de marque à disposition.</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Carte 3: Accompagnement Extérieur */}
-          <motion.div 
-            variants={itemVariants}
+          <div 
+          
             className="group bg-neutral-900 border border-neutral-800 p-10 rounded-2xl shadow-2xl transition-all duration-500 hover:border-amber-400/30 hover:-translate-y-1"
           >
             <div className="flex items-center gap-4 mb-8">
@@ -151,11 +143,11 @@ export default function Pricing() {
                 Une première rencontre idéale avant d'envisager des accompagnements de longue durée (week-end, voyages).
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Carte 4: Modalités de Réservation & Paiement */}
-          <motion.div 
-            variants={itemVariants}
+          <div 
+          
             className="group bg-neutral-900 border border-neutral-800 p-10 rounded-2xl shadow-2xl transition-all duration-500 hover:border-amber-400/30 hover:-translate-y-1"
           >
             <div className="flex items-center gap-4 mb-8">
@@ -182,7 +174,7 @@ export default function Pricing() {
                     {icon: Clock, text: "PayPal"},
                     {icon: Ticket, text: "Wero"}
                   ].map((pay, i) => (
-                    <span key={i} className={`flex items-center gap-2 text-sm bg-neutral-800 px-4 py-2 rounded-full border border-neutral-700 ${pay.strike ? 'opacity-50' : ''}`}>
+                    <span key={i} className={`flex items-center gap-2 text-sm bg-neutral-800 px-4 py-2 rounded-full border border-neutral-700`}>
                       <pay.icon className="w-4 h-4 text-amber-400" />
                       <span>{pay.text}</span>
                     </span>
@@ -191,15 +183,11 @@ export default function Pricing() {
                 <p className="text-xs text-neutral-500 mt-2">* Espèces exclues pour le premier rendez-vous.</p>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Note de bas de page & Politique d'annulation */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
+        <div
           className="text-center max-w-3xl mx-auto border-t border-neutral-900 pt-10"
         >
           <p className="text-xs text-neutral-600 mb-5 tracking-wide">
@@ -211,7 +199,7 @@ export default function Pricing() {
             </svg>
             <span>Courtoisie d'annulation : Gratuite jusqu'à 24 heures avant l'engagement prévu.</span>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

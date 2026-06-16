@@ -1,24 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 export default function Conditions() {
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  }
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: 'spring', stiffness: 100, damping: 20 }
-    }
-  }
 
   return (
     <section id="conditions" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden">
@@ -28,12 +10,8 @@ export default function Conditions() {
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
         
         {/* ================= SECTION SERVICES ================= */}
-        <motion.div 
+        <div 
           className="border border-neutral-900 bg-neutral-950/40 rounded-2xl p-8 md:p-10 mb-20 backdrop-blur-sm"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
         >
           <span className="text-xs uppercase tracking-[0.3em] text-amber-500/80 block text-center mb-3">Prestations</span>
           <h2 className="text-3xl font-light text-center font-serif text-white mb-8">
@@ -62,14 +40,11 @@ export default function Conditions() {
               </span>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* ================= MODE DE PAIEMENT ================= */}
-        <motion.div 
+        <div 
           className="text-center mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
         >
           <span className="text-xs uppercase tracking-[0.3em] text-amber-500/80 block mb-3">Réservations</span>
           <h1 className="text-4xl md:text-5xl font-light font-serif text-white mb-6">
@@ -79,15 +54,11 @@ export default function Conditions() {
           <p className="text-neutral-400 font-light leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
             Pour garantir la sécurité et le sérieux de nos engagements, un pré-paiement sécurisé et discret peut vous être demandé via <span className="text-amber-400 font-medium">Transcash, PayPal, Virement instantanée ou WERO</span>. Voici pourquoi cette méthode protège notre philosophie d'échange :
           </p>
-        </motion.div>
+        </div>
 
         {/* Liste des Avantages */}
-        <motion.div 
+        <div 
           className="space-y-4"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={container}
         >
           {[
             { title: "Sérieux et Sécurité", desc: "En validant une réservation, je vous assure de mon sérieux complet et de mon engagement absolu à honorer notre rendez-vous, tout en évitant les désagréments des annulations de dernière minute." },
@@ -96,9 +67,8 @@ export default function Conditions() {
             { title: "Engagement Mutuel", desc: "L'acompte formalise une relation de confiance réciproque, où chacun s’engage à honorer sa parole et à respecter le temps de l'autre." },
             { title: "Simplicité et Accessibilité", desc: "L’achat de coupons Transcash en bureau de tabac est immédiat, simple et totalement neutre sur vos relevés bancaires, vous évitant les contraintes des virements classiques." }
           ].map((itemBox, idx) => (
-            <motion.div 
+            <div 
               key={idx} 
-              variants={item}
               className="border border-neutral-900 bg-neutral-950/30 rounded-xl p-6 md:p-8 hover:border-neutral-800/80 transition-all duration-300 group"
             >
               <div className="flex items-start gap-6">
@@ -114,9 +84,9 @@ export default function Conditions() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Méthodes de paiement miniatures */}
         <div className="text-center mt-10 mb-24">
@@ -250,11 +220,8 @@ export default function Conditions() {
         </div>
 
         {/* Conclusion / Note d'accueil finale */}
-        <motion.div 
+        <div 
           className="text-center mt-20 p-8 border border-neutral-900 bg-neutral-950/30 rounded-2xl"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
         >
           <p className="text-neutral-400 font-serif italic text-lg mb-2">
             Merci pour votre confiance et votre courtoisie.
@@ -262,7 +229,7 @@ export default function Conditions() {
           <p className="text-sm font-light text-amber-500/85 tracking-wide">
             Chaque détail est pensé pour dessiner les contours d'une rencontre inoubliable. Au plaisir de vous recevoir.
           </p>
-        </motion.div>
+        </div>
 
       </div>
     </section>

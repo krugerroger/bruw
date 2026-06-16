@@ -1,5 +1,5 @@
 "use client"
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const FAQSection = () => {
@@ -52,17 +52,13 @@ const FAQSection = () => {
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
         
         {/* En-tête de section style luxe */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
+        <div
           className="text-center mb-24 flex flex-col items-center"
         >
           <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 block mb-4">Conciergerie</span>
           <h2 className="text-4xl md:text-5xl font-light font-serif mb-6 tracking-wide text-white">Questions fréquentes</h2>
           <div className="w-16 h-[1px] bg-amber-400/30 mx-auto mb-8"></div>
-        </motion.div>
+        </div>
         
         {/* Liste FAQ style épuré (pas de boxes, juste des lignes b-border) */}
         <div className="space-y-0 border-t border-neutral-800">
@@ -98,19 +94,15 @@ const FAQSection = () => {
                 {/* Contenu de la réponse avec animation Framer Motion soyeuse */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
-                    <motion.div
+                    <div
                       key="content"
-                      initial="collapsed"
-                      animate="expanded"
-                      exit="collapsed"
-                      variants={answerVariants}
                       className="overflow-hidden"
                     >
                       {/* Texte réponse : Sans-serif, léger, lecture fluide */}
                       <p className="pb-8 pt-1 text-neutral-300 font-sans font-light leading-relaxed max-w-3xl">
                         {faq.answer}
                       </p>
-                    </motion.div>
+                    </div>
                   )}
                 </AnimatePresence>
               </div>
@@ -119,11 +111,7 @@ const FAQSection = () => {
         </div>
 
         {/* Section CTA style Luxe */}
-        <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            viewport={{ once: true }}
+        <div 
             className="mt-24 text-center border-t border-neutral-900 pt-16"
         >
           <p className="font-sans text-neutral-400 font-light mb-8 max-w-md mx-auto leading-relaxed">
@@ -139,7 +127,7 @@ const FAQSection = () => {
                 Contactez ma conciergerie
              </span>
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
