@@ -106,7 +106,7 @@ export default function SectionBrunella() {
             <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden rounded shadow-2xl shadow-black/50 grayscale-[20%] hover:grayscale-0 transition-all duration-500">
               {/* Remplacer par votre vrai chemin d'image */}
               <Image 
-                src="/bru_hero.jpg" 
+                src="/gallery/1_1.jpeg" 
                 alt="Brunella, art de la séduction"
                 fill
                 className="object-cover object-center"

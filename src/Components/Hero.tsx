@@ -8,30 +8,6 @@ import { Clock, Gem, ShieldCheck } from 'lucide-react'
 
 export default function Hero() {
   // Variantes pour l'animation du conteneur
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  }
-
-  // Variantes pour les éléments enfants
-  const itemVariants: Variants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 90,
-        damping: 12,
-      },
-    },
-  }
 
   return (
     <section className="relative h-screen min-h-[750px] w-full overflow-hidden bg-[#0b0c10]">
