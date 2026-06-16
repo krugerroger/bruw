@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, CheckCircle, ChevronRight, ChevronLeft, Upload, User, Mail, Clock, ArrowBigDown, Sparkles } from 'lucide-react'
+import { Calendar, CheckCircle, ChevronRight, ChevronLeft, Upload, User, Mail, Clock, ArrowBigDown, Sparkles, ChevronDown, ExternalLink } from 'lucide-react'
 
 interface BookingFormProps {
   selectedPackage: {
@@ -35,7 +35,6 @@ interface Offer {
 const Offers: Offer = {
   title: 'Rendez-vous galant',
   price: [
-    { duration: '30 minutes', amount: '50€ (jour) / 70€ (nuit)', description: '1 rapport + massage' },
     { duration: '1 heure', amount: '150€ (jour) / 170€ (soir)', description: '2 rapports + massage' },
     { duration: '1 heure 30', amount: '240€ (jour) / 260€ (soir)', description: '3 rapports + massage' },
     { duration: '2 heures', amount: '300€ (jour) / 320€ (soir)', description: '3 à 4 rapports + massage' },
@@ -199,50 +198,68 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="reservation" className="py-20 bg-base-100">
+    <section id="reservation" className="py-20 bg-base-100 mt-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
 
-          {/* Sidebar image */}
-          <div className="hidden lg:block lg:w-1/3 sticky top-20">
-            <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/bru_hero.jpg"
-                alt="Brunella Moreau - Moments privilégiés"
-                sizes="(min-width: 640px) 32rem, 90vw"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-xl font-light">Des moments uniques</p>
-                <p className="text-sm opacity-80">sur mesure</p>
-              </div>
-            </div>
+{/* Sidebar image */}
+<div className="hidden lg:block lg:w-1/3 sticky top-20 space-y-6">
+  <div className="relative h-[28rem] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+    <Image
+      src="/bru_hero.jpg"
+      alt="Brunella Moreau - Moments privilégiés"
+      sizes="(min-width: 640px) 32rem, 90vw"
+      fill
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+    {/* Dégradé de cinéma plus immersif */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+    
+    <div className="absolute bottom-8 left-8 text-white space-y-1">
+      <p className="text-2xl font-light tracking-wide">Des moments uniques</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-white/60 font-medium">sur mesure</p>
+    </div>
+  </div>
 
-            {/* Package summary card visible on step 2+ */}
-            {currentStep >= 2 && !submitted && (
-              <div className="mt-6 bg-pink-950/30 border border-pink-800/40 rounded-xl p-5 text-sm space-y-2">
-                <p className="text-pink-400 font-semibold uppercase tracking-wider text-xs mb-3">Votre sélection</p>
-                <p className="font-medium text-white">{selectedPackage.duration}</p>
-                <p className="text-3xl font-bold text-pink-500">{selectedPackage.price}</p>
-                {selectedPackage.description && (
-                  <p className="text-xs text-gray-400 border-t border-pink-800/30 pt-2">{selectedPackage.description}</p>
-                )}
-              </div>
-            )}
-          </div>
+  {/* Package summary card visible on step 2+ */}
+  {currentStep >= 2 && !submitted && (
+<div className="relative bg-[#121212]/70 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl space-y-4 animate-in fade-in slide-in-from-top-4 duration-500 overflow-hidden">
+  {/* Halo lumineux en arrière-plan */}
+  <div className="absolute -top-16 -right-16 w-36 h-36 bg-gradient-to-br from-amber-500/20 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+  <div className="flex items-center justify-between border-b border-white/5 pb-3 relative z-10">
+    <p className="text-amber-400 font-medium uppercase tracking-[0.15em] text-xs">
+      Votre sélection
+    </p>
+    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_#f43f5e] animate-pulse"></span>
+  </div>
+  
+  <div className="space-y-1 relative z-10">
+    <p className="text-base font-light text-white/90">{selectedPackage.duration}</p>
+    <p className="text-4xl font-bold text-amber-400">
+      {selectedPackage.price}
+    </p>
+  </div>
+
+  {selectedPackage.description && (
+    <p className="text-xs text-gray-400 border-t border-white/5 pt-3 font-light leading-relaxed relative z-10">
+      {selectedPackage.description}
+    </p>
+  )}
+</div>
+  )}
+</div>
 
           {/* Main form area */}
           <div className="w-full lg:w-2/3">
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-2">Réserver un rendez-vous</h2>
-            <div className="w-20 h-1 bg-pink-500 mb-8" />
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-500 mb-2">Réserver un rendez-vous</h2>
+            <div className="w-20 h-1 bg-amber-500 mb-8" />
 
             {/* ── SUCCESS STATE ── */}
             {submitted ? (
               <div className="card bg-base-200 shadow-lg overflow-hidden">
                 {/* Top accent bar */}
-                <div className="h-2 bg-gradient-to-r from-pink-500 to-rose-600" />
+                <div className="h-2 bg-gradient-to-r from-amber-500 to-amber-600" />
                 <div className="p-8 flex flex-col items-center text-center gap-6">
                   {/* Animated checkmark */}
                   <div className="relative">
@@ -260,7 +277,7 @@ export default function BookingForm() {
 
                   {/* Booking summary */}
                   <div className="w-full bg-gray-800/60 rounded-xl p-6 text-left space-y-4 border border-gray-700">
-                    <p className="text-pink-400 font-semibold uppercase tracking-wider text-xs">Récapitulatif</p>
+                    <p className="text-amber-400 font-semibold uppercase tracking-wider text-xs">Récapitulatif</p>
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>
                         <p className="text-gray-400">Nom</p>
@@ -280,7 +297,7 @@ export default function BookingForm() {
                       </div>
                       <div>
                         <p className="text-gray-400">Tarif</p>
-                        <p className="font-bold text-pink-400 text-xl">{selectedPackage.price}</p>
+                        <p className="font-bold text-amber-400 text-xl">{selectedPackage.price}</p>
                       </div>
                     </div>
                   </div>
@@ -318,8 +335,8 @@ export default function BookingForm() {
                         <div className="flex flex-col items-center gap-1">
                           <div
                             className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border-2
-                              ${isDone ? 'bg-pink-600 border-pink-600 text-white' : ''}
-                              ${isActive ? 'bg-transparent border-pink-500 text-pink-500 shadow-[0_0_12px_rgba(236,72,153,0.4)]' : ''}
+                              ${isDone ? 'bg-amber-600 border-amber-600 text-white' : ''}
+                              ${isActive ? 'bg-transparent border-amber-500 text-amber-500 shadow-[0_0_12px_rgba(236,72,153,0.4)]' : ''}
                               ${!isActive && !isDone ? 'bg-transparent border-gray-600 text-gray-500' : ''}
                             `}
                           >
@@ -327,7 +344,7 @@ export default function BookingForm() {
                           </div>
                           <span
                             className={`text-xs font-medium transition-colors
-                              ${isActive ? 'text-pink-400' : isDone ? 'text-pink-600' : 'text-gray-500'}
+                              ${isActive ? 'text-amber-400' : isDone ? 'text-amber-600' : 'text-gray-500'}
                             `}
                           >
                             {step.label}
@@ -336,7 +353,7 @@ export default function BookingForm() {
                         {i < STEPS.length - 1 && (
                           <div
                             className={`flex-1 h-0.5 mx-2 mb-4 transition-all duration-500
-                              ${currentStep > step.id ? 'bg-pink-600' : 'bg-gray-700'}
+                              ${currentStep > step.id ? 'bg-amber-600' : 'bg-gray-700'}
                             `}
                           />
                         )}
@@ -344,53 +361,71 @@ export default function BookingForm() {
                     )
                   })}
                 </div>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-2xl mx-auto">
 
                   {/* ── STEP 1 : PACKAGE SELECTION ── */}
                   {currentStep === 1 && (
-                    <div className="card bg-base-200 shadow-sm animate-in fade-in slide-in-from-right-4 duration-300">
-                      <div className="card-body gap-4">
-                        <h3 className="text-xl font-semibold text-pink-400">Choisissez votre forfait</h3>
+                    <div className="bg-[#121212]/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl p-6 sm:p-8 animate-in fade-in slide-in-from-right-4 duration-500">
+                      <div className="flex flex-col gap-6">
+                        <h3 className="text-2xl font-light text-white flex items-center gap-3">
+                          <span className="w-8 h-[1px] bg-amber-500"></span>
+                          Votre Expérience
+                        </h3>
 
                         {offer && (
-                          <>
-                            <div className="form-control">
-                              <label className="label">
-                                <span className="label-text text-gray-300">Durée & tarif</span>
+                          <div className="space-y-6">
+                            <div className="flex flex-col gap-2">
+                              <label className="text-sm font-medium text-gray-400 tracking-wide uppercase">
+                                Sélectionnez une formule
                               </label>
-                              <select
-                                name="selectedPackage"
-                                onChange={handlePackageChange}
-                                className="select select-bordered bg-gray-700/60 border-gray-600 text-white"
-                              >
-                                {offer.price.map((option, index) => (
-                                  <option key={index} value={index}>
-                                    {option.duration} — {option.amount}
-                                  </option>
-                                ))}
-                              </select>
-                              {errors.package && <p className="text-error text-sm mt-1">{errors.package}</p>}
+                              <div className="relative">
+                                <select
+                                  name="selectedPackage"
+                                  onChange={handlePackageChange}
+                                  className="w-full appearance-none bg-white/5 border border-white/10 text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all cursor-pointer"
+                                >
+                                  {offer.price.map((option, index) => (
+                                    <option key={index} value={index} className="bg-gray-900 text-white">
+                                      {option.duration} — {option.amount}
+                                    </option>
+                                  ))}
+                                </select>
+                                <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none">
+                                  <ChevronDown className="w-5 h-5 text-gray-400" />
+                                </div>
+                              </div>
+                              {errors.package && <p className="text-amber-400 text-sm mt-1">{errors.package}</p>}
                             </div>
 
                             {/* Selected package preview card */}
-                            <div className="bg-gradient-to-br from-pink-950/50 to-rose-950/30 border border-pink-800/40 rounded-xl p-5 mt-2">
-                              <p className="text-pink-400 uppercase tracking-widest text-xs font-semibold mb-3">Votre sélection</p>
-                              <p className="text-lg font-medium text-white mb-1">{selectedPackage.duration}</p>
-                              <p className="text-4xl font-bold text-pink-500 mb-2">{selectedPackage.price}</p>
+                            <div className="relative overflow-hidden bg-gradient-to-br from-amber-950/40 to-black border border-amber-900/30 rounded-2xl p-6 sm:p-8 group transition-all hover:border-amber-800/50">
+                              <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <Sparkles className="w-24 h-24 text-amber-500" />
+                              </div>
+                              <p className="text-amber-300 uppercase tracking-[0.2em] text-xs font-semibold mb-4">Aperçu de la sélection</p>
+                              <p className="text-xl font-light text-white mb-1">{selectedPackage.duration}</p>
+                              <p className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-500 mb-4">
+                                {selectedPackage.price}
+                              </p>
                               {selectedPackage.description && (
-                                <p className="text-sm text-gray-300 border-t border-pink-800/30 pt-2 mt-2">✨ {selectedPackage.description}</p>
+                                <p className="text-sm text-gray-400 border-t border-white/5 pt-4 mt-2 font-light leading-relaxed">
+                                  {selectedPackage.description}
+                                </p>
                               )}
                             </div>
 
-                            <Link href="/tarifs" className="link link-primary text-sm">
-                              Voir tous les tarifs détaillés →
+                            <Link href="/tarifs" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-amber-400 transition-colors">
+                              Voir tous les tarifs détaillés <ChevronRight className="w-4 h-4" />
                             </Link>
-                          </>
+                          </div>
                         )}
 
-                        <div className="flex justify-end pt-2">
-                          <button type="button" onClick={handleNext} className="btn bg-pink-600 hover:bg-pink-700 border-none text-white gap-2">
+                        <div className="flex justify-end pt-4 border-t border-white/5 mt-2">
+                          <button 
+                            type="button" 
+                            onClick={handleNext} 
+                            className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]"
+                          >
                             Continuer <ChevronRight className="w-4 h-4" />
                           </button>
                         </div>
@@ -400,128 +435,134 @@ export default function BookingForm() {
 
                   {/* ── STEP 2 : PERSONAL INFO ── */}
                   {currentStep === 2 && (
-                    <div className="card bg-base-200 shadow-sm animate-in fade-in slide-in-from-right-4 duration-300">
-                      <div className="card-body gap-5">
-                        <h3 className="text-xl font-semibold text-pink-400">Vos informations</h3>
+                    <div className="bg-[#121212]/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl p-6 sm:p-8 animate-in fade-in slide-in-from-right-4 duration-500">
+                      <div className="flex flex-col gap-6">
+                        <h3 className="text-2xl font-light text-white flex items-center gap-3 mb-2">
+                          <span className="w-8 h-[1px] bg-amber-500"></span>
+                          Informations Personnelles
+                        </h3>
 
-                        {/* Name */}
-                        <div className="form-control">
-                          <label className="label">
-                            <span className="label-text flex items-center gap-2">
-                              <User className="w-4 h-4 text-pink-500" /> Nom & Prénom
-                            </span>
-                          </label>
-                          <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Votre nom complet"
-                            className={`input input-bordered bg-gray-700/50 ${errors.name ? 'input-error' : ''}`}
-                            required
-                          />
-                          {errors.name && <p className="text-error text-sm mt-1">{errors.name}</p>}
+                        <div className="grid grid-cols-1 gap-6">
+                          {/* Name */}
+                          <div className="flex flex-col gap-2">
+                            <label className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                              <User className="w-4 h-4 text-amber-400" /> Nom & Prénom
+                            </label>
+                            <input
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              placeholder="Votre nom complet"
+                              className={`w-full bg-white/5 border ${errors.name ? 'border-amber-500/50' : 'border-white/10'} text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all placeholder:text-gray-600`}
+                              required
+                            />
+                            {errors.name && <p className="text-amber-400 text-sm">{errors.name}</p>}
+                          </div>
+
+                          {/* Email */}
+                          <div className="flex flex-col gap-2">
+                            <label className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                              <Mail className="w-4 h-4 text-amber-400" /> Adresse Email
+                            </label>
+                            <input
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              placeholder="votre@email.com"
+                              className={`w-full bg-white/5 border ${errors.email ? 'border-amber-500/50' : 'border-white/10'} text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all placeholder:text-gray-600`}
+                              required
+                            />
+                            {errors.email && <p className="text-amber-400 text-sm">{errors.email}</p>}
+                          </div>
+
+                          {/* Date */}
+                          <div className="flex flex-col gap-2">
+                            <label className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                              <Calendar className="w-4 h-4 text-amber-400" /> Date & Heure souhaitée
+                            </label>
+                            <input
+                              type="datetime-local"
+                              name="appointmentDate"
+                              value={formData.appointmentDate ? formData.appointmentDate.toISOString().slice(0, 16) : ''}
+                              onChange={handleDateChange}
+                              min={new Date().toISOString().slice(0, 16)}
+                              className={`w-full bg-white/5 border ${errors.appointmentDate ? 'border-amber-500/50' : 'border-white/10'} text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all [color-scheme:dark]`}
+                              required
+                            />
+                            {errors.appointmentDate 
+                              ? <p className="text-amber-400 text-sm">{errors.appointmentDate}</p>
+                              : <p className="text-xs text-gray-500">Disponible de 9h à 20h</p>
+                            }
+                          </div>
+
+                          {/* Payment proof */}
+                          <div className="flex flex-col gap-2 mt-2">
+                            <label className="text-sm font-medium text-gray-400 flex items-center gap-2 mb-1">
+                              <Upload className="w-4 h-4 text-amber-400" /> Justificatif de réservation
+                            </label>
+                            <label
+                              className={`relative flex flex-col items-center justify-center w-full h-40 border-2 border-dashed rounded-3xl cursor-pointer transition-all group overflow-hidden
+                                ${errors.paymentProof ? 'border-amber-500/50 bg-amber-500/5' : 'border-white/10 bg-white/5 hover:border-amber-400/50 hover:bg-amber-950/20'}
+                              `}
+                            >
+                              {filePreview ? (
+                                <div className="absolute inset-0 p-2">
+                                  <img src={filePreview} alt="Preview" className="w-full h-full object-contain rounded-2xl" />
+                                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+                                    <span className="text-white font-medium text-sm">Modifier l'image</span>
+                                  </div>
+                                </div>
+                              ) : formData.paymentProof ? (
+                                <div className="flex flex-col items-center gap-3 z-10">
+                                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                    <CheckCircle className="w-6 h-6 text-green-400" />
+                                  </div>
+                                  <span className="text-green-400 font-medium text-sm">{formData.paymentProof.name}</span>
+                                </div>
+                              ) : (
+                                <div className="flex flex-col items-center gap-3 z-10">
+                                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <Upload className="w-5 h-5 text-amber-300" />
+                                  </div>
+                                  <div className="text-center">
+                                    <p className="text-sm text-gray-300">Photo de la recharge Transcash</p>
+                                    <p className="text-xs text-gray-500 mt-1">Cliquez ou glissez le fichier ici</p>
+                                  </div>
+                                </div>
+                              )}
+                              <input type="file" name="paymentProof" onChange={handleChange} className="hidden" required />
+                            </label>
+                            {errors.paymentProof && <p className="text-amber-400 text-sm mt-1">{errors.paymentProof}</p>}
+                            
+                            <p className="text-xs text-gray-400 mt-3 flex items-center gap-2 bg-white/5 p-3 rounded-xl">
+                              <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                              Virement instantané ? Contactez-moi sur <strong className="text-[#25D366]">WhatsApp +33780967872</strong>
+                            </p>
+                          </div>
+
+                          {/* Optional message */}
+                          <div className="flex flex-col gap-2">
+                            <label className="text-sm font-medium text-gray-400">
+                              Note spéciale <span className="text-gray-600 font-light">(Optionnel)</span>
+                            </label>
+                            <textarea
+                              name="additionalMessage"
+                              value={formData.additionalMessage}
+                              onChange={handleChange}
+                              className="w-full bg-white/5 border border-white/10 text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all placeholder:text-gray-600 min-h-[120px] resize-none"
+                              placeholder="Tenue particulière, lieu spécifique, demande spéciale…"
+                            />
+                          </div>
                         </div>
 
-                        {/* Email */}
-                        <div className="form-control">
-                          <label className="label">
-                            <span className="label-text flex items-center gap-2">
-                              <Mail className="w-4 h-4 text-pink-500" /> Email
-                            </span>
-                          </label>
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="votre@email.com"
-                            className={`input input-bordered bg-gray-700/50 ${errors.email ? 'input-error' : ''}`}
-                            required
-                          />
-                          {errors.email && <p className="text-error text-sm mt-1">{errors.email}</p>}
-                        </div>
-
-                        {/* Date */}
-                        <div className="form-control">
-                          <label className="label">
-                            <span className="label-text flex items-center gap-2">
-                              <Calendar className="w-4 h-4 text-pink-500" /> Date & heure souhaitée
-                            </span>
-                          </label>
-                          <input
-                            type="datetime-local"
-                            name="appointmentDate"
-                            value={formData.appointmentDate ? formData.appointmentDate.toISOString().slice(0, 16) : ''}
-                            onChange={handleDateChange}
-                            min={new Date().toISOString().slice(0, 16)}
-                            className={`input input-bordered bg-gray-700/50 ${errors.appointmentDate ? 'input-error' : ''}`}
-                            required
-                          />
-                          {errors.appointmentDate
-                            ? <p className="text-error text-sm mt-1">{errors.appointmentDate}</p>
-                            : <p className="text-xs text-gray-500 mt-1">Disponible de 9h à 20h</p>
-                          }
-                        </div>
-
-                        {/* Payment proof */}
-                        <div className="form-control">
-                          <label className="label">
-                            <span className="label-text flex items-center gap-2">
-                              <Upload className="w-4 h-4 text-pink-500" /> Justificatif de réservation
-                            </span>
-                          </label>
-
-                          {/* Custom file drop zone */}
-                          <label
-                            className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-xl cursor-pointer transition-colors
-                              ${errors.paymentProof ? 'border-error bg-error/5' : 'border-gray-600 bg-gray-700/30 hover:border-pink-500 hover:bg-pink-950/20'}
-                            `}
-                          >
-                            {filePreview ? (
-                              <img src={filePreview} alt="Preview" className="h-full object-contain rounded-xl p-1" />
-                            ) : formData.paymentProof ? (
-                              <div className="flex flex-col items-center gap-2 text-sm">
-                                <CheckCircle className="w-8 h-8 text-green-400" />
-                                <span className="text-green-400 font-medium">{formData.paymentProof.name}</span>
-                              </div>
-                            ) : (
-                              <div className="flex flex-col items-center gap-2 text-gray-400">
-                                <Upload className="w-8 h-8" />
-                                <span className="text-sm">Photo de la recharge Transcash</span>
-                                <span className="text-xs">Cliquez ou déposez votre fichier ici</span>
-                              </div>
-                            )}
-                            <input type="file" name="paymentProof" onChange={handleChange} className="hidden" required />
-                          </label>
-                          {errors.paymentProof && <p className="text-error text-sm mt-1">{errors.paymentProof}</p>}
-
-                          <p className="text-sm text-gray-400 mt-2">
-                            Pour un virement instantané, contactez-moi sur{' '}
-                            <span className="font-semibold text-[#25D366]">WhatsApp +33780967872</span>
-                          </p>
-                        </div>
-
-                        {/* Optional message */}
-                        <div className="form-control">
-                          <label className="label">
-                            <span className="label-text">Informations supplémentaires <span className="text-gray-500">(optionnel)</span></span>
-                          </label>
-                          <textarea
-                            name="additionalMessage"
-                            value={formData.additionalMessage}
-                            onChange={handleChange}
-                            className="textarea textarea-bordered h-24 bg-gray-700/50"
-                            placeholder="Tenue particulière, lieu spécifique, demande spéciale…"
-                          />
-                        </div>
-
-                        <div className="flex justify-between pt-2">
-                          <button type="button" onClick={handleBack} className="btn btn-ghost gap-2">
+                        <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-4">
+                          <button type="button" onClick={handleBack} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors py-2 px-4 rounded-full hover:bg-white/5">
                             <ChevronLeft className="w-4 h-4" /> Retour
                           </button>
-                          <button type="button" onClick={handleNext} className="btn bg-pink-600 hover:bg-pink-700 border-none text-white gap-2">
-                            Vérifier ma réservation <ChevronRight className="w-4 h-4" />
+                          <button type="button" onClick={handleNext} className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]">
+                            Vérifier la réservation <ChevronRight className="w-4 h-4" />
                           </button>
                         </div>
                       </div>
@@ -530,61 +571,74 @@ export default function BookingForm() {
 
                   {/* ── STEP 3 : SUMMARY + CONFIRM ── */}
                   {currentStep === 3 && (
-                    <div className="card bg-base-200 shadow-sm animate-in fade-in slide-in-from-right-4 duration-300">
-                      <div className="card-body gap-5">
-                        <h3 className="text-xl font-semibold text-pink-400">Récapitulatif & confirmation</h3>
-                        <p className="text-sm text-gray-400">Vérifiez vos informations avant de valider.</p>
-
-                        <div className="bg-gray-800/60 rounded-xl divide-y divide-gray-700/60 overflow-hidden">
-                          <SummaryRow icon={<Sparkles className="w-4 h-4 text-pink-500" />} label="Forfait" value={selectedPackage.duration} />
-                          <SummaryRow icon={<span className="text-pink-500 font-bold text-sm">€</span>} label="Tarif" value={<span className="text-pink-400 font-bold text-xl">{selectedPackage.price}</span>} />
-                          {selectedPackage.description && (
-                            <SummaryRow icon={<span className="text-pink-400 text-sm">✨</span>} label="Inclus" value={selectedPackage.description} />
-                          )}
-                          <SummaryRow icon={<User className="w-4 h-4 text-pink-500" />} label="Nom" value={formData.name} />
-                          <SummaryRow icon={<Mail className="w-4 h-4 text-pink-500" />} label="Email" value={formData.email} />
-                          <SummaryRow
-                            icon={<Calendar className="w-4 h-4 text-pink-500" />}
-                            label="Date"
-                            value={<span className="capitalize">{formatDate(formData.appointmentDate)}</span>}
-                          />
-                          {formData.paymentProof && (
-                            <SummaryRow
-                              icon={<CheckCircle className="w-4 h-4 text-green-400" />}
-                              label="Justificatif"
-                              value={<span className="text-green-400">{formData.paymentProof.name}</span>}
-                            />
-                          )}
-                          {formData.additionalMessage && (
-                            <SummaryRow
-                              icon={<Clock className="w-4 h-4 text-pink-500" />}
-                              label="Message"
-                              value={formData.additionalMessage}
-                            />
-                          )}
+                    <div className="bg-[#121212]/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl p-6 sm:p-8 animate-in fade-in slide-in-from-right-4 duration-500">
+                      <div className="flex flex-col gap-6">
+                        <div className="text-center mb-4">
+                          <h3 className="text-3xl font-light text-white mb-2">Confirmation</h3>
+                          <p className="text-sm text-gray-400">Veuillez vérifier les détails de votre réservation.</p>
                         </div>
 
-                        <div className="bg-pink-950/30 border border-pink-800/30 rounded-xl p-4 text-sm text-pink-200">
-                          ✨ Votre réservation sera confirmée sous <strong>24h</strong> par WhatsApp, Telegram ou email. Un rappel vous sera envoyé la veille du rendez-vous.
+                        <div className="bg-black/40 border border-white/5 rounded-3xl p-6 space-y-6">
+                          <div className="flex justify-between items-end border-b border-white/5 pb-6">
+                            <div>
+                              <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Forfait choisi</p>
+                              <p className="text-xl text-white">{selectedPackage.duration}</p>
+                            </div>
+                            <p className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-500">
+                              {selectedPackage.price}
+                            </p>
+                          </div>
+
+                          <div className="space-y-4">
+                            <SummaryRow icon={<User className="w-4 h-4 text-gray-500" />} label="Nom" value={formData.name} />
+                            <SummaryRow icon={<Mail className="w-4 h-4 text-gray-500" />} label="Email" value={formData.email} />
+                            <SummaryRow
+                              icon={<Calendar className="w-4 h-4 text-gray-500" />}
+                              label="Date"
+                              value={<span className="capitalize text-amber-300">{formatDate(formData.appointmentDate)}</span>}
+                            />
+                            {formData.paymentProof && (
+                              <SummaryRow
+                                icon={<CheckCircle className="w-4 h-4 text-green-500" />}
+                                label="Justificatif"
+                                value={<span className="text-green-400">{formData.paymentProof.name}</span>}
+                              />
+                            )}
+                            {formData.additionalMessage && (
+                              <SummaryRow
+                                icon={<Clock className="w-4 h-4 text-gray-500" />}
+                                label="Message"
+                                value={formData.additionalMessage}
+                              />
+                            )}
+                          </div>
                         </div>
 
-                        <div className="flex justify-between pt-2">
-                          <button type="button" onClick={handleBack} className="btn btn-ghost gap-2">
+                        <div className="bg-amber-950/20 border border-amber-900/30 rounded-2xl p-5 flex gap-4 items-start">
+                          <Sparkles className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                          <p className="text-sm text-amber-200/80 leading-relaxed">
+                            Votre réservation sera confirmée sous <strong className="text-amber-100">24h</strong> par WhatsApp, Telegram ou email. Un rappel vous sera envoyé la veille de notre rencontre.
+                          </p>
+                        </div>
+
+                        <div className="flex items-center justify-between pt-6 mt-2">
+                          <button type="button" onClick={handleBack} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors py-2 px-4 rounded-full hover:bg-white/5">
                             <ChevronLeft className="w-4 h-4" /> Modifier
                           </button>
+                          
                           <button
                             type="submit"
                             disabled={isLoading}
-                            className="btn bg-pink-600 hover:bg-pink-700 border-none text-white gap-2 min-w-40"
+                            className="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-full font-medium min-w-[200px] hover:shadow-[0_0_30px_-5px_rgba(225,29,72,0.4)] disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-[0.98] transition-all"
                           >
                             {isLoading ? (
                               <>
-                                <span className="loading loading-spinner loading-sm" />
-                                Envoi en cours…
+                                <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                Traitement...
                               </>
                             ) : (
                               <>
-                                <CheckCircle className="w-4 h-4" /> Confirmer
+                                Confirmer la réservation <CheckCircle className="w-5 h-5" />
                               </>
                             )}
                           </button>
@@ -606,133 +660,191 @@ export default function BookingForm() {
     Vous pouvez effectuer le règlement de votre recharge Transcash en ligne via deux plateformes dédiées. Sélectionnez le montant correspondant au tarif choisi, achetez la recharge, puis joignez la photo dans le formulaire de réservation.
   </p>
 
-  <div className="space-y-4 p-4 bg-gray-800/50 rounded-lg shadow-md border border-gray-700">
-    <h2 className="font-semibold flex items-center gap-2 text-gray-200">
-      Trois plateformes d'achat de recharge <ArrowBigDown size={28} className="text-gray-400" />
+<div className="bg-[#121212]/40 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+  {/* En-tête de section épuré */}
+  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-4">
+    <h2 className="text-xl font-light text-white tracking-wide flex items-center gap-3">
+      <span className="w-6 h-[1px] bg-amber-500"></span>
+      Plateformes d'Achat Sécurisées
     </h2>
+    <p className="text-xs text-gray-400 font-light tracking-wider uppercase">
+      Obtenir un coupon Transcash
+    </p>
+  </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* Carte Recharge.com - entièrement cliquable */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    {/* ── CARTE 1 : RECHARGE.FR ── */}
+    <a
+      href="https://www.recharge.fr/carte-transcash"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col justify-between bg-white/[0.02] hover:bg-white/[0.06] rounded-2xl border border-white/5 hover:border-amber-500/30 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden p-5"
+    >
+      <div>
+        {/* Conteneur d'image premium */}
+        <div className="w-full h-36 mb-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 relative">
+          <img
+            src="https://www.recharge.fr/_next/image?url=https%3A%2F%2Frecharge-prd.asset.akeneo.cloud%2Fproduct_assets%2Fmedia%2FTranscash.png&w=640&q=75"
+            alt="Aperçu de Recharge.fr"
+            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+        </div>
+        
+        <h3 className="text-lg font-medium text-white tracking-wide mb-2">Recharge.fr</h3>
+        <p className="text-gray-400 text-xs font-light leading-relaxed mb-6">
+          Rechargez vos mobiles, jeux vidéo et cartes cadeaux instantanément. Plus de 750 marques de confiance disponibles.
+        </p>
+      </div>
+
+      <div className="flex items-center justify-between text-xs font-medium tracking-wider uppercase text-amber-400 group-hover:text-amber-300 transition-colors pt-2 border-t border-white/5">
+        <span>Accéder au site</span>
+        <ExternalLink className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      </div>
+    </a>
+
+    {/* ── CARTE 2 : TRANSCASH RECHARGE ── */}
+    <a
+      href="https://www.transcash-recharge.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col justify-between bg-white/[0.02] hover:bg-white/[0.06] rounded-2xl border border-white/5 hover:border-amber-500/30 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden p-5"
+    >
+      <div>
+        <div className="w-full h-36 mb-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 relative">
+          <img
+            src="https://www.transcash-recharge.com/sites/uploads/2021/10/Banniere-visuel-coupons_TCRECHARGEnoMSTRD_939x676.png"
+            alt="Aperçu de Transcash Recharge"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-90"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+        </div>
+        
+        <h3 className="text-lg font-medium text-white tracking-wide mb-2">Transcash Recharge</h3>
+        <p className="text-gray-400 text-xs font-light leading-relaxed mb-6">
+          La solution officielle et sécurisée par carte prépayée. Créditez votre compte Transcash en ligne en seulement quelques clics.
+        </p>
+      </div>
+
+      <div className="flex items-center justify-between text-xs font-medium tracking-wider uppercase text-amber-400 group-hover:text-amber-300 transition-colors pt-2 border-t border-white/5">
+        <span>Accéder au site</span>
+        <ExternalLink className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      </div>
+    </a>
+
+    {/* ── CARTE 3 : CARTE DIRECTE ── */}
+    <a
+      href="https://cartedirecte.fr/cartes-de-paiement/transcash"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col justify-between bg-white/[0.02] hover:bg-white/[0.06] rounded-2xl border border-white/5 hover:border-amber-500/30 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden p-5"
+    >
+      <div>
+        <div className="w-full h-36 mb-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 relative">
+          <img
+            src="https://cartedirecte.fr/cdn-cgi/imagedelivery/Pk8Ky-xDyeK8TLUvfplArQ/cartes-de-paiement-transcash-banner-1659618230.pngv2-staging-1737042874.0467/public?w=1280"
+            alt="Aperçu de Carte Directe"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-90"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+        </div>
+        
+        <h3 className="text-lg font-medium text-white tracking-wide mb-2">Carte Directe</h3>
+        <p className="text-gray-400 text-xs font-light leading-relaxed mb-6">
+          Distribution de codes de paiement Mastercard pour vos transactions en ligne. Système immédiat et sans aucun risque de découvert.
+        </p>
+      </div>
+
+      <div className="flex items-center justify-between text-xs font-medium tracking-wider uppercase text-amber-400 group-hover:text-amber-300 transition-colors pt-2 border-t border-white/5">
+        <span>Visiter le site</span>
+        <ExternalLink className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div className="space-y-8 p-6 sm:p-8 bg-[#0e0e0e]/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl">
+  
+  {/* Section Conciergerie / Contact */}
+  <div className="space-y-4">
+    <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-rose-400/80">
+      Assistance & Conciergerie
+    </h3>
+    <p className="text-sm font-light text-gray-300 leading-relaxed max-w-xl">
+      Une question ou une demande particulière ? Nos canaux privés restent à votre entière disposition pour concevoir votre expérience.
+    </p>
+    
+    {/* Boutons de contact discrets et élégants */}
+    <div className="flex flex-wrap gap-3 pt-2">
       <a
-        href="https://www.recharge.fr/carte-transcash"
+        href="https://wa.me/votre_numero" // Remplacez par votre lien de contact direct
         target="_blank"
         rel="noopener noreferrer"
-        className="group block bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-md hover:border-gray-500 transition-all duration-300 overflow-hidden"
+        className="inline-flex items-center gap-2 px-4 py-2 text.xs uppercase tracking-wider font-light bg-[#25D366]/5 hover:bg-[#25D366]/10 border border-[#25D366]/20 hover:border-[#25D366]/40 text-[#25D366] rounded-full transition-all duration-300"
       >
-        <div className="p-5">
-          {/* Aperçu du site : miniature */}
-          <div className="w-full h-32 mb-4 overflow-hidden rounded-md bg-gray-700">
-            <img
-              src="https://www.recharge.fr/_next/image?url=https%3A%2F%2Frecharge-prd.asset.akeneo.cloud%2Fproduct_assets%2Fmedia%2FTranscash.png&w=640&q=75"
-              alt="Aperçu de Recharge.fr"
-              className="w-full h-full object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex items-center gap-3 mb-3">
-            <h3 className="text-lg font-semibold text-gray-100">Recharge.fr</h3>
-          </div>
-          <p className="text-gray-400 text-sm mb-4">
-            Rechargez vos mobiles, jeux vidéo et cartes cadeaux instantanément. Plus de 750 marques disponibles.
-          </p>
-          <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
-            Visiter le site
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </span>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+        WhatsApp
       </a>
-
-      {/* Carte Transcash Recharge - entièrement cliquable */}
       <a
-        href="https://www.transcash-recharge.com"
+        href="https://t.me/moreau_brunella"
         target="_blank"
         rel="noopener noreferrer"
-        className="group block bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-md hover:border-gray-500 transition-all duration-300 overflow-hidden"
+        className="inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-wider font-light bg-[#0088CC]/5 hover:bg-[#0088CC]/10 border border-[#0088CC]/20 hover:border-[#0088CC]/40 text-[#0088CC] rounded-full transition-all duration-300"
       >
-        <div className="p-5">
-          <div className="w-full h-32 mb-4 overflow-hidden rounded-md bg-gray-700">
-            <img
-              src="https://www.transcash-recharge.com/sites/uploads/2021/10/Banniere-visuel-coupons_TCRECHARGEnoMSTRD_939x676.png"
-              alt="Aperçu de Transcash Recharge"
-              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex items-center gap-3 mb-3">
-            <h3 className="text-lg font-semibold text-gray-100">Transcash Recharge</h3>
-          </div>
-          <p className="text-gray-400 text-sm mb-4">
-            Solution de paiement sécurisée par carte prépayée. Rechargez votre compte Transcash en quelques clics.
-          </p>
-          <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
-            Visiter le site
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </span>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-      </a>
-
-      {/* Carte Carte Directe - entièrement cliquable */}
-      <a
-        href="https://cartedirecte.fr/cartes-de-paiement/transcash"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block bg-gray-800 rounded-xl border border-gray-700 shadow-sm hover:shadow-md hover:border-gray-500 transition-all duration-300 overflow-hidden"
-      >
-        <div className="p-5">
-          <div className="w-full h-32 mb-4 overflow-hidden rounded-md bg-gray-700">
-            <img
-              src="https://cartedirecte.fr/cdn-cgi/imagedelivery/Pk8Ky-xDyeK8TLUvfplArQ/cartes-de-paiement-transcash-banner-1659618230.pngv2-staging-1737042874.0467/public?w=1280"
-              alt="Aperçu de Carte Directe"
-              className="w-full h-full object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex items-center gap-3 mb-3">
-            <h3 className="text-lg font-semibold text-gray-100">Carte Directe</h3>
-          </div>
-          <p className="text-gray-400 text-sm mb-4">
-            Carte prépayée Mastercard pour vos achats en ligne sécurisés. Rechargeable et sans découvert.
-          </p>
-          <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
-            Visiter le site
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </span>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#0088CC]" />
+        Telegram @moreau_brunella
       </a>
     </div>
   </div>
 
-  <p>
-    Contactez-moi sur{' '}
-    <span className="font-semibold text-[#25D366]">WhatsApp +33780967872</span> ou sur Telegram{' '}
-    <a href="https://t.me/moreau_brunella" className="text-[#0088CC] hover:underline">
-      @moreau_brunella
-    </a>{' '}
-    pour toute information.
-  </p>
-
-  <div>
-    <h2 className="font-semibold mb-2">Confirmation et rappel</h2>
-    <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm">
-      <li>Confirmation immédiate après réservation (WhatsApp, Telegram ou email)</li>
-      <li>Rappel envoyé 24h avant le rendez-vous</li>
-      <li>Facture détaillée envoyée après réservation</li>
-      <li>Réservation confirmée uniquement après réception de la facture</li>
-    </ul>
+  {/* Section Informations de Réservation */}
+  <div className="pt-6 border-t border-white/5 space-y-4">
+    <h2 className="text-sm font-medium uppercase tracking-[0.15em] text-white/90">
+      Confirmation &amp; Engagement
+    </h2>
+    
+    {/* Liste stylisée façon grille de conciergerie */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="flex gap-3 items-start">
+        <span className="text-rose-400/60 text-xs mt-0.5">01</span>
+        <p className="text-xs text-gray-400 font-light leading-relaxed">
+          <strong className="text-gray-200 font-normal">Confirmation immédiate</strong> après votre réservation via WhatsApp, Telegram ou email.
+        </p>
+      </div>
+      <div className="flex gap-3 items-start">
+        <span className="text-rose-400/60 text-xs mt-0.5">02</span>
+        <p className="text-xs text-gray-400 font-light leading-relaxed">
+          Un <strong className="text-gray-200 font-normal">rappel personnalisé</strong> vous sera envoyé 24 heures avant notre rendez-vous.
+        </p>
+      </div>
+      <div className="flex gap-3 items-start">
+        <span className="text-rose-400/60 text-xs mt-0.5">03</span>
+        <p className="text-xs text-gray-400 font-light leading-relaxed">
+          Une <strong className="text-gray-200 font-normal">facture détaillée</strong> est émise immédiatement après validation de la demande.
+        </p>
+      </div>
+      <div className="flex gap-3 items-start">
+        <span className="text-rose-400/60 text-xs mt-0.5">04</span>
+        <p className="text-xs text-gray-400 font-light leading-relaxed">
+          Votre réservation n'est <strong className="text-gray-200 font-normal">définitivement confirmée</strong> qu'à réception de ce document.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <p className="italic text-gray-400 text-center text-lg">
-    Le meilleur moyen de résister à la tentation est d'y céder.
-  </p>
+  {/* Signature / Citation Haute Couture */}
+  <div className="pt-8 border-t border-white/5 text-center space-y-2">
+    <p className="font-serif italic text-xl text-white/70 tracking-wide selection:bg-rose-500/30">
+      « Le meilleur moyen de résister à la tentation est d'y céder. »
+    </p>
+  </div>
+
+</div>
 </div>
       </div>
     </section>

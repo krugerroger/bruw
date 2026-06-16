@@ -1,0 +1,17 @@
+export const fileNames = [
+  "1_1.jpeg", "1_2.jpeg", "1_3.jpg", "1_4.jpeg", "1_5.jpeg", "1_6.jpg",
+  "2_1.jpeg", "2_2.jpeg", "2_3.jpeg", "2_4.jpeg",
+  "3_1.jpg", "3_2.jpg", "3_3.jpg", "3_4.jpg", "3_5.jpg", "3_6.jpg",
+  "4_1.jpg", "4_2.jpg","4_3.jpg", 
+  "5_1.jpg", "5_2.jpg","5_3.jpg","5_4.jpg", 
+  "6_1.jpeg", "6_2.jpeg","6_3.jpeg", "6_4.jpg", "6_5.jpeg", "6_6.jpg", "6_7.jpg", "6_8.jpg", 
+  "7_1.jpg", "7_2.jpg", 
+  "8_1.jpg", "8_2.jpg","8_3.jpg", "8_4.jpg", "8_5.jpg", "8_6.jpg", "8_7.jpg", "8_8.jpg", "8_9.jpg", "8_10.jpg", 
+  "9_1.jpeg", "9_2.jpg","9_3.jpg", "9_4.jpg", "9_5.jpeg", "9_6.jpeg", "9_7.jpeg", 
+  "10_1.jpg", "10_2.jpg","10_3.jpg", "10_4.jpg", "10_5.jpeg",
+  "11_1.jpg", "11_2.jpg",
+  "12_1.jpg", "12_2.jpg","12_3.jpg", "12_4.jpg", "12_5.jpg",
+  "13_1.jpeg", "13_2.jpeg","13_3.jpeg", "13_5.jpeg", "13_6.jpeg", "13_7.jpeg", "13_8.jpeg", "13_9.jpeg", 
+  "14_1.jpg", "14_2.jpg",
+  "15_1.jpg", "15_2.jpg", "15_3.jpg", "15_4.jpg",
+];

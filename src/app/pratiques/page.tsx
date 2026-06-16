@@ -76,138 +76,58 @@ export default function PracticesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+ <section className="py-24 bg-[#0a0a0a] text-white">
+      <div className="max-w-4xl mx-auto px-6">
+        
         {/* Header */}
-        <div
-          className="text-center mb-12"
-        >
-          <h1 className="text-3xl md:text-4xl font-bold text-pink-600 mb-4">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-serif font-light text-white mb-6">
             {practicesData.title}
           </h1>
-          <p className="text-xl text-gray-300 mb-4">
+          <div className="w-24 h-[1px] bg-amber-500/50 mx-auto mb-8"></div>
+          <p className="text-lg text-neutral-400 font-light max-w-2xl mx-auto leading-relaxed">
             {practicesData.description}
           </p>
-          <p className="text-gray-400">
-            {practicesData.intro}
-          </p>
         </div>
 
-        {/* What I Do Section */}
-        <div
-          className="mb-12"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-pink-500 mb-6 text-center">
-            {practicesData.whatIDo.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {practicesData.whatIDo.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/60 rounded-lg p-4 hover:bg-gray-700/60 transition-colors"
-              >
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
+        {/* Sections de contenu */}
+        {[
+          { data: practicesData.whatIDo, color: 'text-amber-400', icon: 'M5 13l4 4L19 7' },
+          { data: practicesData.whatIDontDo, color: 'text-red-500', icon: 'M6 18L18 6M6 6l12 12' },
+          { data: practicesData.whatIDontLike, color: 'text-neutral-500', icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' }
+        ].map((section, idx) => (
+          <div key={idx} className="mb-20">
+            <h2 className={`text-xs uppercase tracking-[0.3em] font-medium ${section.color} mb-10 text-center`}>
+              {section.data.title}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+              {section.data.items.map((item, i) => (
+                <div key={i} className="flex items-center group">
+                  <svg className={`w-4 h-4 ${section.color} mr-4 opacity-70`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={section.icon} />
                   </svg>
-                  <span className="text-gray-200">{item}</span>
+                  <span className="text-neutral-300 font-light group-hover:text-white transition-colors duration-300">
+                    {item}
+                  </span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* What I Don't Do Section */}
-        <div
-          className="mb-12"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-red-500 mb-6 text-center">
-            {practicesData.whatIDontDo.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {practicesData.whatIDontDo.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/60 rounded-lg p-4 hover:bg-gray-700/60 transition-colors"
-              >
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-red-500 mt-0.5 mr-3 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                  <span className="text-gray-200">{item}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* What I Don't Like Section */}
-        <div
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-6 text-center">
-            {practicesData.whatIDontLike.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {practicesData.whatIDontLike.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/60 rounded-lg p-4 hover:bg-gray-700/60 transition-colors"
-              >
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                    />
-                  </svg>
-                  <span className="text-gray-200">{item}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
 
         {/* Call to Action */}
-        <div
-          className="text-center mt-12"
-        >
-          <p className="text-gray-400 mb-6">
-            Maintenant que vous connaissez mes pratiques, nchésitez pas à me contacter pour une expérience inoubliable.
+        <div className="text-center pt-12 border-t border-neutral-900">
+          <p className="text-neutral-400 mb-8 font-light italic">
+            "Maintenant que vous connaissez mes pratiques, n'hésitez pas à me contacter pour une expérience inoubliable."
           </p>
-          <Link href="contact">
-            <button className="btn bg-pink-600 hover:bg-pink-700 border-none text-white">
-                Me contacter
+          <Link href="/contact">
+            <button className="px-10 py-3 border border-amber-500/30 text-amber-500 hover:bg-amber-500 hover:text-black uppercase tracking-[0.2em] text-sm transition-all duration-500">
+              Me contacter
             </button>
           </Link>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
