@@ -84,7 +84,11 @@
       "header": {
         "tagline": "Libro de Visitas",
         "title": "Confían en mí",
-        "description": "Momentos compartidos, recuerdos inolvidables. Algunas palabras de quienes disfrutaron de mi compañía."
+        "description": "Momentos compartidos, recuerdos inolvidables. Algunas palabras de quienes disfrutaron de mi compañía.",
+        "satisfaction": "Satisfacción",
+        "average_rating": "Valoración Media",
+        "trust": "Confianza Total",
+        "subscribers": "Suscriptores"
       },
       "list": {
         "empty": "Aún no hay testimonios publicados."
@@ -620,7 +624,7 @@
       "practices": "Prácticas",
       "gallery": "Galería",
       "about": "Sobre mí",
-      "testimonials": "Testimonios",
+      "testimonials": "Reseñas/Testimonios",
       "faq": "Condiciones y FAQ",
       "contact": "Contacto",
       "menuMore": "Más +"

@@ -84,7 +84,11 @@
       "header": {
         "tagline": "Libro degli Ospiti",
         "title": "Si fidano di me",
-        "description": "Momenti condivisi, ricordi preziosi. Alcune parole di chi ha apprezzato la mia compagnia."
+        "description": "Momenti condivisi, ricordi preziosi. Alcune parole di chi ha apprezzato la mia compagnia.",
+        "satisfaction": "Soddisfazione",
+        "average_rating": "Valutazione Media",
+        "trust": "Fiducia Totale",
+        "subscribers": "Iscritti"
       },
       "list": {
         "empty": "Nessuna recensione pubblicata al momento."
@@ -619,7 +623,7 @@
       "practices": "Pratiche",
       "gallery": "Galleria",
       "about": "Chi sono",
-      "testimonials": "Testimonianze",
+      "testimonials": "Recensioni/Testimonianze",
       "faq": "Condizioni e FAQ",
       "contact": "Contatti",
       "menuMore": "Altro +"

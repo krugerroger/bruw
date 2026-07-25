@@ -74,7 +74,7 @@ export default function AdminCommentsPage() {
       const to = from + COMMENTS_PER_PAGE - 1;
 
       const { data, error } = await supabaseClient
-        .from("comments_jessica")
+        .from("comments_brunella")
         .select("*")
         .eq("status", "pending")
         .order("created_at", { ascending: false })
@@ -117,12 +117,15 @@ export default function AdminCommentsPage() {
   const handleApprove = async (id: string) => {
     setApprovingId(id);
     try {
+      // Mise à jour directe via Supabase (tu peux aussi utiliser une API route comme pour Delete si tes RLS l'exigent)
       const { error } = await supabaseClient
-        .from("comments_jessica")
-        .update({ status: "approved" })
+        .from("comments_brunella")
+        .update({ status: "displayed" })
         .eq("id", id);
 
       if (error) throw error;
+
+      // Mise à jour de l'UI (on retire le commentaire puisqu'il n'est plus "pending")
       setComments((prev) => prev.filter((c) => c.id !== id));
     } catch (err) {
       console.error(err);
@@ -132,25 +135,26 @@ export default function AdminCommentsPage() {
     }
   };
 
-  const handleDelete = async (id: string) => {
-    if (!confirm("Êtes-vous sûr de vouloir supprimer définitivement ce commentaire ?")) return;
-    
-    setDeletingId(id);
-    try {
-      const { error } = await supabaseClient
-        .from("comments_jessica")
-        .update({ status: "deleted" })
-        .eq("id", id);
+const handleDelete = async (id: string) => {
+  setDeletingId(id);
+  try {
+    // Suppression définitive de la ligne dans Supabase
+    const { error } = await supabaseClient
+      .from("comments_brunella")
+      .delete()
+      .eq("id", id);
 
-      if (error) throw error;
-      setComments((prev) => prev.filter((c) => c.id !== id));
-    } catch (err) {
-      console.error(err);
-      alert("Impossible de supprimer le commentaire.");
-    } finally {
-      setDeletingId(null);
-    }
-  };
+    if (error) throw error;
+
+    // Mise à jour de l'UI (on retire le commentaire de la liste)
+    setComments((prev) => prev.filter((c) => c.id !== id));
+  } catch (err) {
+    console.error(err);
+    alert("Impossible de supprimer définitivement le commentaire.");
+  } finally {
+    setDeletingId(null);
+  }
+};
 
   if (loading && comments.length === 0) {
     return (

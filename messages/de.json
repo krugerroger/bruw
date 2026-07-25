@@ -84,7 +84,11 @@
       "header": {
         "tagline": "Gästebuch",
         "title": "Sie vertrauen mir",
-        "description": "Gemeinsame Momente, wertvolle Erinnerungen. Einige Worte von Menschen, die meine Gesellschaft genossen haben."
+        "description": "Gemeinsame Momente, wertvolle Erinnerungen. Einige Worte von denen, die meine Gesellschaft genossen haben.",
+        "satisfaction": "Zufriedenheit",
+        "average_rating": "Durchschnittsbewertung",
+        "trust": "Vollstes Vertrauen",
+        "subscribers": "Abonnenten"
       },
       "list": {
         "empty": "Derzeit wurden noch keine Bewertungen veröffentlicht."
@@ -619,7 +623,7 @@
       "practices": "Praktiken",
       "gallery": "Galerie",
       "about": "Über mich",
-      "testimonials": "Bewertungen",
+      "testimonials": "Bewertungen/Erfahrungsberichte",
       "faq": "Bedingungen & FAQ",
       "contact": "Kontakt",
       "menuMore": "Mehr +"

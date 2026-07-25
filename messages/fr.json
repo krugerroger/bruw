@@ -84,7 +84,11 @@
       "header": {
         "tagline": "Livre d'Or",
         "title": "Ils me font confiance",
-        "description": "Des moments partagés, des souvenirs précieux. Quelques confidences de ceux qui ont apprécié ma compagnie."
+        "description": "Des moments partagés, des souvenirs précieux. Quelques confidences de ceux qui ont apprécié ma compagnie.",
+        "satisfaction": "Satisfaction",
+        "average_rating": "Note Moyenne",
+        "trust": "Confiance absolue",
+        "subscribers": "Abonnés"
       },
       "list": {
         "empty": "Aucun témoignage publié pour le moment."
@@ -626,7 +630,7 @@
       "practices": "Pratiques",
       "gallery": "Galerie",
       "about": "À propos",
-      "testimonials": "Témoignages",
+      "testimonials": "Commentaires/Témoignages",
       "faq": "Conditions & FAQ",
       "contact": "Contact",
       "menuMore": "Menu +"

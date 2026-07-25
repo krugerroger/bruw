@@ -83,8 +83,12 @@
     "Testimonials": {
       "header": {
         "tagline": "Guestbook",
-        "title": "They trust me",
-        "description": "Shared moments, treasured memories. A few words from those who appreciated my company."
+        "title": "They Trust Me",
+        "description": "Shared moments, cherished memories. A few words from those who enjoyed my company.",
+        "satisfaction": "Satisfaction",
+        "average_rating": "Average Rating",
+        "trust": "Complete Trust",
+        "subscribers": "Subscribers"
       },
       "list": {
         "empty": "No testimonials have been published yet."
@@ -623,7 +627,7 @@
       "practices": "Practices",
       "gallery": "Gallery",
       "about": "About",
-      "testimonials": "Testimonials",
+      "testimonials": "Reviews/Testimonials",
       "faq": "Terms & FAQ",
       "contact": "Contact",
       "menuMore": "More +"
