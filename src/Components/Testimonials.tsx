@@ -2,30 +2,20 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  PenLine,
-  Loader2,
-  ChevronLeft,
-  ChevronRight,
+import { 
+  ArrowUpRight, 
+  PenLine, 
+  Loader2, 
+  ChevronLeft, 
+  ChevronRight 
 } from "lucide-react";
 import { supabaseClient } from "@/utils/supabaseClient";
-import { useTranslations, useLocale } from "next-intl"; // Added useLocale
+import { useTranslations } from "next-intl";
 
 const COMMENTS_PER_PAGE = 10;
 
-// 1. Define strict types for your component state
-interface Testimonial {
-  id: string | number;
-  name: string;
-  date: string;
-  text: string;
-  rating: number;
-}
-
 export default function Testimonials() {
   const t = useTranslations("Home.Testimonials");
-  const locale = useLocale(); // 2. Grab the current active locale
 
   // États pour le formulaire
   const [name, setName] = useState("");
@@ -40,14 +30,39 @@ export default function Testimonials() {
 
   // États pour Supabase & Pagination
   const [dbCount, setDbCount] = useState(0);
-  // 3. Apply the interface here
-  const [currentComments, setCurrentComments] = useState<Testimonial[]>([]);
+  const [currentComments, setCurrentComments] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoadingPage, setIsLoadingPage] = useState(true);
 
   const commentsTopRef = useRef<HTMLDivElement>(null);
 
-  // ... (useEffect initData remains the same)
+  // Initialisation : Compte total + Page 1
+  useEffect(() => {
+    const initData = async () => {
+      setIsLoadingPage(true);
+      try {
+        const { count, error } = await supabaseClient
+          .from("comments_brunella")
+          .select("*", { count: "exact", head: true })
+          .eq("status", "displayed");
+
+        const fetchedCount = error ? 0 : count || 0;
+        setDbCount(fetchedCount);
+
+        if (fetchedCount > 0) {
+          await fetchPageData(1);
+        } else {
+          setCurrentComments([]);
+        }
+      } catch (err) {
+        console.error("Erreur d'initialisation:", err);
+      } finally {
+        setIsLoadingPage(false);
+      }
+    };
+
+    initData();
+  }, []);
 
   // Fetch exactement 10 éléments
   const fetchPageData = async (page: number) => {
@@ -62,11 +77,11 @@ export default function Testimonials() {
       .range(startIdx, endIdx);
 
     if (!error && data) {
-      const formattedData: Testimonial[] = data.map((item) => ({
+      const formattedData = data.map((item) => ({
         id: item.id,
         name: item.nom,
-        // 4. Use the dynamic locale instead of "fr-FR"
-        date: new Date(item.created_at).toLocaleDateString(locale, {
+        // Remarque : Vous pouvez dynamiser la locale "fr-FR" si votre site est multilingue
+        date: new Date(item.created_at).toLocaleDateString("fr-FR", {
           year: "numeric",
           month: "long",
           day: "numeric",
@@ -80,17 +95,12 @@ export default function Testimonials() {
     }
   };
 
-  // ... rest of the component
-
   // Gestion du clic de pagination
   const handlePageChange = async (page: number) => {
     setCurrentPage(page);
 
     if (commentsTopRef.current) {
-      commentsTopRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      commentsTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     setIsLoadingPage(true);
@@ -139,9 +149,7 @@ export default function Testimonials() {
 
       await fetchPageData(1);
       setCurrentPage(1);
-      setCurrentComments((prev) =>
-        [optimisticComment, ...prev].slice(0, COMMENTS_PER_PAGE),
-      );
+      setCurrentComments((prev) => [optimisticComment, ...prev].slice(0, COMMENTS_PER_PAGE));
 
       setStatus("success");
       setName("");
