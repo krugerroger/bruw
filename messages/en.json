@@ -1,0 +1,784 @@
+{
+  "Home": {
+    "Hero": {
+      "imageAlt": "BRUNELLA - Premium Escort in France",
+      "title": "BRUNELLA",
+      "subtitle": "Professional escort in France",
+      "description": "Discretion, elegance & unforgettable moments",
+      "features": {
+        "discretion": "Guaranteed discretion",
+        "elegance": "Elegance & refinement",
+        "availability": "Flexible availability"
+      },
+      "scroll": "Scroll"
+    },
+    "Services": {
+      "header": {
+        "tagline": "My Services",
+        "title": "Unique moments just for you"
+      },
+      "items": {
+        "privateEncounters": {
+          "title": "Private Meetings",
+          "description": "Exclusive moments in a discreet and refined setting."
+        },
+        "dinners": {
+          "title": "Dinners & Outings",
+          "description": "Elegant companionship for your dinners, events, and evenings."
+        },
+        "travel": {
+          "title": "Travel",
+          "description": "Available throughout France for unforgettable moments."
+        },
+        "discretion": {
+          "title": "Absolute Discretion",
+          "description": "Your privacy is my highest priority. Discretion and respect guaranteed."
+        }
+      },
+      "about": {
+        "tagline": "About",
+        "titlePart1": "Brunella, the art of seduction",
+        "titlePart2": "and refinement",
+        "description": "Brunella, an independent high-end escort, welcomes you for exceptional moments. Elegant, attentive, and passionate, she offers far more than a meeting: a truly unforgettable experience.",
+        "cta": "Learn more",
+        "imageAlt": "Brunella, the art of seduction"
+      },
+      "features": {
+        "independent": {
+          "title": "Independent",
+          "description": "Exclusive and personalized service."
+        },
+        "experience": {
+          "title": "Experience",
+          "description": "Unique and memorable moments."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "The art of creating exceptional moments."
+        },
+        "location": {
+          "title": "Throughout France",
+          "description": "Travel available according to your wishes."
+        }
+      }
+    },
+    "Gallery": {
+      "tagline": "Browse",
+      "title": "Gallery",
+      "description": "A glimpse into my exclusive world. Swipe the image, use the arrows, or click a thumbnail to navigate.",
+      "swipe": "Swipe",
+      "restrictedAccess": "Restricted Access",
+      "collectionTitle": "Complete Collection",
+      "private": "Private",
+      "nav": {
+        "prev": "Previous image",
+        "next": "Next image"
+      },
+      "alt": {
+        "image": "Gallery image {number}",
+        "thumbnail": "Gallery image thumbnail {number}",
+        "thumbnailAria": "Go to image {number}"
+      }
+    },
+    "Testimonials": {
+      "header": {
+        "tagline": "Guestbook",
+        "title": "They trust me",
+        "description": "Shared moments, treasured memories. A few words from those who appreciated my company."
+      },
+      "list": {
+        "empty": "No testimonials have been published yet."
+      },
+      "form": {
+        "intro": {
+          "title": "Leave a review",
+          "dot": ".",
+          "description": "Your feedback is invaluable. It helps preserve the memory of our shared moments. Only your nickname will be displayed online to protect your privacy."
+        },
+        "fields": {
+          "name": {
+            "label": "Name / Nickname *",
+            "placeholder": "e.g. Marc-A."
+          },
+          "email": {
+            "label": "Confidential contact email",
+            "placeholder": "Name@domain.com"
+          },
+          "rating": {
+            "label": "Your rating"
+          },
+          "comment": {
+            "label": "Your review *",
+            "placeholder": "Share your impressions of our meeting..."
+          }
+        },
+        "messages": {
+          "success": "Your message has been sent successfully. It is awaiting moderation.",
+          "error": "An error occurred. Please check the required fields."
+        },
+        "submit": {
+          "loading": "Sending...",
+          "default": "Submit review"
+        }
+      },
+      "disclaimer": {
+        "line1": "* All testimonials come from genuine meetings. First names have been changed to fully protect confidentiality.",
+        "line2": "New reviews are subject to moderation before publication."
+      }
+    },
+    "Contact": {
+      "header": {
+        "tagline": "Get in Touch",
+        "title": "Contact & Booking",
+        "description": "For any request regarding an exclusive meeting or additional information, please use the secure contact methods below."
+      },
+      "booking": {
+        "title": "Booking Request",
+        "badge": "Absolute Discretion",
+        "phone": {
+          "title": "Private Line",
+          "description": "Direct line provided after your request has been approved."
+        },
+        "concierge": {
+          "title": "Digital Concierge:",
+          "whatsapp": "Contact via",
+          "telegram": "Contact via",
+          "telegramChannel": "Join the channel",
+          "email": "Send an"
+        }
+      },
+      "disclaimer": {
+        "title": "Confidentiality Commitment",
+        "description": "This platform is strictly reserved for adults. Every request is handled with the utmost discretion according to a strict confidentiality protocol. No information will ever be shared or disclosed to third parties."
+      }
+    },
+    "FAQ": {
+      "header": {
+        "tagline": "Concierge Service",
+        "title": "Frequently Asked Questions"
+      },
+      "questions": {
+        "q1": {
+          "question": "How can I book an appointment?",
+          "answer": "Contact me through one of my professional channels (Telegram or WhatsApp) in the \"Contact\" section. It's quick and easy!"
+        },
+        "q2": {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept Mastercard, PayPal, TRANSCASH vouchers, and bank transfers. All payments are secure."
+        },
+        "q3": {
+          "question": "Can I cancel my booking?",
+          "answer": "Yes, you may cancel up to 24 hours before your appointment and receive a refund of your booking deposit. No hidden fees."
+        },
+        "q4": {
+          "question": "How can I contact support?",
+          "answer": "Fill out the contact form in the \"Contact\" section. Our team is available 24/7."
+        }
+      },
+      "cta": {
+        "description": "Can't find the exact answer you're looking for? Our concierge service is at your complete disposal.",
+        "button": "Contact my concierge"
+      }
+    }
+  },
+  "Pricing": {
+    "header": {
+      "tagline": "Tailored Excellence",
+      "title": "Services & Fees"
+    },
+    "options": {
+      "title": "Exclusive Experiences",
+      "items": [
+        "International travel (+50% of the hourly rate)",
+        "Haute couture outfits (€100–300 supplement)",
+        "Private venue rental (quotation on request)",
+        "Professional photography (optional €200/hour)",
+        "Special activities (to be arranged together)"
+      ]
+    },
+    "incall": {
+      "title": "Reception (Incall)",
+      "schedule": {
+        "label": "Hours & Setting:",
+        "description": "From 8:00 AM to midnight, in the luxurious setting of a private villa. Attentive service and complete discretion."
+      },
+      "refreshments": {
+        "label": "Refreshments:",
+        "description": "Selection of premium soft drinks, exceptional hot beverages, and fine spirits."
+      },
+      "hygiene": {
+        "label": "Hygiene & Comfort:",
+        "description": "Impeccable. A shower is required upon arrival. High-quality linens and branded toiletries are provided."
+      }
+    },
+    "outcall": {
+      "title": "Elite Companionship (Outcall)",
+      "rate": {
+        "duration": "1 hour of companionship",
+        "price": "€150",
+        "note": "(Rate excludes intimacy)"
+      },
+      "description": "Business dinners, gala evenings, opera performances, or simply pleasant moments together on a terrace. An ideal first meeting before considering longer companionships (weekends, trips)."
+    },
+    "booking": {
+      "title": "Booking Procedure",
+      "guarantee": {
+        "label": "Commitment Guarantee:",
+        "description": "Full payment is required to reserve your exclusive time slot. This procedure ensures optimal arrangements and demonstrates mutual commitment."
+      },
+      "payments": {
+        "label": "Accepted payment methods:",
+        "transcash": "Transcash Voucher",
+        "wire": "Instant Bank Transfer",
+        "paypal": "PayPal",
+        "wero": "Wero",
+        "cashNote": "* Cash is not accepted for the first appointment."
+      }
+    },
+    "footer": {
+      "disclaimer": "Note: Fees are provided for guidance only and may be adjusted depending on the complexity and specific nature of the request.",
+      "cancellation": "Cancellation policy: Free of charge up to 24 hours before the scheduled appointment."
+    }
+  },
+  "Practices": {
+    "title": "My Practices & Boundaries",
+    "description": "To ensure moments of harmony and mutual respect, here is a clear overview of what I offer, as well as my strict boundaries.",
+    "whatIDo": {
+      "title": "What I offer",
+      "items": [
+        "GFE: Girlfriend Experience",
+        "PSE: Pornstar Experience",
+        "Extraball: multiple rounds within 1h",
+        "Chaperoning to Swingers Clubs / Nudist Saunas",
+        "Nudist Erotic Massage",
+        "Body-to-Body Thai Massage",
+        "4-Hand Duo Massage",
+        "Lingam Massage",
+        "Couple's Massage",
+        "Webcam Show / Video Call",
+        "Striptease / Burlesque Striptease",
+        "Extended Foreplay",
+        "Roleplay / HOT Scenarios",
+        "Dirty Talk",
+        "Kamasutra & 69 (soft spot for Doggy Style)",
+        "Being dominated (with respect)",
+        "Foot Fetish",
+        "BDSM: Dominatrix / Soft or Hard SM Initiation",
+        "Facesitting",
+        "Handjob",
+        "Sweet or Wild / Angel or Demon",
+        "Handjob / Titjob (Spanish)",
+        "Bareback or Protected Blowjob",
+        "Body Finishing (except on the face)",
+        "Sex Toys (for me and for you)",
+        "Anal Play / Prostatic Massage",
+        "French Kissing",
+        "HOT Trio: Couple or HFF",
+        "Exciting Conversation: explicit words and spanking",
+        "Anal (on me or on you)",
+        "Cunnilingus and Rimming / Analingus (on me)",
+        "Fisting (vaginal only)",
+        "Golden Shower (giver)"
+      ]
+    },
+    "whatIDontDo": {
+      "title": "What I do not do",
+      "items": [
+        "Rimming / Analingus (on you)",
+        "Being tied up (too risky)",
+        "I do not offer credit!",
+        "I am not a social worker!",
+        "I do not do phone sex",
+        "I do not engage in endless erotic texting chats…",
+        "I do not answer withheld/private numbers or landlines.",
+        "I do not negotiate my rates!!!",
+        "I do not accept spare change / empty-pocket cash!",
+        "I do not blackmail, nor do I accept your credit card info to drain your bank accounts online!! (despite the insistence of certain submissives)"
+      ]
+    },
+    "whatIDontLike": {
+      "title": "What I dislike",
+      "items": [
+        "Immediate informal addressing on the phone and overly familiar language",
+        "Roughness, vulgarity, and lack of respect",
+        "Being drooled or spat on",
+        "Pinching or biting my nipples",
+        "Those who hold back their orgasm to stretch the pleasure out as much as possible, only to end up unable to climax",
+        "Those who book a 30-minute appointment and need 2 hours to reach orgasm",
+        "Forced deep throat with hands on my head"
+      ]
+    },
+    "cta": {
+      "quote": "\"Now that you know my practices, feel free to contact me for an unforgettable experience.\"",
+      "button": "Contact me"
+    }
+  },
+  "About": {
+    "tagline": "Discover",
+    "titlePrefix": "About ",
+    "titleHighlight": "Brunella",
+    "stats": {
+      "ageLabel": "Age",
+      "ageValue": "28 years old",
+      "heightLabel": "Height",
+      "heightValue": "1.70 m",
+      "weightLabel": "Figure",
+      "weightValue": "52 kg",
+      "hairLabel": "Hair",
+      "hairValue": "Brown"
+    },
+    "description": {
+      "welcome": "🌸 Welcome to Brunella Moreau's world",
+      "amenitiesHeader": "Air-conditioned apartment – Refreshments available ❄︎👾",
+      "p1": "In the vibrant heart of the city, I welcome you into a discreet and refined setting designed to awaken your senses and offer you a unique experience focused on comfort, relaxation, and elegance.",
+      "p2": "My name is Brunella Moreau 👩‍🦰❤️, a French woman proud of my heritage and feminine curves. My silky-soft skin and deep gaze invite you on a journey of connection and shared moments, where every instant becomes a memorable escape. 🫦🥵❤️",
+      "p3": "In my welcoming space, every meeting is a genuine experience: a subtle blend of kindness, attentiveness, and authenticity. Every detail is designed to create a pleasant and memorable moment. 😇👅",
+      "p4": "Nothing is left to chance: air conditioning, shower facilities, complimentary refreshments, and easy parking in front of the residence... Everything is arranged so you can arrive relaxed and enjoy your visit. 🥰",
+      "p5": "Relax, unwind, and enjoy a timeless moment in an elegant and welcoming atmosphere. ❤️☺️"
+    },
+    "practicalInfo": {
+      "title": "✨ Practical Information",
+      "locationLabel": "Location:",
+      "locationValue": "Discreet and easily accessible residence with parking available in front of the building.",
+      "comfortLabel": "Comfort:",
+      "comfortValue": "Air conditioning, shower available, complimentary refreshments."
+    },
+    "contact": {
+      "title": "📬 Contact Me",
+      "telegramLabel": "Telegram:",
+      "emailLabel": "Email:",
+      "whatsappLabel": "WhatsApp:"
+    },
+    "footer": {
+      "closing": "💋 See you soon",
+      "message": "I look forward to welcoming you for a relaxing and enjoyable experience in an elegant atmosphere.",
+      "signature": "Brunella — your moment of comfort and elegance. 🌹"
+    },
+    "languages": {
+      "title": "Languages Spoken",
+      "items": ["French", "English", "Italian", "Spanish"]
+    },
+    "passions": {
+      "title": "Passions",
+      "items": [
+        "Travel",
+        "Gastronomy",
+        "Modern Art",
+        "Rare Wines",
+        "Literature",
+        "Fashion"
+      ]
+    }
+  },
+  "Conditions": {
+    "services": {
+      "tagline": "Services",
+      "title": "What do you offer?",
+      "description": "I offer <amber>chaperoning</amber> services (restaurant, private party, swinger Club & Sauna, Nightclub...) and <amber>escorting</amber>, full-body <amber>NUDIST wellness and relaxation massages</amber>, <amber>sensual stripteases</amber> or <amber>Burlesque Striptease</amber>, <amber>DUO escort</amber> services, <amber>Couple Threesome</amber>, <amber>Soft or Hard SM initiation</amber>, <amber>Fetishism</amber>, as well as bringing your <amber>scenarios</amber> and <amber>unusual fantasies</amber> to life.",
+      "items": [
+        "Chaperoning",
+        "Escorting",
+        "Nudist Massages",
+        "Striptease",
+        "Burlesque Striptease",
+        "DUO Escort",
+        "Couple Threesome",
+        "SM Initiation",
+        "Fetishism",
+        "Scenarios & Fantasies"
+      ]
+    },
+    "payment": {
+      "tagline": "Bookings",
+      "title": "Payment Methods",
+      "subtitle": "To ensure the safety and seriousness of our commitments, a secure and discreet advance payment may be requested via <amber>Transcash, PayPal, Instant Bank Transfer, or WERO</amber>. Here is why this method protects our exchange philosophy:",
+      "methodsLabel": "Accepted methods",
+      "methods": ["Transcash", "PayPal", "WERO", "Instant Transfer"],
+      "advantages": [
+        {
+          "title": "Seriousness and Security",
+          "desc": "By confirming a reservation, I assure you of my complete commitment and dedication to honoring our appointment, while avoiding the inconvenience of last-minute cancellations."
+        },
+        {
+          "title": "Optimal Preparation",
+          "desc": "This mutual approach allows me to organize my schedule with complete peace of mind in order to offer you an impeccable, tailor-made service."
+        },
+        {
+          "title": "Discreetness and Anonymity",
+          "desc": "Payments via Transcash or PayPal fully respect your privacy and serve as ideal alternatives to preserve your anonymity."
+        },
+        {
+          "title": "Mutual Commitment",
+          "desc": "The deposit formalizes a relationship of mutual trust, where both parties commit to keeping their word and respecting each other's time."
+        },
+        {
+          "title": "Simplicity and Accessibility",
+          "desc": "Purchasing Transcash vouchers at a tobacconist is immediate, simple, and completely neutral on your bank statements, saving you from the constraints of traditional bank transfers."
+        }
+      ]
+    },
+    "confidentiality": {
+      "title": "Confidentiality and Security",
+      "modificationsTitle": "Modification of Terms",
+      "modificationsDesc": "These guidelines may evolve over time. Any significant changes will be shared with you beforehand, requiring your full agreement to renew our private interactions.",
+      "contactTitle": "Contact and Communication",
+      "contactDesc": "For any questions regarding this policy or to refine your specific needs, you can write to me directly at:"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1Title": "Do you have limits or taboos?",
+      "q1Desc": "I am a modern, free-spirited woman who enjoys swinger pleasures. However, I strictly refuse any degrading, hygienically questionable, or disrespectful behavior. My physical safety and strict respect for my privacy remain my absolute priorities.",
+      "q2Title": "Is it possible to negotiate your rates and options?",
+      "q2Desc": "My rates and services reflect the quality, refinement, and dedication I bring to every moment. They are not negotiable. If my terms do not align with your expectations, the field offers a multitude of varied profiles where you will easily find what you are looking for. Please note that no amount of extra payment will induce me to accept a practice that was previously declined.",
+      "q3Title": "Do you have age criteria for your partners?",
+      "q3Desc": "I particularly appreciate the maturity, calm, and manners of experienced men, who often prove to be attentive gentlemen. Although I have a natural preference for profiles over 30, I do not close my door to younger men; the elegance of your approach and your charm will make all the difference.",
+      "q4Title": "Do you welcome people with disabilities?",
+      "q4Desc": "Absolutely. Physical particularities or disabilities (motor, sensory, medical devices, or ostomies) are by no means an obstacle. I am used to accompanying diverse profiles with great naturalness and kindness. Do not hesitate to share your needs with me in advance so we can organize our ideal moment of connection.",
+      "q5Title": "Can I count on your complete discretion?",
+      "q5Desc": "Without any reservation. Absolute discretion is <amber>the golden rule</amber> that structures my escort service. Naturally, I expect the same elegance on your part.",
+      "q5Disclaimer": "* I remind you that this site presents exclusive chaperoning and wellness modeling services between consenting adults, operating within an independent and legal framework. Any subsequent chemistry or intimacy falls strictly under mutual private consent, completely independent of the remuneration for the hourly service."
+    },
+    "footer": {
+      "thankYou": "Thank you for your trust and courtesy.",
+      "note": "Every detail is designed to shape the contours of an unforgettable encounter. Looking forward to welcoming you."
+    }
+  },
+  "Booker": {
+    "button": "Book Now"
+  },
+  "BookingForm": {
+    "title": "Book an Appointment",
+    "sidebar": {
+      "title": "Unique Moments",
+      "subtitle": "Tailored for You",
+      "selection": "Your Selection"
+    },
+    "errors": {
+      "parsing": "Parsing error:",
+      "package": "Please select a package",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "dateRequired": "Please choose a date",
+      "proofRequired": "Proof of payment is required",
+      "dateFuture": "Please select a future date",
+      "general": "Error:"
+    },
+    "dateFallback": "—"
+  },
+  "InfoSection": {
+    "description": "You can pay for your Transcash top-up online via two dedicated platforms. Select the amount corresponding to the chosen rate, purchase the top-up, and then attach the photo in the booking form.",
+    "header": {
+      "title": "Secure Purchasing Platforms",
+      "subtitle": "Get a Transcash voucher"
+    },
+    "cards": {
+      "recharge": {
+        "title": "Recharge.fr",
+        "description": "Top up your mobile, video games, and gift cards instantly. Over 750 trusted brands available.",
+        "action": "Go to website"
+      },
+      "transcash": {
+        "title": "Transcash Recharge",
+        "description": "The official and secure prepaid card solution. Credit your Transcash account online in just a few clicks.",
+        "action": "Go to website"
+      },
+      "carteDirecte": {
+        "title": "Carte Directe",
+        "description": "Distribution of Mastercard payment codes for your online transactions. Immediate system with zero risk of overdraft.",
+        "action": "Visit website"
+      }
+    },
+    "assistance": {
+      "tagline": "Assistance & Concierge Service",
+      "description": "A question or a special request? Our private channels remain at your full disposal to tailor your experience.",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram {handle}"
+    },
+    "confirmation": {
+      "title": "Confirmation & Commitment",
+      "step1": {
+        "num": "01",
+        "bold": "Immediate confirmation",
+        "text": " after your booking via WhatsApp, Telegram, or email."
+      },
+      "step2": {
+        "num": "02",
+        "textBefore": "A ",
+        "bold": "personalized reminder",
+        "textAfter": " will be sent to you 24 hours before our meeting."
+      },
+      "step3": {
+        "num": "03",
+        "textBefore": "A ",
+        "bold": "detailed invoice",
+        "textAfter": " is issued immediately upon validation of the request."
+      },
+      "step4": {
+        "num": "04",
+        "textBefore": "Your booking is ",
+        "bold": "definitely confirmed",
+        "textAfter": " only upon receipt of this document."
+      }
+    },
+    "quote": "“The only way to get rid of a temptation is to yield to it.”"
+  },
+  "PackageSelection": {
+    "title": "Your Experience",
+    "selectLabel": "Select a package",
+    "preview": {
+      "tagline": "Selection Preview"
+    },
+    "allRatesLink": "View all detailed rates",
+    "buttons": {
+      "continue": "Continue"
+    }
+  },
+  "PersonnalInfo": {
+    "title": "Personal Information",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "your@email.com"
+      },
+      "appointmentDate": {
+        "label": "Preferred Date & Time",
+        "availabilityHint": "Available from 9:00 AM to 8:00 PM"
+      },
+      "paymentProof": {
+        "label": "Booking Proof",
+        "changeImage": "Change image",
+        "defaultTitle": "Photo of the Transcash voucher",
+        "defaultSubtitle": "Click or drag the file here"
+      },
+      "transferNotice": {
+        "textBefore": "Instant transfer? Contact me on ",
+        "whatsappLabel": "WhatsApp {phone}"
+      },
+      "additionalMessage": {
+        "label": "Special Note",
+        "optionalTag": "(Optional)",
+        "placeholder": "Special outfit, specific location, special request..."
+      }
+    },
+    "buttons": {
+      "back": "Back",
+      "verify": "Review booking"
+    }
+  },
+  "SuccessState": {
+    "title": "Request sent successfully!",
+    "description": {
+      "textBefore": "I will confirm your appointment within ",
+      "timeframe": "24 hours",
+      "textAfter": " via WhatsApp, Telegram or email."
+    },
+    "summary": {
+      "title": "Summary",
+      "name": "Name",
+      "email": "Email",
+      "appointmentDate": "Desired date",
+      "package": "Package",
+      "price": "Price"
+    },
+    "buttons": {
+      "whatsapp": "Contact me on WhatsApp",
+      "telegram": "Contact me on Telegram"
+    }
+  },
+  "Summary": {
+    "header": {
+      "title": "Confirmation",
+      "subtitle": "Please check your booking details."
+    },
+    "package": {
+      "label": "Selected package"
+    },
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "date": "Date",
+      "proof": "Proof",
+      "message": "Message"
+    },
+    "notice": {
+      "textBefore": "Your booking will be confirmed within ",
+      "timeframe": "24 hours",
+      "textAfter": " via WhatsApp, Telegram or email. A reminder will be sent the day before our meeting."
+    },
+    "buttons": {
+      "edit": "Edit",
+      "processing": "Processing...",
+      "confirm": "Confirm booking"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "rates": "Services & Rates",
+      "practices": "Practices",
+      "gallery": "Gallery",
+      "about": "About",
+      "testimonials": "Testimonials",
+      "faq": "Terms & FAQ",
+      "contact": "Contact",
+      "menuMore": "More +"
+    },
+    "actions": {
+      "book": "Book Now",
+      "close": "Close"
+    }
+  },
+  "Footer": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "gallery": "Gallery",
+      "about": "About",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "legal": "Legal Notice - Brunella, Independent",
+    "copyright": "© 2023 - 2026 Brunella. All rights reserved.",
+    "tooltips": {
+      "confidentiality": "Absolute confidentiality",
+      "location": "Based in France"
+    }
+  },
+  "ServiceCards": {
+    "availableOptions": "Available options:",
+    "bookButton": "Book now",
+    "services": {
+      "intimateMoment": {
+        "title": "Intimate Moment",
+        "description": "A complete sensual experience combining tenderness and passion",
+        "highlights": [
+          "GFE: Girlfriend Experience",
+          "PSE: Porn Star Experience",
+          "Extraball: Multiple rounds in 1h",
+          "Chaperoning: Swinger club / Nudist sauna",
+          "Erotic massages: Nudist, Thai Body-to-Body, 4-Hand Duo, Lingam, Couples",
+          "Shows & fantasies: Webcam, Striptease, Burlesque striptease, Roleplay, HOT scenarios, Dirty talk",
+          "Carnal pleasures: Extended foreplay, Kamasutra & 69 (soft spot for doggy style), French Kiss",
+          "Fetishism & domination: BDSM (Dominatrix, soft/hard initiation), Facesitting, Foot fetish",
+          "Intense experiences: Handjob, Sweet or wild (Angel or Demon), Handjob (classic & Spanish/titjob), Bareback or protected blowjob, Body finishing (excluding face)",
+          "Sensual explorations: Sex toys (for me & for you), Anal play / Prostatic massage, HOT Trio (Couple or HFF), Exciting conversation (explicit words & spanking)",
+          "Specific pleasures: Anal (on me or on you), Cunnilingus & Rimming/Analingus (on me), Fisting (vaginal only), Golden shower (giver)",
+          "Sensual explorations: Sex toys (for me & for you), Anal play / Prostatic massage, HOT Trio (Couple or HFF), Exciting conversation (explicit words & spanking)"
+        ],
+        "options": [
+          {
+            "prestation": "2 rounds + massage",
+            "duration": "Romantic date",
+            "time": "1 hour",
+            "amount": "150€",
+            "details": "Daytime: <span class=\"font-bold text-white text-md\">150€</span> / After 7:00 PM: <span class=\"font-bold text-white text-md\">170€</span>. We get to know each other over a drink, shower, and a moment of sensuality"
+          },
+          {
+            "prestation": "3 rounds + massage",
+            "duration": "Romantic date",
+            "time": "1 hour 30 mins",
+            "amount": "240€",
+            "details": "Daytime: <span class=\"font-bold text-white text-md\">240€</span> / After 7:00 PM: <span class=\"font-bold text-white text-md\">250€</span>. We get to know each other over a drink, shower, and a moment of sensuality"
+          },
+          {
+            "prestation": "3 to 4 rounds + massage",
+            "duration": "Romantic date",
+            "time": "2 hours",
+            "amount": "300€",
+            "details": "Daytime: <span class=\"font-bold text-white text-md\">300€</span> / After 7:00 PM: <span class=\"font-bold text-white text-md\">320€</span>. We get to know each other over a drink, shower, and a moment of sensuality"
+          },
+          {
+            "prestation": "4 rounds + massage",
+            "duration": "Romantic date",
+            "time": "3 hours",
+            "amount": "400€",
+            "details": "Daytime: <span class=\"font-bold text-white text-md\">400€</span> / After 7:00 PM: <span class=\"font-bold text-white text-md\">420€</span>. We get to know each other over a drink, shower, and a moment of sensuality"
+          },
+          {
+            "prestation": "550€ (before 7:00 PM)",
+            "duration": "Relaxation and wellness afternoon",
+            "time": "4 hours",
+            "amount": "550€",
+            "details": "We enjoy an afternoon at a wellness spa (spa, hammam, massage…), or over a drink and lunch, then move to your room to finish in style…"
+          },
+          {
+            "prestation": "670€ 2h Dinner + 2h intimacy",
+            "duration": "Delight evening (8:00 PM to midnight)",
+            "time": "4 hours",
+            "amount": "720€",
+            "details": "A sensual one-on-one evening for an awakening of the senses…"
+          },
+          {
+            "prestation": "720€ 2h Dinner + 3h intimacy",
+            "duration": "Sultry evening (8:00 PM to 1:00 AM)",
+            "time": "5 hours",
+            "amount": "720€",
+            "details": "My favorite romantic date, over a nice dinner at my place or your hotel, followed by a wild night…"
+          },
+          {
+            "prestation": "800€ dinner + sultry night + breakfast",
+            "duration": "Overnight (8:00 PM to 8:00 AM)",
+            "time": "12 hours",
+            "amount": "800€",
+            "details": "We meet over dinner at a restaurant or at your hotel before heading to your room for a passionate night. No all-nighter: 5 hours of sleep minimum, and please arrange for our or my breakfast"
+          }
+        ]
+      }
+    }
+  },
+  "Steps": {
+    "package": "Package",
+    "info": "Your Details",
+    "confirmation": "Confirmation"
+  },
+  "Offers": {
+    "title": "Romantic Date",
+    "prices": {
+      "1h": {
+        "duration": "1 hour",
+        "amount": "150€ (day) / 170€ (evening)",
+        "description": "2 rounds + massage"
+      },
+      "1h30": {
+        "duration": "1 hour 30 mins",
+        "amount": "240€ (day) / 260€ (evening)",
+        "description": "3 rounds + massage"
+      },
+      "2h": {
+        "duration": "2 hours",
+        "amount": "300€ (day) / 320€ (evening)",
+        "description": "3 to 4 rounds + massage"
+      },
+      "3h": {
+        "duration": "3 hours",
+        "amount": "400€ (day) / 420€ (evening)",
+        "description": "4 rounds + massage"
+      },
+      "afternoon": {
+        "duration": "Relaxing afternoon (4h, before 7 PM)",
+        "amount": "550€",
+        "description": "Spa, hammam, massage, drink/lunch + intimate time"
+      },
+      "delightEvening": {
+        "duration": "Delight Evening (8 PM–12 AM, 4h)",
+        "amount": "670€",
+        "description": "2h dinner + 2h pleasure"
+      },
+      "hotEvening": {
+        "duration": "Sultry Evening (8 PM–1 AM, 5h)",
+        "amount": "720€",
+        "description": "2h dinner + 3h pleasure"
+      },
+      "fullNight": {
+        "duration": "Overnight (8 PM–8 AM, 12h)",
+        "amount": "800€",
+        "description": "Dinner, sensual night (5h min. sleep), breakfast to be arranged"
+      }
+    }
+  }
+}

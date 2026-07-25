@@ -1,0 +1,781 @@
+{
+  "Home": {
+    "Hero": {
+      "imageAlt": "BRUNELLA - Escort Premium en Francia",
+      "title": "BRUNELLA",
+      "subtitle": "Escort profesional en Francia",
+      "description": "Discreción, elegancia y momentos inolvidables",
+      "features": {
+        "discretion": "Discreción garantizada",
+        "elegance": "Elegancia y refinamiento",
+        "availability": "Disponibilidad flexible"
+      },
+      "scroll": "Desplazar"
+    },
+    "Services": {
+      "header": {
+        "tagline": "Mis Servicios",
+        "title": "Momentos únicos solo para ti"
+      },
+      "items": {
+        "privateEncounters": {
+          "title": "Encuentros Privados",
+          "description": "Momentos exclusivos en un entorno discreto y refinado."
+        },
+        "dinners": {
+          "title": "Cenas y Salidas",
+          "description": "Compañía elegante para tus cenas, eventos y veladas."
+        },
+        "travel": {
+          "title": "Desplazamientos",
+          "description": "Disponible en toda Francia para momentos inolvidables."
+        },
+        "discretion": {
+          "title": "Discreción Absoluta",
+          "description": "Tu privacidad es mi máxima prioridad. Discreción y respeto garantizados."
+        }
+      },
+      "about": {
+        "tagline": "Sobre mí",
+        "titlePart1": "Brunella, el arte de la seducción",
+        "titlePart2": "y el refinamiento",
+        "description": "Brunella, escort independiente de alta gama, te recibe para compartir momentos excepcionales. Elegante, atenta y apasionada, ofrece mucho más que un encuentro: una auténtica experiencia.",
+        "cta": "Más información",
+        "imageAlt": "Brunella, el arte de la seducción"
+      },
+      "features": {
+        "independent": {
+          "title": "Independiente",
+          "description": "Servicio exclusivo y personalizado."
+        },
+        "experience": {
+          "title": "Experiencia",
+          "description": "Momentos únicos e inolvidables."
+        },
+        "passion": {
+          "title": "Pasión",
+          "description": "El arte de crear momentos excepcionales."
+        },
+        "location": {
+          "title": "En toda Francia",
+          "description": "Desplazamientos disponibles según tus deseos."
+        }
+      }
+    },
+    "Gallery": {
+      "tagline": "Explorar",
+      "title": "Galería",
+      "description": "Un vistazo a mi mundo exclusivo. Desliza la imagen, usa las flechas o haz clic en una miniatura para navegar.",
+      "swipe": "Deslizar",
+      "restrictedAccess": "Acceso Restringido",
+      "collectionTitle": "Colección Completa",
+      "private": "Privado",
+      "nav": {
+        "prev": "Imagen anterior",
+        "next": "Siguiente imagen"
+      },
+      "alt": {
+        "image": "Imagen de la galería {number}",
+        "thumbnail": "Miniatura de la imagen de la galería {number}",
+        "thumbnailAria": "Ir a la imagen {number}"
+      }
+    },
+    "Testimonials": {
+      "header": {
+        "tagline": "Libro de Visitas",
+        "title": "Confían en mí",
+        "description": "Momentos compartidos, recuerdos inolvidables. Algunas palabras de quienes disfrutaron de mi compañía."
+      },
+      "list": {
+        "empty": "Aún no hay testimonios publicados."
+      },
+      "form": {
+        "intro": {
+          "title": "Dejar un comentario",
+          "dot": ".",
+          "description": "Tu opinión es muy importante. Ayuda a mantener vivos nuestros momentos compartidos. Solo tu seudónimo será visible en línea para preservar tu privacidad."
+        },
+        "fields": {
+          "name": {
+            "label": "Nombre / Seudónimo *",
+            "placeholder": "Ej.: Marc-A."
+          },
+          "email": {
+            "label": "Correo electrónico confidencial",
+            "placeholder": "Nombre@dominio.com"
+          },
+          "rating": {
+            "label": "Tu valoración"
+          },
+          "comment": {
+            "label": "Tu comentario *",
+            "placeholder": "Comparte tus sensaciones sobre nuestro encuentro..."
+          }
+        },
+        "messages": {
+          "success": "Tu mensaje ha sido enviado correctamente. Está pendiente de moderación.",
+          "error": "Se produjo un error. Verifica los campos obligatorios."
+        },
+        "submit": {
+          "loading": "Enviando...",
+          "default": "Enviar comentario"
+        }
+      },
+      "disclaimer": {
+        "line1": "* Todos los testimonios provienen de encuentros reales. Los nombres han sido modificados para garantizar la máxima confidencialidad.",
+        "line2": "Los nuevos comentarios serán moderados antes de su publicación."
+      }
+    },
+    "Contact": {
+      "header": {
+        "tagline": "Ponte en Contacto",
+        "title": "Contacto y Reservas",
+        "description": "Para cualquier solicitud de un encuentro exclusivo o información adicional, te invito a utilizar los canales seguros que aparecen a continuación."
+      },
+      "booking": {
+        "title": "Solicitud de Reserva",
+        "badge": "Discreción Absoluta",
+        "phone": {
+          "title": "Línea Privada",
+          "description": "La línea directa se comunicará tras la validación de la solicitud."
+        },
+        "concierge": {
+          "title": "Conserjería Digital:",
+          "whatsapp": "Contactar por",
+          "telegram": "Contactar por",
+          "telegramChannel": "Unirse al canal",
+          "email": "Enviar un"
+        }
+      },
+      "disclaimer": {
+        "title": "Compromiso de Confidencialidad",
+        "description": "Plataforma estrictamente reservada para personas adultas. Cada solicitud se gestiona siguiendo un protocolo que garantiza la máxima discreción. Ninguna información será compartida ni cedida a terceros."
+      }
+    },
+    "FAQ": {
+      "header": {
+        "tagline": "Conserjería",
+        "title": "Preguntas Frecuentes"
+      },
+      "questions": {
+        "q1": {
+          "question": "¿Cómo puedo reservar una cita?",
+          "answer": "Contáctame a través de uno de mis canales profesionales (Telegram o WhatsApp) en la sección «Contacto». ¡Es rápido y sencillo!"
+        },
+        "q2": {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos Mastercard, PayPal, recargas TRANSCASH y transferencias bancarias. Todos los pagos son seguros."
+        },
+        "q3": {
+          "question": "¿Puedo cancelar mi reserva?",
+          "answer": "Sí, puedes cancelar hasta 24 horas antes de la cita y recibir el reembolso de tu depósito de reserva. Sin cargos ocultos."
+        },
+        "q4": {
+          "question": "¿Cómo puedo contactar con el soporte?",
+          "answer": "Completa el formulario de contacto en la sección «Contacto». Nuestro equipo está disponible las 24 horas, los 7 días de la semana."
+        }
+      },
+      "cta": {
+        "description": "¿No encuentras la respuesta que buscas? Nuestro servicio de conserjería está completamente a tu disposición.",
+        "button": "Contactar con mi conserjería"
+      }
+    }
+  },
+  "Pricing": {
+    "header": {
+      "tagline": "Excelencia a Medida",
+      "title": "Servicios y Tarifas"
+    },
+    "options": {
+      "title": "Experiencias Exclusivas",
+      "items": [
+        "Desplazamientos internacionales (+50 % de la tarifa por hora)",
+        "Vestidos de alta costura (suplemento de 100-300 €)",
+        "Alquiler de espacios privados (presupuesto a medida)",
+        "Fotografía profesional (opción 200 €/h)",
+        "Actividades especiales (a convenir)"
+      ]
+    },
+    "incall": {
+      "title": "Recepción (Incall)",
+      "schedule": {
+        "label": "Horario y entorno:",
+        "description": "De 08:00 a 00:00, en el lujoso entorno de una villa privada. Servicio atento y total discreción."
+      },
+      "refreshments": {
+        "label": "Bebidas:",
+        "description": "Selección de refrescos premium, bebidas calientes de alta calidad y licores selectos."
+      },
+      "hygiene": {
+        "label": "Higiene y confort:",
+        "description": "Impecable. Se requiere una ducha al llegar. Ropa de hogar de alta calidad y artículos de aseo de primeras marcas a tu disposición."
+      }
+    },
+    "outcall": {
+      "title": "Compañía de Élite (Outcall)",
+      "rate": {
+        "duration": "1 hora de acompañamiento",
+        "price": "150 €",
+        "note": "(Tarifa sin intimidad)"
+      },
+      "description": "Cenas de negocios, galas, óperas o simplemente momentos agradables en una terraza. Un primer encuentro ideal antes de considerar acompañamientos de larga duración (fines de semana, viajes)."
+    },
+    "booking": {
+      "title": "Protocolo de Reserva",
+      "guarantee": {
+        "label": "Garantía de compromiso:",
+        "description": "Se requiere el pago completo para reservar tu horario exclusivo. Este procedimiento garantiza las mejores condiciones y demuestra un compromiso mutuo."
+      },
+      "payments": {
+        "label": "Métodos de pago aceptados:",
+        "transcash": "Cupón Transcash",
+        "wire": "Transferencia bancaria inmediata",
+        "paypal": "PayPal",
+        "wero": "Wero",
+        "cashNote": "* No se acepta efectivo en la primera cita."
+      }
+    },
+    "footer": {
+      "disclaimer": "Nota: Las tarifas son orientativas y pueden ajustarse según la complejidad y la naturaleza específica de la solicitud.",
+      "cancellation": "Política de cancelación: Gratuita hasta 24 horas antes de la cita."
+    }
+  },
+  "Practices": {
+    "title": "Mis Prácticas y Límites",
+    "description": "Para garantizar momentos de armonía y respeto mutuo, aquí tiene un resumen claro de lo que ofrezco, así como mis límites estrictos.",
+    "whatIDo": {
+      "title": "Lo que ofrezco",
+      "items": [
+        "GFE: Girl Friend Experience",
+        "PSE: Porn Star Experience",
+        "Extraball: varios contactos en 1 hora",
+        "Acompañamiento a Club Liberal / Sauna Swinger",
+        "Masaje Erótico naturista",
+        "Masaje BodyBody Tailandés",
+        "Masaje en Dúo a 4 manos",
+        "Masaje del Lingam",
+        "Masaje en Pareja",
+        "Show en WebCam / Videollamada",
+        "Striptease / Desnudo burlesque",
+        "Largas caricias y preliminares",
+        "Juegos de rol / Escenario HOT",
+        "Conversación picante / Palabras sucias",
+        "Kamasutra y 69 (debilidad por la postura del perrito)",
+        "Ser dominada (con respeto)",
+        "Fetichismo de pies",
+        "BDSM: Ama Dominatriz e Iniciación SM Suave/Hard",
+        "Facesitting",
+        "Handjob",
+        "Dulce o salvaje / Ángel o Demonio",
+        "Paja / Paja con el pecho (rusa)",
+        "Felación al natural o protegida",
+        "Final en el cuerpo (excepto en la cara)",
+        "Juguetes sexuales (para mí y para usted)",
+        "Trabajo anal / Masaje prostático",
+        "Beso francés (con lengua)",
+        "Trío HOT: Pareja o HFF",
+        "Conversación excitante: palabras explícitas y azotes",
+        "Anal (en mí o en usted)",
+        "Cunnilingus y Anulingus (en mí)",
+        "Fisting (únicamente vaginal)",
+        "Lluvia dorada (activa / dar)"
+      ]
+    },
+    "whatIDontDo": {
+      "title": "Lo que no hago",
+      "items": [
+        "Anulingus (en usted)",
+        "Estar atada (demasiado arriesgado)",
+        "¡No fió ni doy crédito!",
+        "¡No soy asistenta social!",
+        "No hago teléfono erótico",
+        "No mantengo chats de SMS eróticos interminables…",
+        "No respondo a llamadas con número oculto ni a teléfonos fijos.",
+        "¡¡¡No negocio mis tarifas!!!",
+        "¡No acepto 'cambio suelto' o calderilla!",
+        "¡¡No hago chantaje, ni acepto los datos de su tarjeta de crédito para vaciar sus cuentas bancarias por internet!! (a pesar de la insistencia de ciertos sumisos)"
+      ]
+    },
+    "whatIDontLike": {
+      "title": "Lo que no me gusta",
+      "items": [
+        "Tuteo directo por teléfono y un lenguaje demasiado familiar",
+        "La brutalidad, las groserías y la falta de respeto",
+        "Que me babeen o me escupan encima",
+        "Que me pellizquen o muerdan los pezones",
+        "Quienes retienen su eyaculación para alargar el placer al máximo para al final no lograr eyacular",
+        "Quienes reservan una cita de 30 minutos y necesitan 2 horas para eyacular",
+        "Garganta profunda forzada con las manos en la cabeza"
+      ]
+    },
+    "cta": {
+      "quote": "«Ahora que conoce mis prácticas, no dude en contactarme para una experiencia inolvidable.»",
+      "button": "Contactarme"
+    }
+  },
+  "About": {
+    "tagline": "Descubrir",
+    "titlePrefix": "Sobre ",
+    "titleHighlight": "Brunella",
+    "stats": {
+      "ageLabel": "Edad",
+      "ageValue": "28 años",
+      "heightLabel": "Altura",
+      "heightValue": "1,70 m",
+      "weightLabel": "Figura",
+      "weightValue": "52 kg",
+      "hairLabel": "Cabello",
+      "hairValue": "Castaño"
+    },
+    "description": {
+      "welcome": "🌸 Bienvenido al universo de Brunella Moreau",
+      "amenitiesHeader": "Apartamento con aire acondicionado – Bebidas frías disponibles ❄︎👾",
+      "p1": "En el corazón de la ciudad, te recibo en un entorno discreto y refinado, pensado para ofrecerte una experiencia única centrada en el bienestar y la comodidad.",
+      "p2": "Me llamo Brunella Moreau 👩‍🦰❤️, soy una mujer francesa orgullosa de mis raíces y de mi feminidad. Mi piel suave y mi mirada profunda te invitan a compartir un momento especial y memorable. 🫦🥵❤️",
+      "p3": "En mi acogedor espacio, cada encuentro es una experiencia auténtica basada en la atención, la amabilidad y el respeto. 😇👅",
+      "p4": "Nada queda al azar: aire acondicionado, ducha, bebidas frías y fácil aparcamiento frente a la residencia. Todo está preparado para tu comodidad. 🥰",
+      "p5": "Relájate y disfruta de un momento especial en un ambiente elegante y acogedor. ❤️☺️"
+    },
+    "practicalInfo": {
+      "title": "✨ Información práctica",
+      "locationLabel": "Lugar:",
+      "locationValue": "Residencia discreta y de fácil acceso, con aparcamiento frente al edificio.",
+      "comfortLabel": "Comodidad:",
+      "comfortValue": "Aire acondicionado, ducha disponible y bebidas frías de cortesía."
+    },
+    "contact": {
+      "title": "📬 Contactarme",
+      "telegramLabel": "Telegram:",
+      "emailLabel": "Correo electrónico:",
+      "whatsappLabel": "WhatsApp:"
+    },
+    "footer": {
+      "closing": "💋 Hasta pronto",
+      "message": "Espero darte la bienvenida para compartir un momento agradable en un ambiente elegante.",
+      "signature": "Brunella — tu momento de bienestar y elegancia. 🌹"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "items": ["Francés", "Inglés", "Italiano", "Español"]
+    },
+    "passions": {
+      "title": "Pasiones",
+      "items": [
+        "Viajes",
+        "Gastronomía",
+        "Arte moderno",
+        "Vinos exclusivos",
+        "Literatura",
+        "Moda"
+      ]
+    }
+  },
+  "Conditions": {
+    "services": {
+      "tagline": "Servicios",
+      "title": "¿Qué ofrece?",
+      "description": "Ofrezco mis servicios de <amber>acompañamiento</amber> (restaurante, fiesta privada, Club y Sauna liberal, Discoteca...) y de <amber>escort</amber>, servicios de <amber>masajes NATURISTA integral</amber> de bienestar y relajación, <amber>striptease sensuales</amber> o <amber>Desnudo Burlesque</amber>, servicios de <amber>DUO escort</amber>, <amber>Trío en pareja</amber>, <amber>iniciación al SM Suave o Hard</amber>, <amber>Fetiche</amber>, así como la realización de sus <amber>escenarios</amber> y <amber>fantasías insólitas</amber>.",
+      "items": [
+        "Acompañamiento",
+        "Escort",
+        "Masajes Naturistas",
+        "Striptease",
+        "Desnudo Burlesque",
+        "DUO Escort",
+        "Trío en Pareja",
+        "Iniciación SM",
+        "Fetiche",
+        "Escenarios y Fantasías"
+      ]
+    },
+    "payment": {
+      "tagline": "Reservas",
+      "title": "Métodos de Pago",
+      "subtitle": "Para garantizar la seguridad y la seriedad de nuestros compromisos, se le puede solicitar un pago previo seguro y discreto a través de <amber>Transcash, PayPal, Transferencia instantánea o WERO</amber>. A continuación, le explicamos por qué este método protege nuestra filosofía de intercambio:",
+      "methodsLabel": "Métodos aceptados",
+      "methods": ["Transcash", "PayPal", "WERO", "Transferencia instantánea"],
+      "advantages": [
+        {
+          "title": "Seriedad y Seguridad",
+          "desc": "Al confirmar una reserva, le aseguro mi absoluto compromiso y dedicación para cumplir con nuestra cita, evitando los inconvenientes de las cancelaciones de última hora."
+        },
+        {
+          "title": "Preparación Óptima",
+          "desc": "Este enfoque mutuo me permite organizar mi agenda con total tranquilidad para ofrecerle un servicio a medida e impecable."
+        },
+        {
+          "title": "Discreción y Anonimato",
+          "desc": "Los pagos a través de Transcash o PayPal respetan totalmente su privacidad y se posicionan como alternativas ideales para preservar su anonimato."
+        },
+        {
+          "title": "Compromiso Mutuo",
+          "desc": "El anticipo formaliza una relación de confianza recíproca, donde cada uno se compromete a cumplir su palabra y a respetar el tiempo del otro."
+        },
+        {
+          "title": "Simplicidad y Accesibilidad",
+          "desc": "La compra de cupones Transcash en un estanco es inmediata, sencilla y totalmente neutra en sus extractos bancarios, evitándole las limitaciones de las transferencias tradicionales."
+        }
+      ]
+    },
+    "confidentiality": {
+      "title": "Confidencialidad y Seguridad",
+      "modificationsTitle": "Modificación de las Condiciones",
+      "modificationsDesc": "Estas pautas pueden evolucionar con el tiempo. Cualquier modificación significativa le será comunicada previamente, requiriendo su total acuerdo para renovar nuestras interacciones privadas.",
+      "contactTitle": "Contacto y Comunicación",
+      "contactDesc": "Para cualquier pregunta relativa a esta carta o para precisar sus necesidades particulares, puede escribirme directamente a:"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1Title": "¿Tiene límites o tabúes?",
+      "q1Desc": "Soy una mujer moderna, libre y aficionada a los placeres liberales. Sin embargo, rechazo estrictamente cualquier comportamiento degradante, higiénicamente dudoso o falto de respeto. Mi seguridad física y el estricto respeto a mi vida privada siguen siendo mis prioridades absolutas.",
+      "q2Title": "¿Es posible negociar sus tarifas y opciones?",
+      "q2Desc": "Mis tarifas y servicios reflejan la calidad, el refinamiento y la dedicación que otorgo a cada momento. No son negociables. Si mis condiciones no coinciden con sus expectativas, el sector ofrece una multitud de perfiles variados donde encontrará fácilmente lo que busca. Tenga en cuenta que ningún sobreprecio me hará aceptar una práctica previamente rechazada.",
+      "q3Title": "¿Tiene criterios de edad para sus compañeros?",
+      "q3Desc": "Aprecio particularmente la madurez, la calma y los modales de los hombres con experiencia, que a menudo resultan ser caballeros muy atentos. Aunque tengo una preferencia natural por los perfiles de más de 30 años, no cierro la puerta a los más jóvenes; la elegancia de su trato y su poder de seducción marcarán la diferencia.",
+      "q4Title": "¿Acoge a personas con discapacidad?",
+      "q4Desc": "Absolutamente. Las particularidades físicas o discapacidades (motoras, sensoriales, dispositivos médicos u ostomías) no constituyen en ningún caso un freno. Estoy acostumbrada a acompañar perfiles diversos con mucha naturalidad y empatía. No dude en compartir sus necesidades previamente para organizar nuestro momento ideal de complicidad.",
+      "q5Title": "¿Puedo contar con su entera discreción?",
+      "q5Desc": "Sin ninguna reserva. La discreción absoluta es <amber>la regla de oro</amber> que estructura mi actividad de acompañamiento. Exijo naturalmente la misma elegancia por su parte.",
+      "q5Disclaimer": "* Le recuerdo que este sitio presenta servicios exclusivos de acompañamiento y masajes de bienestar entre adultos, dentro de un marco legal e independiente. Cualquier química o intimidad posterior responde estrictamente al libre consentimiento mutuo en el ámbito privado, de forma totalmente independiente del pago por el servicio por horas."
+    },
+    "footer": {
+      "thankYou": "Gracias por su confianza y amabilidad.",
+      "note": "Cada detalle está pensado para trazar los contornos de un encuentro inolvidable. Será un placer recibirle."
+    }
+  },
+  "Booker": {
+    "button": "Reservar ahora"
+  },
+  "BookingForm": {
+    "title": "Reservar una cita",
+    "sidebar": {
+      "title": "Momentos únicos",
+      "subtitle": "A tu medida",
+      "selection": "Tu selección"
+    },
+    "errors": {
+      "parsing": "Error de análisis:",
+      "package": "Por favor, selecciona un paquete",
+      "nameRequired": "El nombre es obligatorio",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Correo electrónico no válido",
+      "dateRequired": "Por favor, elige una fecha",
+      "proofRequired": "Se requiere el comprobante de pago",
+      "dateFuture": "Por favor, selecciona una fecha futura",
+      "general": "Error:"
+    },
+    "dateFallback": "—"
+  },
+  "InfoSection": {
+    "description": "Puede realizar el pago de su recarga Transcash en línea a través de dos plataformas dedicadas. Seleccione el importe correspondiente a la tarifa elegida, compre la recarga y luego adjunte la foto en el formulario de reserva.",
+    "header": {
+      "title": "Plataformas de Compra Seguras",
+      "subtitle": "Obtener un cupón Transcash"
+    },
+    "cards": {
+      "recharge": {
+        "title": "Recharge.fr",
+        "description": "Recargue sus móviles, videojuegos y tarjetas de regalo al instante. Más de 750 marcas de confianza disponibles.",
+        "action": "Acceder al sitio"
+      },
+      "transcash": {
+        "title": "Transcash Recharge",
+        "description": "La solución oficial y segura mediante tarjeta prepago. Acredite su cuenta Transcash en línea en solo unos clics.",
+        "action": "Acceder al sitio"
+      },
+      "carteDirecte": {
+        "title": "Carte Directe",
+        "description": "Distribución de códigos de pago Mastercard para sus transacciones en línea. Sistema inmediato y sin riesgo de descubierto.",
+        "action": "Visitar el sitio"
+      }
+    },
+    "assistance": {
+      "tagline": "Asistencia y Conserjería",
+      "description": "¿Una pregunta o una solicitud particular? Nuestros canales privados están a su entera disposición para diseñar su experiencia.",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram {handle}"
+    },
+    "confirmation": {
+      "title": "Confirmación y Compromiso",
+      "step1": {
+        "num": "01",
+        "bold": "Confirmación inmediata",
+        "text": " tras su reserva a través de WhatsApp, Telegram o correo electrónico."
+      },
+      "step2": {
+        "num": "02",
+        "textBefore": "Se le enviará un ",
+        "bold": "recordatorio personalizado",
+        "textAfter": " 24 horas antes de nuestra cita."
+      },
+      "step3": {
+        "num": "03",
+        "textBefore": "Se emite una ",
+        "bold": "factura detallada",
+        "textAfter": " inmediatamente después de la validación de la solicitud."
+      },
+      "step4": {
+        "num": "04",
+        "textBefore": "Su reserva solo está ",
+        "bold": "confirmada definitivamente",
+        "textAfter": " tras la recepción de este documento."
+      }
+    },
+    "quote": "«La única manera de librarse de la tentación es ceder ante ella.»"
+  },
+  "PackageSelection": {
+    "title": "Tu Experiencia",
+    "selectLabel": "Selecciona una fórmula",
+    "preview": { "tagline": "Vista previa de la selección" },
+    "allRatesLink": "Ver todas las tarifas detalladas",
+    "buttons": { "continue": "Continuar" }
+  },
+  "PersonnalInfo": {
+    "title": "Información personal",
+    "fields": {
+      "name": {
+        "label": "Nombre y Apellidos",
+        "placeholder": "Su nombre completo"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "tu@correo.com"
+      },
+      "appointmentDate": {
+        "label": "Fecha y hora deseadas",
+        "availabilityHint": "Disponible de 9:00 a 20:00"
+      },
+      "paymentProof": {
+        "label": "Comprobante de la reserva",
+        "changeImage": "Cambiar imagen",
+        "defaultTitle": "Foto del comprobante Transcash",
+        "defaultSubtitle": "Haga clic o arrastre el archivo aquí"
+      },
+      "transferNotice": {
+        "textBefore": "¿Transferencia instantánea? Contácteme por ",
+        "whatsappLabel": "WhatsApp {phone}"
+      },
+      "additionalMessage": {
+        "label": "Nota especial",
+        "optionalTag": "(Opcional)",
+        "placeholder": "Vestimenta especial, lugar específico, solicitud especial..."
+      }
+    },
+    "buttons": {
+      "back": "Volver",
+      "verify": "Revisar la reserva"
+    }
+  },
+  "SuccessState": {
+    "title": "¡Solicitud enviada con éxito!",
+    "description": {
+      "textBefore": "Confirmaré su cita en un plazo de ",
+      "timeframe": "24 horas",
+      "textAfter": " por WhatsApp, Telegram o correo electrónico."
+    },
+    "summary": {
+      "title": "Resumen",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "appointmentDate": "Fecha deseada",
+      "package": "Paquete",
+      "price": "Precio"
+    },
+    "buttons": {
+      "whatsapp": "Contactarme por WhatsApp",
+      "telegram": "Contactarme por Telegram"
+    }
+  },
+  "Summary": {
+    "header": {
+      "title": "Confirmación",
+      "subtitle": "Por favor, revise los detalles de su reserva."
+    },
+    "package": {
+      "label": "Paquete elegido"
+    },
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "date": "Fecha",
+      "proof": "Justificante",
+      "message": "Mensaje"
+    },
+    "notice": {
+      "textBefore": "Su reserva será confirmada en un plazo de ",
+      "timeframe": "24 horas",
+      "textAfter": " por WhatsApp, Telegram o correo electrónico. Se le enviará un recordatorio el día anterior a nuestro encuentro."
+    },
+    "buttons": {
+      "edit": "Modificar",
+      "processing": "Procesando...",
+      "confirm": "Confirmar la reserva"
+    }
+  },
+
+  "Header": {
+    "nav": {
+      "home": "Inicio",
+      "rates": "Servicios y Tarifas",
+      "practices": "Prácticas",
+      "gallery": "Galería",
+      "about": "Sobre mí",
+      "testimonials": "Testimonios",
+      "faq": "Condiciones y FAQ",
+      "contact": "Contacto",
+      "menuMore": "Más +"
+    },
+    "actions": {
+      "book": "Reservar",
+      "close": "Cerrar"
+    }
+  },
+  "Footer": {
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "gallery": "Galería",
+      "about": "Sobre mí",
+      "faq": "Preguntas frecuentes",
+      "contact": "Contacto"
+    },
+    "legal": "Aviso legal - Brunella, Independiente",
+    "copyright": "© 2023 - 2026 Brunella. Todos los derechos reservados.",
+    "tooltips": {
+      "confidentiality": "Confidencialidad absoluta",
+      "location": "Con sede en Francia"
+    }
+  },
+  "ServiceCards": {
+    "availableOptions": "Opciones disponibles:",
+    "bookButton": "Reservar",
+    "services": {
+      "intimateMoment": {
+        "title": "Momento Íntimo",
+        "description": "Experiencia sensual completa que combina ternura y pasión",
+        "highlights": [
+          "GFE: Girl Friend Experience",
+          "PSE: Porn Star Experience",
+          "Extraball: Varios contactos en 1 hora",
+          "Acompañamiento: Club liberal / Sauna swinger",
+          "Masajes eróticos: Naturista, BodyBody Tailandés, Dúo a 4 manos, Lingam, Pareja",
+          "Show y fantasías: Webcam, Striptease, Desnudo burlesque, Juegos de rol, Escenarios HOT, Palabras picantes",
+          "Placeres carnales: Largos preliminares, Kamasutra y 69 (debilidad por la postura del perrito), Beso francés",
+          "Fetichismo y dominación: BDSM (Ama Dominatriz, iniciación soft/hard), Facesitting, Fetichismo de pies",
+          "Experiencias intensas: Handjob, Dulce o salvaje (Ángel o Demonio), Paja (clásica y rusa), Felación al natural o protegida, Final en el cuerpo (excepto la cara)",
+          "Exploraciones sensuales: Juguetes sexuales (para mí y para usted), Trabajo anal / Masaje prostático, Trío HOT (Pareja o HFF), Conversación excitante (palabras explícitas y azotes)",
+          "Placeres específicos: Anal (en mí o en usted), Cunnilingus y Anulingus (en mí), Fisting (únicamente vaginal), Lluvia dorada (activa / dar)",
+          "Exploraciones sensuales: Juguetes sexuales (para mí y para usted), Trabajo anal / Masaje prostático, Trío HOT (Pareja o HFF), Conversación excitante (palabras explícitas y azotes)"
+        ],
+        "options": [
+          {
+            "prestation": "2 contactos + masaje",
+            "duration": "Cita galante",
+            "time": "1 hora",
+            "amount": "150€",
+            "details": "Por la mañana/tarde: <span class=\"font-bold text-white text-md\">150€</span> / Después de las 19:00: <span class=\"font-bold text-white text-md\">170€</span>. Nos conocemos con una copa, ducha y un momento de sensualidad"
+          },
+          {
+            "prestation": "3 contactos + masaje",
+            "duration": "Cita galante",
+            "time": "1 hora y media",
+            "amount": "240€",
+            "details": "Por la mañana/tarde: <span class=\"font-bold text-white text-md\">240€</span> / Después de las 19:00: <span class=\"font-bold text-white text-md\">250€</span>. Nos conocemos con una copa, ducha y un momento de sensualidad"
+          },
+          {
+            "prestation": "3 a 4 contactos + masaje",
+            "duration": "Cita galante",
+            "time": "2 horas",
+            "amount": "300€",
+            "details": "Por la mañana/tarde: <span class=\"font-bold text-white text-md\">300€</span> / Después de las 19:00: <span class=\"font-bold text-white text-md\">320€</span>. Nos conocemos con una copa, ducha y un momento de sensualidad"
+          },
+          {
+            "prestation": "4 contactos + masaje",
+            "duration": "Cita galante",
+            "time": "3 horas",
+            "amount": "400€",
+            "details": "Por la mañana/tarde: <span class=\"font-bold text-white text-md\">400€</span> / Después de las 19:00: <span class=\"font-bold text-white text-md\">420€</span>. Nos conocemos con una copa, ducha y un momento de sensualidad"
+          },
+          {
+            "prestation": "550€ (antes de las 19h)",
+            "duration": "Tarde de relajación y bienestar",
+            "time": "4 horas",
+            "amount": "550€",
+            "details": "Disfrutamos de una tarde en un centro de bienestar (spa, hammam, masaje…), o tomando algo y almorzando, para luego ir a su habitación y terminar por todo lo alto…"
+          },
+          {
+            "prestation": "670€ 2h Cena + 2h íntimas",
+            "duration": "Noche de deleite (de 20:00 a medianoche)",
+            "time": "4 horas",
+            "amount": "720€",
+            "details": "Una velada sensual a solas para un despertar carnal de los sentidos…"
+          },
+          {
+            "prestation": "720€ 2h Cena + 3h íntimas",
+            "duration": "Noche tórrida (de 20:00 a 1:00)",
+            "time": "5 horas",
+            "amount": "720€",
+            "details": "Mi cita galante preferida, disfrutando de una buena cena en mi casa o en su hotel, seguida de una noche apasionada…"
+          },
+          {
+            "prestation": "800€ cena + noche tórrida + desayuno",
+            "duration": "Noche completa (de 20:00 a 8:00)",
+            "time": "12 horas",
+            "amount": "800€",
+            "details": "Nos encontramos a cenar en un restaurante o en su hotel antes de ir a su habitación para un momento apasionado. Sin noches en blanco: 5 horas de sueño como mínimo y por favor prevea nuestro o mi desayuno"
+          }
+        ]
+      }
+    }
+  },
+  "Steps": {
+    "package": "Tarifa",
+    "info": "Sus Datos",
+    "confirmation": "Confirmación"
+  },
+  "Offers": {
+    "title": "Cita Galante",
+    "prices": {
+      "1h": {
+        "duration": "1 hora",
+        "amount": "150€ (día) / 170€ (noche)",
+        "description": "2 contactos + masaje"
+      },
+      "1h30": {
+        "duration": "1 hora y media",
+        "amount": "240€ (día) / 260€ (noche)",
+        "description": "3 contactos + masaje"
+      },
+      "2h": {
+        "duration": "2 horas",
+        "amount": "300€ (día) / 320€ (noche)",
+        "description": "3 a 4 contactos + masaje"
+      },
+      "3h": {
+        "duration": "3 horas",
+        "amount": "400€ (día) / 420€ (noche)",
+        "description": "4 contactos + masaje"
+      },
+      "afternoon": {
+        "duration": "Tarde de relax (4h, antes de las 19h)",
+        "amount": "550€",
+        "description": "Spa, hammam, masaje, copa/almuerzo + momento íntimo"
+      },
+      "delightEvening": {
+        "duration": "Noche de Deleite (20h–00h, 4h)",
+        "amount": "670€",
+        "description": "2h cena + 2h placer"
+      },
+      "hotEvening": {
+        "duration": "Noche Tórrida (20h–01h, 5h)",
+        "amount": "720€",
+        "description": "2h cena + 3h placer"
+      },
+      "fullNight": {
+        "duration": "Noche Completa (20h–08h, 12h)",
+        "amount": "800€",
+        "description": "Cena, noche sensual (mín. 5h de sueño), desayuno por prever"
+      }
+    }
+  }
+}

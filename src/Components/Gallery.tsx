@@ -4,68 +4,51 @@ import { fileNames } from '@/constants/gallery';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion'
 import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
-// Type pour une image de la galerie
 interface GalleryImage {
   id: number;
   src: string;
-  alt: string;
   blurred?: boolean;
 }
 
-// Génération dynamique du tableau d'images
 const galleryImages: GalleryImage[] = fileNames.map((fileName, index) => ({
   id: index + 1,
   src: `/gallery/${fileName}`,
-  alt: `Image galerie ${index + 1}`,
-  blurred: false // Change cette logique si certaines images nécessitent un flou conditionnel
+  blurred: false
 }));
 
 export default function Gallery() {
-  // UNIQUE State: L'index de l'image active affichée en grand
+  const t = useTranslations('Home.Gallery');
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  
-  // Ref pour le conteneur des miniatures (barre horizontale du bas)
   const thumbnailsRef = useRef<HTMLDivElement>(null);
 
-  // Trouve l'image active
   const activeImage = galleryImages[activeIndex];
-
-  // Seuil pour déclencher le swipe (en pixels)
   const swipeThreshold = 50;
 
-  // Fonction pour aller à l'image suivante
   const paginateNext = () => {
     setActiveIndex((prev) => (prev + 1) % galleryImages.length);
   };
 
-  // Fonction pour aller à l'image précédente
   const paginatePrev = () => {
     setActiveIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
-  // Gestionnaire de fin de drag (swipe)
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const { offset, velocity } = info;
 
-    // Calcul basé sur la vélocité OU la distance parcourue
     if (offset.x < -swipeThreshold || velocity.x < -500) {
-      // Swipe vers la gauche -> Image suivante
       paginateNext();
     } else if (offset.x > swipeThreshold || velocity.x > 500) {
-      // Swipe vers la droite -> Image précédente
       paginatePrev();
     }
   };
 
-  // Effet pour synchroniser le défilement des miniatures avec l'image active
-  // Pour que la miniature active soit toujours visible (centrée)
   useEffect(() => {
     const thumbnailsContainer = thumbnailsRef.current;
     if (thumbnailsContainer) {
       const activeThumb = thumbnailsContainer.children[activeIndex] as HTMLElement;
       if (activeThumb) {
-        // Calcule la position pour centrer la miniature
         const containerWidth = thumbnailsContainer.offsetWidth;
         const thumbOffset = activeThumb.offsetLeft;
         const thumbWidth = activeThumb.offsetWidth;
@@ -80,7 +63,6 @@ export default function Gallery() {
     }
   }, [activeIndex]);
 
-  // Composant helper pour les flèches de navigation
   const NavButton = ({ direction, onClick }: { direction: 'prev' | 'next'; onClick: () => void }) => (
     <button
       onClick={onClick}
@@ -97,7 +79,7 @@ export default function Gallery() {
         ${direction === 'prev' ? 'left-4' : 'right-4'}
         ${direction === 'prev' ? 'lg:opacity-0' : 'lg:opacity-0'}
       `}
-      aria-label={direction === 'prev' ? "Image précédente" : "Image suivante"}
+      aria-label={direction === 'prev' ? t('nav.prev') : t('nav.next')}
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d={direction === 'prev' ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
@@ -106,21 +88,18 @@ export default function Gallery() {
   );
 
   return (
-    // Thème sombre global pour la section
     <section id="gallery" className="py-28 bg-[#0a0a0a] text-white relative overflow-hidden border-t border-neutral-900">
       
-      {/* Élément décoratif subtil */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-amber-400/40 to-transparent"></div>
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10 mb-16 flex flex-col items-center">
         
-        {/* En-tête de section style Luxe */}
         <div className="text-center mb-16 max-w-xl">
-          <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 block mb-4">Parcourir</span>
-          <h2 className="text-4xl md:text-5xl font-light font-serif mb-6 tracking-wide text-white">Galerie</h2>
+          <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 block mb-4">{t('tagline')}</span>
+          <h2 className="text-4xl md:text-5xl font-light font-serif mb-6 tracking-wide text-white">{t('title')}</h2>
           <div className="w-16 h-[1px] bg-amber-400/30 mx-auto mb-8"></div>
           <p className="text-lg text-neutral-400 max-w-xl mx-auto font-light leading-relaxed">
-            Un aperçu de mon univers exclusif. Balayez l'image (swipe), utilisez les flèches ou cliquez sur une miniature pour naviguer.
+            {t('description')}
           </p>
         </div>
 
@@ -133,7 +112,6 @@ export default function Gallery() {
           onDragEnd={handleDragEnd}
           whileTap={{ cursor: "grabbing" }}
         >
-          {/* Arrière-plan flouté dynamique */}
           <AnimatePresence mode="popLayout">
             <motion.div
               key={`bg-${activeImage.id}`}
@@ -165,7 +143,7 @@ export default function Gallery() {
             className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none flex items-center gap-2 bg-black/70 px-5 py-2.5 rounded-full border border-neutral-800/80 backdrop-blur-sm shadow-xl"
           >
             <span className="text-neutral-500 text-sm">&larr;</span>
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-300 font-medium">Swipe</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-neutral-300 font-medium">{t('swipe')}</span>
             <span className="text-neutral-500 text-sm">&rarr;</span>
           </motion.div>
 
@@ -175,12 +153,12 @@ export default function Gallery() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5, }}
+              transition={{ duration: 0.5 }}
               className="absolute inset-0 z-[3]"
             >
               <Image 
                 src={activeImage.src} 
-                alt={activeImage.alt} 
+                alt={t('alt.image', { number: activeIndex + 1 })} 
                 fill 
                 className="object-contain select-none pointer-events-none"
                 draggable="false" 
@@ -197,7 +175,7 @@ export default function Gallery() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-400/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 font-medium">Accès Réservé</span>
+              <span className="text-xs uppercase tracking-[0.3em] text-amber-400/70 font-medium">{t('restrictedAccess')}</span>
             </div>
           )}
         </motion.div>
@@ -206,7 +184,7 @@ export default function Gallery() {
       {/* --- BARRE DE MINIATURES EN BAS --- */}
       <div className="w-full relative z-10">
         <div className="text-center mb-5 max-w-sm mx-auto">
-          <span className="text-[10px] uppercase tracking-[0.2em] text-amber-400/80 mb-2 block">Collection Complète</span>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-amber-400/80 mb-2 block">{t('collectionTitle')}</span>
         </div>
         
         <div 
@@ -226,11 +204,11 @@ export default function Gallery() {
                           ? 'border-amber-400 shadow-2xl scale-110' 
                           : 'border-neutral-900 bg-neutral-950 hover:border-amber-400/40 opacity-70 hover:opacity-100'}
                         `}
-              aria-label={`Aller à l'image ${index + 1}`}
+              aria-label={t('alt.thumbnailAria', { number: index + 1 })}
             >
               <Image 
                 src={image.src} 
-                alt={`Miniature ${image.alt}`} 
+                alt={t('alt.thumbnail', { number: index + 1 })} 
                 fill 
                 className="object-cover select-none" 
                 draggable="false" 
@@ -244,7 +222,7 @@ export default function Gallery() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-amber-400/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
-                  <span className="text-[7px] uppercase tracking-[0.1em] text-amber-400/70 font-medium">Privé</span>
+                  <span className="text-[7px] uppercase tracking-[0.1em] text-amber-400/70 font-medium">{t('private')}</span>
                 </div>
               )}
             </button>

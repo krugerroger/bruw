@@ -1,14 +1,13 @@
-//admin/data/privateData-reservation/page.tsx
+// admin/data/privateData-reservation/page.tsx
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link'; // ✅ Correction : Import du composant de navigation de Next.js
 import { supabaseClient } from '@/utils/supabaseClient';
-import Image from 'next/image';
 import { 
   RefreshCw, 
   LogOut, 
-  Eye, 
   User, 
   Clock, 
   CreditCard, 
@@ -17,8 +16,9 @@ import {
   DollarSign,
   Mail,
   Shield,
-  AlertCircle
-} from 'lucide-react';
+  AlertCircle,
+  MessageSquare
+} from 'lucide-react'; // ✅ Correction : Retrait de 'Link' qui entrait en conflit
 
 interface Reservation {
   id: string;
@@ -35,20 +35,40 @@ interface Reservation {
 }
 
 export default function AdminPage() {
+  // ✅ Correction : Initialisé à true pour éviter le flash du message "Aucune réservation" au premier chargement
   const [reservations, setReservations] = useState<Reservation[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [userEmail, setUserEmail] = useState<string>('');
   const [authError, setAuthError] = useState<string>('');
   const router = useRouter();
 
-  // Vérifier l'authentification et récupérer l'utilisateur
-  useEffect(() => {
-    checkAuthAndFetchData();
+  const fetchReservations = useCallback(async () => {
+    try {
+      setLoading(true); // ✅ Correction : Activer le chargement lors d'une actualisation manuelle
+      console.log('📥 Récupération des réservations...');
+
+      const { data, error } = await supabaseClient
+        .from('customers')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('❌ Erreur Supabase:', error);
+        throw error;
+      }
+
+      console.log(`✅ ${data?.length || 0} réservations récupérées`);
+      setReservations(data || []);
+    } catch (error: any) {
+      console.error('❌ Erreur lors de la récupération:', error);
+      alert('Erreur lors de la récupération des réservations');
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  const checkAuthAndFetchData = async () => {
+  const checkAuthAndFetchData = useCallback(async () => {
     try {
-      // Vérifier la session
       const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
       
       if (sessionError) {
@@ -64,45 +84,20 @@ export default function AdminPage() {
         return;
       }
 
-      // Récupérer l'email de l'utilisateur
       setUserEmail(session.user.email || '');
       console.log('✅ Utilisateur connecté:', session.user.email);
 
-      // Récupérer les réservations
       await fetchReservations();
-
     } catch (error) {
       console.error('❌ Erreur de vérification:', error);
       setAuthError('Erreur de vérification');
       router.push('/admin/adminLogin');
     }
-  };
+  }, [router, fetchReservations]);
 
-  const fetchReservations = async () => {
-    try {
-      
-      console.log('📥 Récupération des réservations...');
-
-      const { data, error } = await supabaseClient
-        .from('customers')
-        .select('*')
-        .order('created_at', { ascending: false });
-
-      if (error) {
-        console.error('❌ Erreur Supabase:', error);
-        throw error;
-      }
-
-      console.log(`✅ ${data?.length || 0} réservations récupérées`);
-      setReservations(data || []);
-
-    } catch (error: any) {
-      console.error('❌ Erreur lors de la récupération:', error);
-      alert('Erreur lors de la récupération des réservations');
-    } finally {
-      setLoading(false);
-    }
-  };
+  useEffect(() => {
+    checkAuthAndFetchData();
+  }, [checkAuthAndFetchData]);
 
   const handleLogout = async () => {
     try {
@@ -161,8 +156,8 @@ export default function AdminPage() {
           </h2>
           <p className="text-slate-600 mb-6">{authError}</p>
           <button
-            onClick={() => router.push('/adminLogin')}
-            className="btn btn-primary"
+            onClick={() => router.push('/admin/adminLogin')} // ✅ Correction du chemin de redirection
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all shadow"
           >
             Retour à la connexion
           </button>
@@ -209,6 +204,14 @@ export default function AdminPage() {
 
         {/* Statistiques */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          <Link
+            href="/admin/data/comments"
+            className="flex items-center justify-center gap-2 px-6 py-3 border border-slate-200 bg-white hover:bg-slate-50 rounded-xl transition-all text-sm font-medium text-slate-700 shadow-sm"
+          >
+            <MessageSquare size={14} />
+            Commentaires
+          </Link>
+          
           <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
@@ -226,7 +229,7 @@ export default function AdminPage() {
               <div>
                 <p className="text-sm text-slate-600">À venir</p>
                 <p className="text-2xl font-bold text-slate-800">
-                  {reservations.filter(r => new Date(r.meetdate) > new Date()).length}
+                  {reservations.filter(r => r.meetdate && new Date(r.meetdate) > new Date()).length}
                 </p>
               </div>
               <div className="p-2 bg-emerald-50 rounded-lg">
@@ -248,20 +251,6 @@ export default function AdminPage() {
               </div>
             </div>
           </div>
-          
-          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-slate-600">Confirmées</p>
-                <p className="text-2xl font-bold text-slate-800">
-                  {reservations.filter(r => r.status === 'confirmed').length}
-                </p>
-              </div>
-              <div className="p-2 bg-sky-50 rounded-lg">
-                <CreditCard className="w-5 h-5 text-sky-600" />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Tableau des réservations - Version Desktop */}
@@ -270,21 +259,11 @@ export default function AdminPage() {
             <table className="min-w-full divide-y divide-slate-200">
               <thead className="bg-slate-50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                    Client
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                    Forfait
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                    Date RDV
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                    Statut
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                    Images
-                  </th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Client</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Forfait</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Date RDV</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Statut</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Images</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-slate-200">
@@ -315,20 +294,22 @@ export default function AdminPage() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm font-medium text-slate-900">
-                        {new Date(reservation.meetdate).toLocaleDateString('fr-FR', {
-                          weekday: 'short',
-                          day: 'numeric',
-                          month: 'short',
-                          year: 'numeric'
-                        })}
-                      </div>
-                      <div className="text-sm text-slate-500">
-                        {new Date(reservation.meetdate).toLocaleTimeString('fr-FR', { 
-                          hour: '2-digit', 
-                          minute: '2-digit' 
-                        })}
-                      </div>
+                      {reservation.meetdate ? (
+                        <>
+                          <div className="text-sm font-medium text-slate-900">
+                            {new Date(reservation.meetdate).toLocaleDateString('fr-FR', {
+                              weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
+                            })}
+                          </div>
+                          <div className="text-sm text-slate-500">
+                            {new Date(reservation.meetdate).toLocaleTimeString('fr-FR', { 
+                              hour: '2-digit', minute: '2-digit' 
+                            })}
+                          </div>
+                        </>
+                      ) : (
+                        <span className="text-slate-400 text-sm">Non planifié</span>
+                      )}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getStatusColor(reservation.status)}`}>
@@ -343,10 +324,6 @@ export default function AdminPage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-violet-100 to-fuchsia-100 hover:from-violet-200 hover:to-fuchsia-200 text-violet-700 font-medium rounded-lg transition-all hover:shadow-md border border-violet-200"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
                           Voir l'image
                         </a>
                       ) : (
@@ -364,7 +341,6 @@ export default function AdminPage() {
         <div className="lg:hidden space-y-4 mb-8">
           {reservations.map((reservation) => (
             <div key={reservation.id} className="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
-              {/* En-tête de la carte */}
               <div className="flex justify-between items-start mb-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
@@ -372,9 +348,7 @@ export default function AdminPage() {
                       <User className="h-4 w-4 text-violet-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-slate-900 text-base truncate">
-                        {reservation.name}
-                      </h3>
+                      <h3 className="font-semibold text-slate-900 text-base truncate">{reservation.name}</h3>
                       <p className="text-slate-600 text-sm truncate flex items-center gap-1">
                         <Mail className="w-3 h-3" />
                         {reservation.email}
@@ -387,7 +361,6 @@ export default function AdminPage() {
                 </span>
               </div>
 
-              {/* Détails du forfait */}
               <div className="mb-3 space-y-2">
                 <div className="flex items-center gap-2 text-slate-700">
                   <Package className="w-4 h-4 text-violet-600" />
@@ -405,45 +378,37 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* Date du rendez-vous */}
               <div className="flex items-center justify-between p-2 bg-slate-50 rounded-lg mb-3">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-slate-600" />
-                  <div className="text-sm">
-                    <div className="font-medium text-slate-900">
-                      {new Date(reservation.meetdate).toLocaleDateString('fr-FR', {
-                        day: 'numeric',
-                        month: 'short'
-                      })}
+                  {reservation.meetdate ? (
+                    <div className="text-sm">
+                      <div className="font-medium text-slate-900">
+                        {new Date(reservation.meetdate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })}
+                      </div>
+                      <div className="text-slate-600">
+                        {new Date(reservation.meetdate).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}
+                      </div>
                     </div>
-                    <div className="text-slate-600">
-                      {new Date(reservation.meetdate).toLocaleTimeString('fr-FR', {
-                        hour: '2-digit',
-                        minute: '2-digit'
-                      })}
-                    </div>
-                  </div>
+                  ) : (
+                    <span className="text-slate-400 text-sm">Non planifié</span>
+                  )}
                 </div>
-                <a
-                          href={reservation.ticketproof}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-violet-100 to-fuchsia-100 hover:from-violet-200 hover:to-fuchsia-200 text-violet-700 font-medium rounded-lg transition-all hover:shadow-md border border-violet-200"
-                        >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
-                          Voir l'image
-                        </a>
+                {reservation.ticketproof && (
+                  <a
+                    href={reservation.ticketproof}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 font-medium rounded-lg text-xs border border-violet-200"
+                  >
+                    Voir l'image
+                  </a>
+                )}
               </div>
 
-              {/* Message supplémentaire (si présent) */}
               {reservation.message && (
                 <div className="mt-2 p-2 bg-blue-50 rounded-lg border border-blue-100">
-                  <p className="text-xs text-slate-700 line-clamp-2">
-                    {reservation.message}
-                  </p>
+                  <p className="text-xs text-slate-700 line-clamp-2">{reservation.message}</p>
                 </div>
               )}
             </div>
@@ -456,9 +421,7 @@ export default function AdminPage() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
               <Calendar className="w-8 h-8 text-slate-400" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-700 mb-2">
-              Aucune réservation
-            </h3>
+            <h3 className="text-lg font-semibold text-slate-700 mb-2">Aucune réservation</h3>
             <p className="text-slate-600 mb-6 max-w-md mx-auto">
               Les nouvelles réservations apparaîtront automatiquement ici.
             </p>
