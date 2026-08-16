@@ -622,12 +622,14 @@
       "home": "Inicio",
       "rates": "Servicios y Tarifas",
       "practices": "Prácticas",
+      "massages": "Masajes",
       "gallery": "Galería",
       "about": "Sobre mí",
-      "testimonials": "Reseñas/Testimonios",
+      "testimonials": "Comentarios/Testimonios",
       "faq": "Condiciones y FAQ",
       "contact": "Contacto",
-      "menuMore": "Más +"
+      "partners": "Partner",
+      "menuMore": "Más"
     },
     "actions": {
       "book": "Reservar",
@@ -779,6 +781,320 @@
         "duration": "Noche Completa (20h–08h, 12h)",
         "amount": "800€",
         "description": "Cena, noche sensual (mín. 5h de sueño), desayuno por prever"
+      },
+      "massage_relaxant_60": {
+        "duration": "Masaje Relajante (60 min)",
+        "amount": "120€"
+      },
+      "massage_relaxant_90": {
+        "duration": "Masaje Relajante (90 min)",
+        "amount": "160€"
+      },
+      "massage_pierres_90": {
+        "duration": "Masaje con Piedras Calientes (90 min)",
+        "amount": "160€"
+      },
+      "massage_suedois_60": {
+        "duration": "Masaje Sueco (60 min)",
+        "amount": "130€"
+      },
+      "massage_suedois_90": {
+        "duration": "Masaje Sueco (90 min)",
+        "amount": "175€"
+      },
+      "massage_deeptissue_60": {
+        "duration": "Masaje de Tejido Profundo (60 min)",
+        "amount": "140€"
+      },
+      "massage_deeptissue_90": {
+        "duration": "Masaje de Tejido Profundo (90 min)",
+        "amount": "190€"
+      },
+      "massage_sportif_60": {
+        "duration": "Masaje Deportivo (60 min)",
+        "amount": "130€"
+      },
+      "massage_californien_60": {
+        "duration": "Masaje Californiano (60 min)",
+        "amount": "120€"
+      },
+      "massage_californien_90": {
+        "duration": "Masaje Californiano (90 min)",
+        "amount": "160€"
+      },
+      "massage_aromatherapie_75": {
+        "duration": "Masaje de Aromaterapia (75 min)",
+        "amount": "140€"
+      },
+      "massage_prenatal_60": {
+        "duration": "Masaje Prenatal (60 min)",
+        "amount": "120€"
+      },
+      "massage_reflexo_45": {
+        "duration": "Reflexología Podal (45 min)",
+        "amount": "90€"
+      },
+      "massage_reflexo_60": {
+        "duration": "Reflexología Podal (60 min)",
+        "amount": "120€"
+      },
+      "massage_dos_nuque_30": {
+        "duration": "Masaje de Espalda, Cuello y Hombros (30 min)",
+        "amount": "65€"
+      },
+      "massage_dos_nuque_45": {
+        "duration": "Masaje de Espalda, Cuello y Hombros (45 min)",
+        "amount": "85€"
+      }
+    }
+  },
+  "MassagePage": {
+    "hero": {
+      "tagline": "El Arte del Tacto",
+      "title": {
+        "part1": "Una pausa fuera del tiempo para",
+        "highlight": "revitalizar",
+        "part2": "el cuerpo."
+      },
+      "subtitle": "Cada tratamiento es una invitación a un viaje interior. Un enfoque personalizado que combina técnicas ancestrales y aceites preciosos para liberar las tensiones más profundas.",
+      "cta": "Reservar una cita"
+    },
+    "philosophy": {
+      "tagline": "Mi Filosofía",
+      "title": {
+        "part1": "El bienestar no es un lujo,",
+        "highlight": "es una necesidad."
+      },
+      "paragraph1": "Mi enfoque del masaje va más allá de la simple dimensión corporal. Se trata de escuchar profundamente su fisiología y su estado emocional. Cada cuerpo cuenta una historia, cada tensión es un mensaje. Al crear un espacio seguro, privado y de alta calidad, le permito entregarse por completo.",
+      "paragraph2": "La combinación de movimientos precisos, respiración compartida y fragancias delicadas estimula el proceso natural de autorrecuperación del organismo, devolviéndole su energía vital.",
+      "features": {
+        "bioOils": {
+          "title": "Aceites Bio",
+          "desc": "Elixires 100% naturales"
+        },
+        "serenity": {
+          "title": "Serenidad",
+          "desc": "Silencio y discreción"
+        },
+        "tailored": {
+          "title": "A Medida",
+          "desc": "Presión personalizada"
+        },
+        "holistic": {
+          "title": "Holístico",
+          "desc": "Cuerpo y mente conectados"
+        }
+      }
+    },
+    "treatments": {
+      "tagline": "Nuestra Carta",
+      "title": "Tratamientos Exclusivos",
+      "forWho": "¿Para quién?",
+      "benefits": "Principales beneficios:",
+      "bookCare": "Reservar este tratamiento"
+    },
+    "experience": {
+      "tagline": "La Experiencia",
+      "title": "El Desarrollo del Ritual",
+      "steps": {
+        "welcome": {
+          "num": "01",
+          "title": "La Bienvenida",
+          "desc": "Un momento de conversación acompañado de una bebida caliente para comprender su estado físico y emocional."
+        },
+        "prep": {
+          "num": "02",
+          "title": "La Preparación",
+          "desc": "Se instala cómodamente en la sala climatizada, sobre una camilla ergonómica."
+        },
+        "care": {
+          "num": "03",
+          "title": "El Tratamiento",
+          "desc": "Una desconexión total donde la técnica pasa a un segundo plano para dar protagonismo a las sensaciones y la relajación."
+        },
+        "awakening": {
+          "num": "04",
+          "title": "El Despertar",
+          "desc": "Un regreso suave a la realidad, a su propio ritmo, seguido de consejos personalizados."
+        }
+      }
+    },
+    "healthImpact": {
+      "title": "El impacto global en su salud.",
+      "description": "La masoterapia está científicamente reconocida por sus numerosos beneficios para el organismo. Un tacto experto actúa simultáneamente sobre las dimensiones física, psicológica y energética.",
+      "physiological": {
+        "title": "Fisiológico",
+        "desc": "Relaja los músculos, mejora la flexibilidad de las articulaciones, estimula la circulación linfática y favorece el sistema inmunitario."
+      },
+      "psychological": {
+        "title": "Psicológico",
+        "desc": "Reducción significativa del cortisol (la hormona del estrés), aumento de la liberación de endorfinas y mejora de la concentración."
+      }
+    },
+    "testimonials": {
+      "tagline": "Testimonios",
+      "title": "Palabras de Nuestros Clientes",
+      "items": {
+        "sophie": {
+          "author": "Sophie L.",
+          "service": "Deep Tissue",
+          "quote": "Una experiencia excepcional. Después de meses de dolores cervicales causados por el trabajo de oficina, el tratamiento liberó tensiones que creía crónicas."
+        },
+        "marc": {
+          "author": "Marc D.",
+          "service": "Masaje Sueco",
+          "quote": "Un entorno absolutamente majestuoso y con una discreción perfecta. El masaje fue firme, preciso y extraordinariamente eficaz para mi recuperación deportiva."
+        },
+        "eleonore": {
+          "author": "Éléonore V.",
+          "service": "Ritual Relajante",
+          "quote": "Una pausa suspendida en el tiempo. La atención a los detalles, desde la elección del aceite y la música hasta el calor de la camilla... Un verdadero renacimiento emocional."
+        },
+        "julien": {
+          "author": "Julien M.",
+          "service": "Masaje Sueco",
+          "quote": "El nivel de exigencia y profesionalidad es impresionante. Una experiencia inmersiva que reinicia por completo el cuerpo y la mente."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes"
+    },
+    "cta": {
+      "titlePart1": "Concédase este",
+      "titleHighlight": "privilegio.",
+      "description": "Nuestra agenda está diseñada para garantizar a cada cliente el tiempo y la tranquilidad que merece. Las citas son limitadas.",
+      "button": "Reservar una cita"
+    }
+  },
+  "partners": {
+    "trustLabel": "Sello de Confianza",
+    "title": "Ecosistema",
+    "titleHighlight": "Premium",
+    "titleEnd": "& Socios",
+    "quote": "La confianza se construye sobre la transparencia y el respeto. Colaboro exclusivamente con las plataformas y directorios más reconocidos del sector.",
+    "visit": "Visitar",
+    "platformsReferenced": "{count} Plataformas Referenciadas",
+    "cta": {
+      "title": "Convertirse en Socio Oficial",
+      "description": "¿Gestiona un directorio selecto de prestigio o una red con una audiencia cualificada? Hablemos sobre una colaboración o un intercambio de visibilidad específico.",
+      "button": "Proponer una Colaboración"
+    },
+    "trustChips": {
+      "verified": "Plataformas Verificadas",
+      "exclusive": "Colaboraciones Exclusivas",
+      "reciprocal": "Relaciones Mutuas"
+    },
+    "categories": {
+      "france": {
+        "title": "Directorios de Referencia en Francia",
+        "tagline": "Selección nacional de alta visibilidad",
+        "sites": {
+          "sexemodel": {
+            "name": "SexeModel",
+            "desc": "Plataforma de anuncios y contactos para adultos."
+          },
+          "erosmix": {
+            "name": "Erosmix",
+            "desc": "Directorio VIP con perfiles reales y servicios premium en Francia."
+          },
+          "baiser1": {
+            "name": "1Baiser",
+            "desc": "Perfiles independientes y de lujo verificados en Francia."
+          },
+          "ladys": {
+            "name": "Ladys.one",
+            "desc": "Servicios locales independientes en todo el mundo."
+          },
+          "escortsexe": {
+            "name": "EscortSexe.net",
+            "desc": "Directorio de anuncios y perfiles para adultos en Francia."
+          },
+          "annonce6": {
+            "name": "6annonce",
+            "desc": "Directorio en París, Lyon, Marsella y en toda Francia."
+          },
+          "tescort": {
+            "name": "Tescort",
+            "desc": "Anuncios de perfiles independientes con discreción garantizada."
+          },
+          "niamodel": {
+            "name": "Niamodel",
+            "desc": "Directorio de perfiles femeninos y trans en Francia."
+          },
+          "escorte": {
+            "name": "EscortE",
+            "desc": "Perfiles independientes premium y servicios de masaje."
+          }
+        }
+      },
+      "libertine": {
+        "title": "Redes Sociales y de Encuentros para Adultos",
+        "tagline": "Espacios de conexión e intereses compartidos",
+        "sites": {
+          "jmdate": {
+            "name": "JM Date",
+            "desc": "Red social de encuentros para adultos, solteros, parejas o grupos."
+          },
+          "lovesita": {
+            "name": "LOveSita",
+            "desc": "Encuentros para adultos discretos, seguros y respetuosos."
+          },
+          "vivasexe": {
+            "name": "VivaSexe",
+            "desc": "Anuncios y encuentros para adultos sin tabúes."
+          },
+          "renole": {
+            "name": "Renole",
+            "desc": "Plataforma para adultos con diversos perfiles de Francia."
+          }
+        }
+      },
+      "international": {
+        "title": "Internacional y Especializados",
+        "tagline": "Plataformas globales y alternativas VIP",
+        "sites": {
+          "devozki": {
+            "name": "Devozki",
+            "desc": "Directorio VIP internacional y anuncios para adultos."
+          },
+          "hunqz": {
+            "name": "HUNQZ",
+            "desc": "Directorio de perfiles y acompañantes adultos gay, bi y trans."
+          },
+          "escorts69": {
+            "name": "Escorts69",
+            "desc": "Acceso exclusivo a perfiles trans en Francia."
+          },
+          "fgirl": {
+            "name": "Fgirl (Facegirl)",
+            "desc": "Directorio líder para adultos en Suiza, incluyendo Ginebra y Lausana."
+          },
+          "escort46": {
+            "name": "Escort46",
+            "desc": "Encuentra servicios de masaje y servicios para adultos en tu zona."
+          },
+          "escortLuxembourg": {
+            "name": "Escort-Luxembourg",
+            "desc": "Encuentra perfiles para adultos en Luxemburgo."
+          },
+          "encantadoras": {
+            "name": "Encantadoras",
+            "desc": "Perfiles reales y verificados para adultos en España."
+          },
+          "escortGalleries": {
+            "name": "Escort Galleries",
+            "desc": "Motor de búsqueda internacional de servicios para adultos."
+          },
+          "topEscortBabes": {
+            "name": "Top Escort Babes",
+            "desc": "Anuncios con fotos y vídeos VIP."
+          },
+          "escortlistVip": {
+            "name": "Escortlist VIP",
+            "desc": "Directorio mundial de perfiles independientes y agencias."
+          }
+        }
       }
     }
   }

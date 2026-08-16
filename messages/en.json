@@ -623,14 +623,16 @@
   "Header": {
     "nav": {
       "home": "Home",
-      "rates": "Services & Rates",
+      "rates": "Services & Prices",
       "practices": "Practices",
+      "massages": "Massages",
       "gallery": "Gallery",
       "about": "About",
-      "testimonials": "Reviews/Testimonials",
+      "testimonials": "Comments/Testimonials",
       "faq": "Terms & FAQ",
       "contact": "Contact",
-      "menuMore": "More +"
+      "partners": "Partners",
+      "menuMore": "More Menu"
     },
     "actions": {
       "book": "Book Now",
@@ -782,6 +784,320 @@
         "duration": "Overnight (8 PM–8 AM, 12h)",
         "amount": "800€",
         "description": "Dinner, sensual night (5h min. sleep), breakfast to be arranged"
+      },
+      "massage_relaxant_60": {
+        "duration": "Relaxing Massage (60 min)",
+        "amount": "120€"
+      },
+      "massage_relaxant_90": {
+        "duration": "Relaxing Massage (90 min)",
+        "amount": "160€"
+      },
+      "massage_pierres_90": {
+        "duration": "Hot Stone Massage (90 min)",
+        "amount": "160€"
+      },
+      "massage_suedois_60": {
+        "duration": "Swedish Massage (60 min)",
+        "amount": "130€"
+      },
+      "massage_suedois_90": {
+        "duration": "Swedish Massage (90 min)",
+        "amount": "175€"
+      },
+      "massage_deeptissue_60": {
+        "duration": "Deep Tissue Massage (60 min)",
+        "amount": "140€"
+      },
+      "massage_deeptissue_90": {
+        "duration": "Deep Tissue Massage (90 min)",
+        "amount": "190€"
+      },
+      "massage_sportif_60": {
+        "duration": "Sports Massage (60 min)",
+        "amount": "130€"
+      },
+      "massage_californien_60": {
+        "duration": "Californian Massage (60 min)",
+        "amount": "120€"
+      },
+      "massage_californien_90": {
+        "duration": "Californian Massage (90 min)",
+        "amount": "160€"
+      },
+      "massage_aromatherapie_75": {
+        "duration": "Aromatherapy Massage (75 min)",
+        "amount": "140€"
+      },
+      "massage_prenatal_60": {
+        "duration": "Prenatal Massage (60 min)",
+        "amount": "120€"
+      },
+      "massage_reflexo_45": {
+        "duration": "Foot Reflexology (45 min)",
+        "amount": "90€"
+      },
+      "massage_reflexo_60": {
+        "duration": "Foot Reflexology (60 min)",
+        "amount": "120€"
+      },
+      "massage_dos_nuque_30": {
+        "duration": "Back, Neck & Shoulders Focus (30 min)",
+        "amount": "65€"
+      },
+      "massage_dos_nuque_45": {
+        "duration": "Back, Neck & Shoulders Focus (45 min)",
+        "amount": "85€"
+      }
+    }
+  },
+  "MassagePage": {
+    "hero": {
+      "tagline": "The Art of Touch",
+      "title": {
+        "part1": "A timeless pause to",
+        "highlight": "revitalize",
+        "part2": "the body."
+      },
+      "subtitle": "Each treatment is an invitation to an inner journey. A tailored approach combining ancestral techniques and precious oils to release your deepest tensions.",
+      "cta": "Book an appointment"
+    },
+    "philosophy": {
+      "tagline": "My Philosophy",
+      "title": {
+        "part1": "Well-being is not a luxury,",
+        "highlight": "it is a necessity."
+      },
+      "paragraph1": "My approach to massage goes beyond the simple physical dimension. It is about deeply listening to your physiology and emotional state. Every body tells a story, every tension is a message. By creating a safe, private and highly refined space, I allow you to completely let go.",
+      "paragraph2": "The combination of precise movements, shared breathing and delicate fragrances stimulates your body's natural self-healing process, restoring your vital energy.",
+      "features": {
+        "bioOils": {
+          "title": "Organic Oils",
+          "desc": "100% natural elixirs"
+        },
+        "serenity": {
+          "title": "Serenity",
+          "desc": "Silence & discretion"
+        },
+        "tailored": {
+          "title": "Tailored",
+          "desc": "Customized pressure"
+        },
+        "holistic": {
+          "title": "Holistic",
+          "desc": "Body & mind connected"
+        }
+      }
+    },
+    "treatments": {
+      "tagline": "Our Menu",
+      "title": "Signature Treatments",
+      "forWho": "For whom?",
+      "benefits": "Main benefits:",
+      "bookCare": "Book this treatment"
+    },
+    "experience": {
+      "tagline": "The Experience",
+      "title": "The Ritual Journey",
+      "steps": {
+        "welcome": {
+          "num": "01",
+          "title": "Welcome",
+          "desc": "A moment of conversation over a hot drink to understand your physical and emotional state."
+        },
+        "prep": {
+          "num": "02",
+          "title": "Preparation",
+          "desc": "You settle comfortably in the heated treatment room, on an ergonomic massage table."
+        },
+        "care": {
+          "num": "03",
+          "title": "The Treatment",
+          "desc": "A complete disconnection where technique fades into the background, allowing you to focus entirely on your sensations and relaxation."
+        },
+        "awakening": {
+          "num": "04",
+          "title": "Awakening",
+          "desc": "A gentle return to reality at your own pace, followed by personalized advice."
+        }
+      }
+    },
+    "healthImpact": {
+      "title": "The overall impact on your health.",
+      "description": "Massage therapy is scientifically recognized for its many benefits to the body. Expert touch acts simultaneously on your physical, psychological and energetic dimensions.",
+      "physiological": {
+        "title": "Physiological",
+        "desc": "Relaxes muscles, improves joint flexibility, stimulates lymphatic circulation and supports the immune system."
+      },
+      "psychological": {
+        "title": "Psychological",
+        "desc": "Significant reduction in cortisol (the stress hormone), increased endorphin release and improved concentration."
+      }
+    },
+    "testimonials": {
+      "tagline": "Testimonials",
+      "title": "Words from Our Clients",
+      "items": {
+        "sophie": {
+          "author": "Sophie L.",
+          "service": "Deep Tissue",
+          "quote": "Rare expertise. After months of neck pain caused by office work, the treatment released tensions I thought were chronic."
+        },
+        "marc": {
+          "author": "Marc D.",
+          "service": "Swedish Massage",
+          "quote": "An absolutely majestic setting with perfect discretion. The massage was firm, precise and remarkably effective for my sports recovery."
+        },
+        "eleonore": {
+          "author": "Éléonore V.",
+          "service": "Relaxing Ritual",
+          "quote": "A moment suspended in time. The attention to detail, from the choice of oil and music to the warmth of the table... A true emotional rebirth."
+        },
+        "julien": {
+          "author": "Julien M.",
+          "service": "Swedish Massage",
+          "quote": "The level of standards and professionalism is impressive. An immersive experience that completely resets both body and mind."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    },
+    "cta": {
+      "titlePart1": "Give yourself this",
+      "titleHighlight": "privilege.",
+      "description": "Our schedule is designed to guarantee every client the time and tranquility they deserve. Appointments are limited.",
+      "button": "Book an appointment"
+    }
+  },
+  "partners": {
+    "trustLabel": "Trust Label",
+    "title": "Premium",
+    "titleHighlight": "Ecosystem",
+    "titleEnd": "& Partners",
+    "quote": "Trust is built on transparency and respect. I work exclusively with the most recognized platforms and directories in the industry.",
+    "visit": "Visit",
+    "platformsReferenced": "{count} Referenced Platforms",
+    "cta": {
+      "title": "Become an Official Partner",
+      "description": "Do you manage a selective premium directory or a network with a qualified audience? Let's discuss a targeted partnership or cross-promotion opportunity.",
+      "button": "Propose a Partnership"
+    },
+    "trustChips": {
+      "verified": "Verified Platforms",
+      "exclusive": "Exclusive Partnerships",
+      "reciprocal": "Mutual Relationships"
+    },
+    "categories": {
+      "france": {
+        "title": "Leading Directories in France",
+        "tagline": "High-visibility national selection",
+        "sites": {
+          "sexemodel": {
+            "name": "SexeModel",
+            "desc": "Adult listings and dating platform."
+          },
+          "erosmix": {
+            "name": "Erosmix",
+            "desc": "VIP directory featuring real profiles and premium services in France."
+          },
+          "baiser1": {
+            "name": "1Baiser",
+            "desc": "Verified luxury and independent profiles in France."
+          },
+          "ladys": {
+            "name": "Ladys.one",
+            "desc": "Independent local services worldwide."
+          },
+          "escortsexe": {
+            "name": "EscortSexe.net",
+            "desc": "Directory of adult listings and profiles in France."
+          },
+          "annonce6": {
+            "name": "6annonce",
+            "desc": "Directory covering Paris, Lyon, Marseille and locations throughout France."
+          },
+          "tescort": {
+            "name": "Tescort",
+            "desc": "Independent listings with guaranteed discretion."
+          },
+          "niamodel": {
+            "name": "Niamodel",
+            "desc": "Directory of female and trans profiles in France."
+          },
+          "escorte": {
+            "name": "EscortE",
+            "desc": "Independent premium profiles and massage services."
+          }
+        }
+      },
+      "libertine": {
+        "title": "Adult Social & Dating Networks",
+        "tagline": "Spaces for social connections and shared interests",
+        "sites": {
+          "jmdate": {
+            "name": "JM Date",
+            "desc": "Social dating network for adults, whether single, couples or groups."
+          },
+          "lovesita": {
+            "name": "LOveSita",
+            "desc": "Discreet, secure and respectful adult dating."
+          },
+          "vivasexe": {
+            "name": "VivaSexe",
+            "desc": "Adult listings and dating without taboos."
+          },
+          "renole": {
+            "name": "Renole",
+            "desc": "Adult platform featuring various profiles from France."
+          }
+        }
+      },
+      "international": {
+        "title": "International & Specialized",
+        "tagline": "Global platforms and VIP alternatives",
+        "sites": {
+          "devozki": {
+            "name": "Devozki",
+            "desc": "International VIP directory and adult listings."
+          },
+          "hunqz": {
+            "name": "HUNQZ",
+            "desc": "Directory for gay, bi and trans adult profiles and companions."
+          },
+          "escorts69": {
+            "name": "Escorts69",
+            "desc": "Exclusive access to trans profiles in France."
+          },
+          "fgirl": {
+            "name": "Fgirl (Facegirl)",
+            "desc": "Leading adult directory in Switzerland, including Geneva and Lausanne."
+          },
+          "escort46": {
+            "name": "Escort46",
+            "desc": "Find massage and adult services in your area."
+          },
+          "escortLuxembourg": {
+            "name": "Escort-Luxembourg",
+            "desc": "Find adult profiles in Luxembourg."
+          },
+          "encantadoras": {
+            "name": "Encantadoras",
+            "desc": "Real and verified adult profiles in Spain."
+          },
+          "escortGalleries": {
+            "name": "Escort Galleries",
+            "desc": "International search engine for adult services."
+          },
+          "topEscortBabes": {
+            "name": "Top Escort Babes",
+            "desc": "Listings with VIP photos and videos."
+          },
+          "escortlistVip": {
+            "name": "Escortlist VIP",
+            "desc": "Worldwide independent and agency directory."
+          }
+        }
       }
     }
   }

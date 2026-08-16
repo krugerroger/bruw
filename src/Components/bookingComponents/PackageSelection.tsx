@@ -41,15 +41,38 @@ function PackageSelection({
                   onChange={handlePackageChange}
                   className="w-full appearance-none bg-white/5 border border-white/10 text-white rounded-2xl px-5 py-4 outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all cursor-pointer"
                 >
-                  {offer.price.map((option, index) => (
-                    <option
-                      key={index}
-                      value={index}
-                      className="bg-gray-900 text-white"
-                    >
-                      {option.duration} — {option.amount}
-                    </option>
-                  ))}
+                  <optgroup
+                    label="✨ ACCOMPAGNEMENTS CLASSIQUES"
+                    className="bg-zinc-950 text-zinc-500 font-mono text-[10px] tracking-widest uppercase py-2"
+                  >
+                    {offer.price
+                      .filter((d) => !d.value.startsWith("massage_"))
+                      .map((option) => (
+                        <option
+                          key={option.value}
+                          value={option.value}
+                          className="bg-gray-900 text-white"
+                        >
+                          {option.duration} — {option.amount}
+                        </option>
+                      ))}
+                  </optgroup>
+                  <optgroup
+                    label="💆‍♀️ MASSAGES"
+                    className="bg-zinc-950 text-zinc-500 font-mono text-[10px] tracking-widest uppercase py-2"
+                  >
+                    {offer.price
+                      .filter((d) => d.value.startsWith("massage_"))
+                      .map((option) => (
+                        <option
+                          key={option.value}
+                          value={option.value}
+                          className="bg-gray-900 text-white"
+                        >
+                          {option.duration} — {option.amount}
+                        </option>
+                      ))}
+                  </optgroup>
                 </select>
                 <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none">
                   <ChevronDown className="w-5 h-5 text-gray-400" />

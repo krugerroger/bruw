@@ -17,9 +17,11 @@ export default function Header() {
     { name: t("nav.home"), href: "/", isMainDesktop: true },
     { name: t("nav.rates"), href: "/tarifs", isMainDesktop: true },
     { name: t("nav.practices"), href: "/pratiques", isMainDesktop: true },
+    { name: t("nav.massages"), href: "/massages", isMainDesktop: false },
     { name: t("nav.gallery"), href: "/galerie", isMainDesktop: true },
     { name: t("nav.about"), href: "/about", isMainDesktop: true },
     { name: t("nav.testimonials"), href: "/temoignages", isMainDesktop: false },
+    { name: t("nav.partners"), href: "/partenaires", isMainDesktop: false },
     { name: t("nav.faq"), href: "/conditions", isMainDesktop: false },
     { name: t("nav.contact"), href: "/contact", isMainDesktop: false },
   ];

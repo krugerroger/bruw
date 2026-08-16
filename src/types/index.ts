@@ -15,6 +15,7 @@ export interface BookingFormProps {
 }
 
 export interface PriceOption {
+  value: string;
   duration: string;
   amount: string;
   description?: string;
@@ -23,4 +24,10 @@ export interface PriceOption {
 export interface Offer {
   title: string;
   price: PriceOption[];
+}
+
+export interface MassageOption {
+  value: string;
+  duration: string;
+  amount: string;
 }

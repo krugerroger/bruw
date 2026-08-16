@@ -628,11 +628,13 @@
       "home": "Accueil",
       "rates": "Prestations & Tarifs",
       "practices": "Pratiques",
+      "massages": "Massages",
       "gallery": "Galerie",
       "about": "À propos",
       "testimonials": "Commentaires/Témoignages",
       "faq": "Conditions & FAQ",
       "contact": "Contact",
+      "partners": "Partners",
       "menuMore": "Menu +"
     },
     "actions": {
@@ -647,7 +649,8 @@
       "gallery": "Galerie",
       "about": "À propos",
       "faq": "FAQ",
-      "contact": "Contact"
+      "contact": "Contact",
+      "massages": "Massages"
     },
     "legal": "Mentions légales - Brunella, Indépendante",
     "copyright": "© 2023 - 2026 Brunella. Tous droits réservés.",
@@ -704,6 +707,70 @@
         "duration": "Nuit Complète (20h–08h, 12h)",
         "amount": "800€",
         "description": "Dîner, nuit sensuelle (5h de sommeil min.), petit déjeuner à prévoir"
+      },
+      "massage_relaxant_60": {
+        "duration": "Massage Relaxant (60 min)",
+        "amount": "120€"
+      },
+      "massage_relaxant_90": {
+        "duration": "Massage Relaxant (90 min)",
+        "amount": "160€"
+      },
+      "massage_pierres_90": {
+        "duration": "Massage Pierres Chaudes (90 min)",
+        "amount": "160€"
+      },
+      "massage_suedois_60": {
+        "duration": "Massage Suédois (60 min)",
+        "amount": "130€"
+      },
+      "massage_suedois_90": {
+        "duration": "Massage Suédois (90 min)",
+        "amount": "175€"
+      },
+      "massage_deeptissue_60": {
+        "duration": "Massage Deep Tissue (60 min)",
+        "amount": "140€"
+      },
+      "massage_deeptissue_90": {
+        "duration": "Massage Deep Tissue (90 min)",
+        "amount": "190€"
+      },
+      "massage_sportif_60": {
+        "duration": "Massage Sportif (60 min)",
+        "amount": "130€"
+      },
+      "massage_californien_60": {
+        "duration": "Massage Californien (60 min)",
+        "amount": "120€"
+      },
+      "massage_californien_90": {
+        "duration": "Massage Californien (90 min)",
+        "amount": "160€"
+      },
+      "massage_aromatherapie_75": {
+        "duration": "Massage Aromathérapie (75 min)",
+        "amount": "140€"
+      },
+      "massage_prenatal_60": {
+        "duration": "Massage Prénatal (60 min)",
+        "amount": "120€"
+      },
+      "massage_reflexo_45": {
+        "duration": "Réflexologie Plantaire (45 min)",
+        "amount": "90€"
+      },
+      "massage_reflexo_60": {
+        "duration": "Réflexologie Plantaire (60 min)",
+        "amount": "120€"
+      },
+      "massage_dos_nuque_30": {
+        "duration": "Focus Dos, Nuque & Épaules (30 min)",
+        "amount": "65€"
+      },
+      "massage_dos_nuque_45": {
+        "duration": "Focus Dos, Nuque & Épaules (45 min)",
+        "amount": "85€"
       }
     }
   },
@@ -786,6 +853,256 @@
             "details": "Nous nous rencontrons autour d’un dîner au restaurant à votre hôtel avant de rejoindre votre chambre pour un moment torride. Pas de nuit blanche : sommeil de 5h minimum et merci de prévoir notre ou mon petit déjeuner"
           }
         ]
+      }
+    }
+  },
+  "MassagePage": {
+    "hero": {
+      "tagline": "L'Art du Toucher",
+      "title": {
+        "part1": "Une parenthèse hors du temps pour",
+        "highlight": "revitaliser",
+        "part2": "le corps."
+      },
+      "subtitle": "Chaque soin est une invitation au voyage intérieur. Une approche sur-mesure combinant techniques ancestrales et huiles précieuses pour relâcher vos tensions les plus profondes.",
+      "cta": "Prendre rendez-vous"
+    },
+    "philosophy": {
+      "tagline": "Ma Philosophie",
+      "title": {
+        "part1": "Le bien-être n'est pas un luxe,",
+        "highlight": "c'est une nécessité."
+      },
+      "paragraph1": "Mon approche du massage dépasse la simple dimension corporelle. Il s'agit d'une écoute profonde de votre physiologie et de vos états d'âme. Chaque corps raconte une histoire, chaque tension est un message. En créant un espace sécurisant, confiné et hautement qualitatif, je vous permets de vous abandonner totalement.",
+      "paragraph2": "L'alliance de mouvements précis, d'une respiration partagée et de fragrances délicates stimule le processus naturel d'auto-guérison de votre organisme, vous restituant votre énergie vitale.",
+      "features": {
+        "bioOils": {
+          "title": "Huiles Bio",
+          "desc": "Élixirs 100% naturels"
+        },
+        "serenity": {
+          "title": "Sérénité",
+          "desc": "Silence & discrétion"
+        },
+        "tailored": {
+          "title": "Sur-mesure",
+          "desc": "Pression adaptée"
+        },
+        "holistic": {
+          "title": "Holistique",
+          "desc": "Corps & Esprit liés"
+        }
+      }
+    },
+    "treatments": {
+      "tagline": "Notre Carte",
+      "title": "Les Soins Signatures",
+      "forWho": "Pour qui ?",
+      "benefits": "Bienfaits principaux :",
+      "bookCare": "Réserver ce soin"
+    },
+    "experience": {
+      "tagline": "L'Expérience",
+      "title": "Déroulement d'un rituel",
+      "steps": {
+        "welcome": {
+          "num": "01",
+          "title": "L'Accueil",
+          "desc": "Un temps d'échange autour d'une boisson chaude pour comprendre votre état physique et émotionnel."
+        },
+        "prep": {
+          "num": "02",
+          "title": "La Préparation",
+          "desc": "Vous vous installez confortablement dans la cabine chauffée, sur une table ergonomique."
+        },
+        "care": {
+          "num": "03",
+          "title": "Le Soin",
+          "desc": "Une déconnexion totale où la technique s'efface au profit du ressenti et de l'abandon."
+        },
+        "awakening": {
+          "num": "04",
+          "title": "L'Éveil",
+          "desc": "Un retour à la réalité en douceur, à votre rythme, suivi de conseils personnalisés."
+        }
+      }
+    },
+    "healthImpact": {
+      "title": "L'impact global sur votre santé.",
+      "description": "La massothérapie est reconnue scientifiquement pour ses nombreuses vertus sur l'organisme. Un toucher expert agit simultanément sur vos dimensions corporelles, psychiques et énergétiques.",
+      "physiological": {
+        "title": "Physiologique",
+        "desc": "Détend les muscles, assouplit les articulations, stimule la circulation lymphatique et renforce le système immunitaire."
+      },
+      "psychological": {
+        "title": "Psychologique",
+        "desc": "Baisse drastique du cortisol (hormone du stress), sécrétion massive d'endorphines, amélioration de la concentration."
+      }
+    },
+    "testimonials": {
+      "tagline": "Confidences",
+      "title": "Mots de nos clients",
+      "items": {
+        "sophie": {
+          "author": "Sophie L.",
+          "service": "Deep Tissue",
+          "quote": "Une expertise rare. Après des mois de douleurs cervicales dues au bureau, le soin a débloqué des tensions que je pensais chroniques."
+        },
+        "marc": {
+          "author": "Marc D.",
+          "service": "Massage Suédois",
+          "quote": "Un cadre absolument majestueux et d'une discrétion parfaite. Le massage était ferme, précis et redoutablement efficace pour ma récupération sportive."
+        },
+        "eleonore": {
+          "author": "Éléonore V.",
+          "service": "Rituel Relaxant",
+          "quote": "Une parenthèse suspendue. L'attention portée aux détails, du choix de l'huile musicale jusqu'à la chaleur de la table... Une véritable renaissance émotionnelle."
+        },
+        "julien": {
+          "author": "Julien M.",
+          "service": "Massage Suédois",
+          "quote": "Le niveau d'exigence et de professionnalisme est impressionnant. Une expérience immersive qui réinitialise complètement le corps et l'esprit."
+        }
+      }
+    },
+    "faq": {
+      "title": "Foire Aux Questions"
+    },
+    "cta": {
+      "titlePart1": "Accordez-vous ce",
+      "titleHighlight": "privilège.",
+      "description": "Nos agendas sont conçus pour garantir à chaque client le temps et la quiétude qu'il mérite. Les créneaux sont limités.",
+      "button": "Prendre rendez-vous"
+    }
+  },
+  "partners": {
+    "trustLabel": "Label de Confiance",
+    "title": "Écosystème",
+    "titleHighlight": "Premium",
+    "titleEnd": "& Partenaires",
+    "quote": "La confiance se bâtit sur la transparence et le respect. Je collabore exclusivement avec les plateformes et annuaires les plus reconnus du secteur.",
+    "visit": "Visiter",
+    "platformsReferenced": "{count} Plateformes Référencées",
+    "cta": {
+      "title": "Devenir Partenaire Officiel",
+      "description": "Vous administrez un annuaire sélectif de prestige ou un réseau d'audience qualifiée ? Discutons ensemble d'un maillage ou d'un échange de visibilité ciblé.",
+      "button": "Proposer une synergie"
+    },
+    "trustChips": {
+      "verified": "Plateformes Vérifiées",
+      "exclusive": "Partenariats Exclusifs",
+      "reciprocal": "Relations Réciproques"
+    },
+    "categories": {
+      "france": {
+        "title": "Annuaires de Référence France",
+        "tagline": "Sélection nationale haute visibilité",
+        "sites": {
+          "sexemodel": {
+            "name": "SexeModel",
+            "desc": "Libertines annonces - Sexemodel, Etre en adultes !"
+          },
+          "erosmix": {
+            "name": "Erosmix",
+            "desc": "VIP Directory, photos réelles et services d'escorte haut de gamme en France."
+          },
+          "baiser1": {
+            "name": "1Baiser",
+            "desc": "Escortes de luxe et indépendantes vérifiées en France."
+          },
+          "ladys": {
+            "name": "Ladys.one",
+            "desc": "Services locaux d'escorte indépendants partout dans le monde."
+          },
+          "escortsexe": {
+            "name": "EscortSexe.net",
+            "desc": "Annuaires d'annonces escortes, trans et boys en France."
+          },
+          "annonce6": {
+            "name": "6annonce",
+            "desc": "Annuaire d'escorte à Paris, Lyon, Marseille et partout en France."
+          },
+          "tescort": {
+            "name": "Tescort",
+            "desc": "Annonces d'escortes indépendantes avec discrétion garantie."
+          },
+          "niamodel": {
+            "name": "Niamodel",
+            "desc": "Annuaire des escortes féminines et shemales en France."
+          },
+          "escorte": {
+            "name": "EscortE",
+            "desc": "Escortes de luxe et massages érotiques indépendants."
+          }
+        }
+      },
+      "libertine": {
+        "title": "Réseaux Libertins & Rencontres",
+        "tagline": "Espaces d'échanges et complicités",
+        "sites": {
+          "jmdate": {
+            "name": "JM Date",
+            "desc": "Réseau social des rencontres libres : seul, en couple ou à plusieurs."
+          },
+          "lovesita": {
+            "name": "LOveSita",
+            "desc": "Rencontre libertine discrète, sécurisée et respectueuse."
+          },
+          "vivasexe": {
+            "name": "VivaSexe",
+            "desc": "Annonces sexe réelles et rencontres coquines sans tabou."
+          },
+          "renole": {
+            "name": "Renole",
+            "desc": "Site destiné aux adultes avec escortes, gays et trans de France."
+          }
+        }
+      },
+      "international": {
+        "title": "International & Spécialisés",
+        "tagline": "Plateformes globales et alternatives VIP",
+        "sites": {
+          "devozki": {
+            "name": "Devozki",
+            "desc": "International VIP escort directory and adult listings."
+          },
+          "hunqz": {
+            "name": "HUNQZ",
+            "desc": "The top site for Gay, Bi and Trans Escorts and companions."
+          },
+          "escorts69": {
+            "name": "Escorts69",
+            "desc": "Accès exclusif aux meilleures escorts trans en France."
+          },
+          "fgirl": {
+            "name": "Fgirl (Facegirl)",
+            "desc": "L'annuaire érotique N°1 en Suisse (Genève, Lausanne)."
+          },
+          "escort46": {
+            "name": "Escort46",
+            "desc": "Trouvez le meilleur massage et escortes dans votre région."
+          },
+          "escortLuxembourg": {
+            "name": "Escort-Luxembourg",
+            "desc": "Trouver une escort girl au Luxembourg."
+          },
+          "encantadoras": {
+            "name": "Encantadoras",
+            "desc": "Escorts reales y verificadas en España."
+          },
+          "escortGalleries": {
+            "name": "Escort Galleries",
+            "desc": "Largest international escort service search engine."
+          },
+          "topEscortBabes": {
+            "name": "Top Escort Babes",
+            "desc": "Annonces d'escortes avec photos et vidéos VIP."
+          },
+          "escortlistVip": {
+            "name": "Escortlist VIP",
+            "desc": "Worldwide independent & agency escort catalogue."
+          }
+        }
       }
     }
   }
