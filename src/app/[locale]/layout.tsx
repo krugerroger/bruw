@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
 
 type Props = {
   children: React.ReactNode;
@@ -96,8 +97,12 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${playfair.variable} dark`}>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${playfair.variable} dark`}
+    >
       <body className="font-sans">
+        <Analytics />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}
